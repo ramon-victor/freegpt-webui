@@ -1,0 +1,11 @@
+version: '3.5'
+
+services:
+  chatgpt-clone:
+    image: chatgpt-clone
+    container_name: chatgpt-clone
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "1337:1337"
