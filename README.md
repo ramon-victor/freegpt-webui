@@ -12,6 +12,7 @@ The application interface was incorporated from the [chatgpt-clone](https://gith
 The free GPT API was incorporated from the [freeGPT](https://github.com/Ruu3f/freeGPT) repository.
 
 ## Table of Contents  
+- [To-Do List](#to-do-list)  
 - [Getting Started](#getting-started-white_check_mark)  
   - [Cloning the Repository](#cloning-the-repository-inbox_tray)  
   - [Install Dependencies](#install-dependencies-wrench)  
@@ -20,7 +21,18 @@ The free GPT API was incorporated from the [freeGPT](https://github.com/Ruu3f/fr
   - [Prerequisites](#prerequisites)  
   - [Running the Docker](#running-the-docker)  
 
-  
+##
+
+## To-Do List ✔️
+
+- [x] Integrate the free GPT API into the WebUI
+- [x] Create Docker support
+- [ ] Add the GPT-4 model
+- [ ] Enhance the user interface
+- [ ] Improve the Jailbreak functionality
+- [ ] Enable editing and creating Jailbreaks in the WebUI
+- [ ] Migrate the interface to React.js (?)
+
 ## Getting Started :white_check_mark:  
 To get started with this project, you'll need to clone the repository and have [Python](https://www.python.org/downloads/) installed on your system.  
   
