@@ -1,9 +1,9 @@
 version: '3.5'
 
 services:
-  gptfree-jailbreak-webui:
-    image: gptfree-jailbreak-webui
-    container_name: gptfree-jailbreak-webui
+  freegpt-webui:
+    image: freegpt-webui
+    container_name: freegpt-webui
     build:
       context: .
       dockerfile: Dockerfile
