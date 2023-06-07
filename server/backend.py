@@ -69,10 +69,11 @@ class Backend_Api:
                         print(f"Error with proxy {random_proxy}: {e}")
                         remove_proxy(random_proxy)
 
-                if not self.use_auto_proxy:
+                while not self.use_auto_proxy:
                     try:
                         res = gpt3.Completion.create(prompt=conversation)
                         response = res['text']
+                        break
                     except Exception as e:
                         print(f"Error: {e}")
 
