@@ -1,4 +1,4 @@
-# GPTfree Jailbreak WebUI :unlock:
+# freeGPT WebUI with Jailbreak :unlock:
 This project showcases an unlocked version of ChatGPT with WebUI. <br> 🌟 <strong>NOT REQUIRE ANY API KEY</strong> 🌟 <br>
 Experience the power of ChatGPT with a user-friendly interface, completely free of charge.
 
