@@ -1,25 +1,27 @@
-from time import time
+import threading
 from flask import request
-from hashlib import sha256
 from datetime import datetime
 from requests import get
-from requests import post
-from json import loads
 from freeGPT import gpt3
-
+from server.auto_proxy import get_random_proxy, remove_proxy, update_working_proxies
 from server.config import special_instructions
 
 
 class Backend_Api:
     def __init__(self, app, config: dict) -> None:
         self.app = app
-        self.openai_key = config['openai_key']
+        self.use_auto_proxy = config['use_auto_proxy']
         self.routes = {
             '/backend-api/v2/conversation': {
                 'function': self._conversation,
                 'methods': ['POST']
             }
         }
+
+        if self.use_auto_proxy:
+            update_proxies = threading.Thread(
+                target=update_working_proxies, daemon=True)
+            update_proxies.start()
 
     def _conversation(self):
         try:
@@ -53,12 +55,32 @@ class Backend_Api:
                 extra + special_instructions[jailbreak] + \
                 _conversation + [prompt]
 
-            def stream():      
-              res = gpt3.Completion.create(prompt=conversation)      
-              response = res['text']    
-              yield response
-  
-            return self.app.response_class(stream(), mimetype='text/event-stream')  
+            def stream():
+                response = None
+
+                while self.use_auto_proxy:
+                    try:
+                        random_proxy = get_random_proxy()
+                        res = gpt3.Completion.create(
+                            prompt=conversation, proxy=random_proxy)
+                        response = res['text']
+                        break
+                    except Exception as e:
+                        print(f"Error with proxy {random_proxy}: {e}")
+                        remove_proxy(random_proxy)
+
+                if not self.use_auto_proxy:
+                    try:
+                        res = gpt3.Completion.create(prompt=conversation)
+                        response = res['text']
+                    except Exception as e:
+                        print(f"Error: {e}")
+
+                if response is not None:
+                    print(response)
+                    yield response
+
+            return self.app.response_class(stream(), mimetype='text/event-stream')
 
         except Exception as e:
             print(e)
