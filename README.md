@@ -12,11 +12,13 @@ The application interface was incorporated from the [chatgpt-clone](https://gith
 The free GPT API was incorporated from the [freeGPT](https://github.com/Ruu3f/freeGPT) repository.
 
 ## Table of Contents  
-- [To-Do List](#to-do-list)  
+- [To-Do List](#to-do-list-%EF%B8%8F)  
 - [Getting Started](#getting-started-white_check_mark)  
   - [Cloning the Repository](#cloning-the-repository-inbox_tray)  
   - [Install Dependencies](#install-dependencies-wrench)  
 - [Running the Application](#running-the-application-rocket)  
+- [Auto Proxy](#auto-proxy-)
+  - [Enable Auto Proxy](#enable-auto-proxy)
 - [Docker](#docker-)  
   - [Prerequisites](#prerequisites)  
   - [Running the Docker](#running-the-docker)  
@@ -74,7 +76,7 @@ The freeGPT API refuses some connections, especially when hosted in the cloud (A
 Auto proxy solves this problem automatically for you. 
 When enabled, the application will automatically fetch and test proxy servers, updating the list of working proxies every 30 minutes.  
   
-### Enable  
+### Enable Auto Proxy
 To enable it, just go to the `config.json` file and change the value of the "use_auto_proxy" to `true`.  
 
 ```
