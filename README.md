@@ -1,4 +1,4 @@
-# GPTfree Jailbreak WebUI :unlock:
+# freeGPT WebUI with Jailbreak :unlock:
 This project showcases an unlocked version of ChatGPT with WebUI. <br> 🌟 <strong>NOT REQUIRE ANY API KEY</strong> 🌟 <br>
 Experience the power of ChatGPT with a user-friendly interface, completely free of charge.
 
@@ -12,11 +12,13 @@ The application interface was incorporated from the [chatgpt-clone](https://gith
 The free GPT API was incorporated from the [freeGPT](https://github.com/Ruu3f/freeGPT) repository.
 
 ## Table of Contents  
-- [To-Do List](#to-do-list)  
+- [To-Do List](#to-do-list-%EF%B8%8F)  
 - [Getting Started](#getting-started-white_check_mark)  
   - [Cloning the Repository](#cloning-the-repository-inbox_tray)  
   - [Install Dependencies](#install-dependencies-wrench)  
 - [Running the Application](#running-the-application-rocket)  
+- [Auto Proxy](#auto-proxy-)
+  - [Enable Auto Proxy](#enable-auto-proxy)
 - [Docker](#docker-)  
   - [Prerequisites](#prerequisites)  
   - [Running the Docker](#running-the-docker)  
@@ -27,6 +29,7 @@ The free GPT API was incorporated from the [freeGPT](https://github.com/Ruu3f/fr
 
 - [x] Integrate the free GPT API into the WebUI
 - [x] Create Docker support
+- [x] Auto Proxy
 - [ ] Add the GPT-4 model
 - [ ] Enhance the user interface
 - [ ] Improve the Jailbreak functionality
@@ -67,6 +70,21 @@ or
 ```
 http://172.17.0.2:1338
 ```
+## Auto Proxy 🔑  
+The application includes an auto proxy feature that allows it to work with multiple free proxy servers. 
+The freeGPT API refuses some connections, especially when hosted in the cloud (Azure, AWS, Google Cloud). 
+Auto proxy solves this problem automatically for you. 
+When enabled, the application will automatically fetch and test proxy servers, updating the list of working proxies every 30 minutes.  
+  
+### Enable Auto Proxy
+To enable it, just go to the `config.json` file and change the value of the "use_auto_proxy" to `true`.  
+
+```
+"use_auto_proxy": true
+```
+![use-auto-proxy-gif](https://github.com/ramonvc/gptfree-jailbreak-webui/assets/13617054/f83c6217-411c-404c-9f4c-8ae700a486d1)
+
+
 
 ## Docker 🐳
 ### Prerequisites
