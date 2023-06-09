@@ -74,7 +74,6 @@ const ask_gpt = async (message) => {
             <div class="message">
                 <div class="user">
                     ${user_image}
-                    <i class="fa-regular fa-phone-arrow-up-right"></i>
                 </div>
                 <div class="content" id="user_${token}"> 
                     ${format(message)}
@@ -90,7 +89,7 @@ const ask_gpt = async (message) => {
 		message_box.innerHTML += `
             <div class="message">
                 <div class="user">
-                    ${gpt_image} <i class="fa-regular fa-phone-arrow-down-left"></i>
+                    ${gpt_image}
                 </div>
                 <div class="content" id="gpt_${window.token}">
                     <div id="cursor"></div>
@@ -199,10 +198,10 @@ const ask_gpt = async (message) => {
 };
 
 const decodeUnicode = (str) => {
-    return str.replace(/\\u([a-fA-F0-9]{4})/g, function (match, grp) {
-        return String.fromCharCode(parseInt(grp, 16));
-    });
-}
+	return str.replace(/\\u([a-fA-F0-9]{4})/g, function (match, grp) {
+		return String.fromCharCode(parseInt(grp, 16));
+	});
+};
 
 const clear_conversations = async () => {
 	const elements = box_conversations.childNodes;
@@ -262,11 +261,6 @@ const load_conversation = async (conversation_id) => {
             <div class="message">
                 <div class="user">
                     ${item.role == "assistant" ? gpt_image : user_image}
-                    ${
-						item.role == "assistant"
-							? `<i class="fa-regular fa-phone-arrow-down-left"></i>`
-							: `<i class="fa-regular fa-phone-arrow-up-right"></i>`
-					}
                 </div>
                 <div class="content">
                     ${item.role == "assistant" ? markdown.render(item.content) : item.content}

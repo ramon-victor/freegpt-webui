@@ -214,18 +214,6 @@ body {
     outline: 1px solid var(--blur-border);
 }
 
-.message .user:after {
-    content: "63";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    height: 60%;
-    width: 60%;
-    background: var(--colour-3);
-    filter: blur(10px) opacity(0.5);
-    z-index: 10000;
-}
-
 .message .content {
     display: flex;
     flex-direction: column;
@@ -434,8 +422,9 @@ select {
     background: transparent;
     border-radius: var(--border-radius-1);
     width: 100%;
-    cursor: default;
-    border: 1px dashed var(--conversations)
+    border: 1px dashed var(--conversations);
+    text-decoration: none; 
+    color: inherit
 }
 
 .bottom_buttons {

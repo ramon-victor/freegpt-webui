@@ -1,4 +1,5 @@
 import threading
+import re
 from flask import request
 from datetime import datetime
 from requests import get
@@ -55,6 +56,12 @@ class Backend_Api:
                 extra + special_instructions[jailbreak] + \
                 _conversation + [prompt]
 
+            def filter_jailbroken_response(response):  
+                response = re.sub(r'GPT:.*?ACT:', '', response, flags=re.DOTALL)  
+                response = re.sub(r'ACT:', '', response)  
+            
+                return response  
+
             def stream():
                 response = None
 
@@ -78,7 +85,7 @@ class Backend_Api:
                         print(f"Error: {e}")
 
                 if response is not None:
-                    print(response)
+                    response = filter_jailbroken_response(response)
                     yield response
 
             return self.app.response_class(stream(), mimetype='text/event-stream')
