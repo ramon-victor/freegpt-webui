@@ -30,9 +30,9 @@ Experience the power of ChatGPT with a user-friendly interface, completely free.
 - [x] Integrate the free GPT API into the WebUI
 - [x] Create Docker support
 - [x] Auto Proxy
+- [x] Improve the Jailbreak functionality
 - [ ] Add the GPT-4 model
 - [ ] Enhance the user interface
-- [ ] Improve the Jailbreak functionality
 - [ ] Enable editing and creating Jailbreaks in the WebUI
 - [ ] Migrate the interface to React.js (?)
 
