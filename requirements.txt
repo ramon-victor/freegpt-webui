@@ -10,3 +10,4 @@ streamlit==1.21.0
 selenium  
 fake-useragent  
 freeGPT  
+googletrans==4.0.0-rc1  

@@ -1,5 +1,6 @@
 import threading
 import re
+from googletrans import Translator
 from flask import request
 from datetime import datetime
 from requests import get
@@ -52,15 +53,13 @@ class Backend_Api:
 
                 extra = [{'role': 'user', 'content': blob}]
 
+            if special_instructions[jailbreak]:
+                set_response_language(
+                    prompt['content'], special_instructions[jailbreak])
+
             conversation = [{'role': 'system', 'content': system_message}] + \
                 extra + special_instructions[jailbreak] + \
                 _conversation + [prompt]
-
-            def filter_jailbroken_response(response):  
-                response = re.sub(r'GPT:.*?ACT:', '', response, flags=re.DOTALL)  
-                response = re.sub(r'ACT:', '', response)  
-            
-                return response  
 
             def stream():
                 response = None
@@ -98,3 +97,19 @@ class Backend_Api:
                 'success': False,
                 "error": f"an error occurred {str(e)}"
             }, 400
+
+
+def filter_jailbroken_response(response):
+    response = re.sub(r'GPT:.*?ACT:', '', response, flags=re.DOTALL)
+    response = re.sub(r'ACT:', '', response)
+    return response
+
+
+def set_response_language(prompt, special_instructions_list):
+    print(prompt)
+    translator = Translator()
+    detected_language = translator.detect(prompt).lang
+    language_instructions = f"You will respond in the language: {detected_language}. "
+    if special_instructions_list:
+        special_instructions_list[0]['content'] = language_instructions + \
+            special_instructions_list[0]['content']
