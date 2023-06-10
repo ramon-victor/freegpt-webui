@@ -1,0 +1,13 @@
+input[type="checkbox"] {
+	height: 0;
+	width: 0;
+	display: none;
+}
+
+input:checked + label {
+	background: var(--blur-border);
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px - 20px);
+}

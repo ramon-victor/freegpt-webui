@@ -1,0 +1,29 @@
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 50px;
+	height: 30px;
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	background-color: var(--blur-bg);
+	border-radius: var(--border-radius-1);
+	border: 1px solid var(--blur-border);
+	display: block;
+	border-radius: 100px;
+	position: relative;
+	overflow: hidden;
+	transition: 0.33s;
+}
+
+label:after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 5px;
+	width: 20px;
+	height: 20px;
+	background: var(--colour-3);
+	border-radius: 90px;
+	transition: 0.33s;
+}

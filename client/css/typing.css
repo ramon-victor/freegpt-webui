@@ -1,0 +1,15 @@
+.typing {
+	position: absolute;
+	top: -25px;
+	left: 0;
+	font-size: 14px;
+	animation: show_popup 0.4s;
+}
+
+.typing-hiding {
+	animation: hide_popup 0.4s;
+}
+
+.typing-hidden {
+	display: none;
+}

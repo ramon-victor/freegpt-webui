@@ -1,0 +1,5 @@
+.main-container {
+	display: flex;
+	gap: var(--section-gap);
+	height: 100%;
+}

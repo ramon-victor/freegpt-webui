@@ -1,0 +1,130 @@
+.conversation {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.conversation #messages {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	overflow-wrap: break-word;
+	padding-bottom: 50px;
+}
+
+.conversation .user-input {
+	max-height: 200px;
+}
+
+.conversation .user-input input {
+	font-size: 15px;
+	width: 100%;
+	height: 100%;
+	padding: 12px 15px;
+	background: none;
+	border: none;
+	outline: none;
+	color: var(--colour-3);
+}
+
+.conversation .user-input input::placeholder {
+	color: var(--user-input);
+}
+
+.conversation-title {
+	color: var(--colour-3);
+	font-size: 14px;
+}
+
+.conversation .user-input textarea {
+	font-size: 15px;
+	width: 100%;
+	height: 100%;
+	padding: 12px 15px;
+	background: none;
+	border: none;
+	outline: none;
+	color: var(--colour-3);
+
+	resize: vertical;
+	max-height: 150px;
+	min-height: 80px;
+}
+
+.new-conversation {
+	padding: 8px 12px;
+	display: flex;
+	gap: 18px;
+	align-items: center;
+	cursor: pointer;
+	user-select: none;
+	background: transparent;
+	border: 1px dashed var(--conversations);
+	border-radius: var(--border-radius-1);
+}
+
+.new-conversation span {
+	color: var(--colour-3);
+	font-size: 14px;
+}
+
+.new-conversation:hover {
+	border-style: solid;
+}
+
+.box {
+	backdrop-filter: blur(20px);
+	-webkit-backdrop-filter: blur(20px);
+	background-color: var(--blur-bg);
+	height: 100%;
+	width: 100%;
+	border-radius: var(--border-radius-1);
+	border: 1px solid var(--blur-border);
+}
+
+.input-box {
+	display: flex;
+	align-items: center;
+	padding-right: 15px;
+	cursor: pointer;
+}
+
+#cursor {
+	line-height: 17px;
+	margin-left: 3px;
+	-webkit-animation: blink 0.8s infinite;
+	animation: blink 0.8s infinite;
+	width: 7px;
+	height: 15px;
+}
+
+@keyframes blink {
+	0% {
+		background: #ffffff00;
+	}
+
+	50% {
+		background: white;
+	}
+
+	100% {
+		background: #ffffff00;
+	}
+}
+
+@-webkit-keyframes blink {
+	0% {
+		background: #ffffff00;
+	}
+
+	50% {
+		background: white;
+	}
+
+	100% {
+		background: #ffffff00;
+	}
+}

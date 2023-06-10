@@ -26,39 +26,6 @@
 			const user_image = `<img src="/assets/img/user.png" alt="User Avatar">`;
 			const gpt_image = `<img src="/assets/img/gpt.png" alt="GPT Avatar">`;
 		</script>
-		<style>
-			.hljs {
-				color: #e9e9f4;
-				background: #28293629;
-				border-radius: var(--border-radius-1);
-				border: 1px solid var(--blur-border);
-				font-size: 15px;
-			}
-
-			#message-input {
-				margin-right: 30px;
-				height: 80px;
-			}
-
-			#message-input::-webkit-scrollbar {
-				width: 5px;
-			}
-
-			/* Track */
-			#message-input::-webkit-scrollbar-track {
-				background: #f1f1f1;
-			}
-
-			/* Handle */
-			#message-input::-webkit-scrollbar-thumb {
-				background: #c7a2ff;
-			}
-
-			/* Handle on hover */
-			#message-input::-webkit-scrollbar-thumb:hover {
-				background: #8b3dff;
-			}
-		</style>
 		<script src="/assets/js/highlight.min.js"></script>
 		<script src="/assets/js/highlightjs-copy.min.js"></script>
 		<script>
@@ -68,11 +35,11 @@
 	</head>
 
 	<body>
-		<div class="gradient"></div>
-		<div class="row">
-			<div class="box conversations">
+		<div class="background-gradient"></div>
+		<div class="main-container">
+			<div class="box sidebar">
 				<div class="top">
-					<button class="new_convo" onclick="new_conversation()">
+					<button class="new-conversation" onclick="new_conversation()">
 						<i class="fa-regular fa-plus"></i>
 						<span>New Conversation</span>
 					</button>
@@ -85,7 +52,7 @@
 					</button>
 					<a class="info" href="https://github.com/ramonvc/gptfree-jailbreak-webui" target="_blank">
 						<i class="fa-brands fa-github"></i>
-						<span class="convo-title">
+						<span class="conversation-title">
 							@ramonvc<br />
 							Version: 0.0.2-Alpha<br />
 						</span>
@@ -93,7 +60,7 @@
 				</div>
 			</div>
 			<div class="conversation">
-				<div class="stop_generating stop_generating-hidden">
+				<div class="stop-generating stop-generating-hidden">
 					<button id="cancelButton">
 						<span>Stop Generating</span>
 						<i class="fa-regular fa-stop"></i>
@@ -124,7 +91,6 @@
 							<option value="text-gpt-0035-render-sha-0" selected>gpt-3.5-turbo</option>
 							<option disabled value="text-gpt-0040-render-sha-0">gpt-4 (coming soon)</option>
 						</select>
-						<!-- <span class="about">Model</span> -->
 					</div>
 					<div class="field">
 						<select name="jailbreak" id="jailbreak">

@@ -7,7 +7,7 @@ const message_box = document.getElementById(`messages`);
 const message_input = document.getElementById(`message-input`);
 const box_conversations = document.querySelector(`.top`);
 const spinner = box_conversations.querySelector(".spinner");
-const stop_generating = document.querySelector(`.stop_generating`);
+const stop_generating = document.querySelector(`.stop-generating`);
 const send_button = document.querySelector(`#send-button`);
 let prompt_lock = false;
 
@@ -44,11 +44,11 @@ const handle_ask = async () => {
 };
 
 const remove_cancel_button = async () => {
-	stop_generating.classList.add(`stop_generating-hiding`);
+	stop_generating.classList.add(`stop-generating-hiding`);
 
 	setTimeout(() => {
-		stop_generating.classList.remove(`stop_generating-hiding`);
-		stop_generating.classList.add(`stop_generating-hidden`);
+		stop_generating.classList.remove(`stop-generating-hiding`);
+		stop_generating.classList.add(`stop-generating-hidden`);
 	}, 300);
 };
 
@@ -68,7 +68,7 @@ const ask_gpt = async (message) => {
 		window.text = ``;
 		window.token = message_id();
 
-		stop_generating.classList.remove(`stop_generating-hidden`);
+		stop_generating.classList.remove(`stop-generating-hidden`);
 
 		message_box.innerHTML += `
             <div class="message">
@@ -326,10 +326,10 @@ const load_conversations = async (limit, offset, loader) => {
 
 	for (conversation of conversations) {
 		box_conversations.innerHTML += `
-            <div class="convo">
+            <div class="conversation-sidebar">
                 <div class="left" onclick="set_conversation('${conversation.id}')">
                     <i class="fa-regular fa-comments"></i>
-                    <span class="convo-title">${conversation.title}</span>
+                    <span class="conversation-title">${conversation.title}</span>
                 </div>
                 <i onclick="delete_conversation('${conversation.id}')" class="fa-regular fa-trash"></i>
             </div>
@@ -415,7 +415,7 @@ window.onload = async () => {
 };
 
 document.querySelector(".mobile-sidebar").addEventListener("click", (event) => {
-	const sidebar = document.querySelector(".conversations");
+	const sidebar = document.querySelector(".sidebar");
 
 	if (sidebar.classList.contains("shown")) {
 		sidebar.classList.remove("shown");

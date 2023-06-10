@@ -1,0 +1,53 @@
+.message {
+	width: 100%;
+	overflow-wrap: break-word;
+	display: flex;
+	gap: var(--section-gap);
+	padding: var(--section-gap);
+	padding-bottom: 0;
+}
+
+.message:last-child {
+	animation: 0.6s show_message;
+}
+
+@keyframes show_message {
+	from {
+		transform: translateY(10px);
+		opacity: 0;
+	}
+}
+
+.message .user {
+	max-width: 48px;
+	max-height: 48px;
+	flex-shrink: 0;
+}
+
+.message .user img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 8px;
+	outline: 1px solid var(--blur-border);
+}
+
+.message .content {
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+
+.message .content p,
+.message .content li,
+.message .content code {
+	font-size: 15px;
+	line-height: 1.3;
+}
+
+.message .user i {
+	position: absolute;
+	bottom: -6px;
+	right: -6px;
+	z-index: 1000;
+}

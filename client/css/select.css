@@ -1,0 +1,20 @@
+select {
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border-radius: 8px;
+
+	-webkit-backdrop-filter: blur(20px);
+	backdrop-filter: blur(20px);
+
+	cursor: pointer;
+	background-color: var(--blur-bg);
+	border: 1px solid var(--blur-border);
+	color: var(--colour-3);
+	display: block;
+	position: relative;
+	overflow: hidden;
+	outline: none;
+	padding: 8px 16px;
+
+	appearance: none;
+}
