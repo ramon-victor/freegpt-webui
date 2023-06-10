@@ -56,6 +56,31 @@
 	color: inherit;
 }
 
+.sidebar-footer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.sidebar-footer button {
+	padding: 8px 12px;
+	display: flex;
+	gap: 18px;
+	align-items: center;
+	cursor: pointer;
+	user-select: none;
+	background: transparent;
+	border: 1px solid #c7a2ff;
+	border-radius: var(--border-radius-1);
+	width: 100%;
+}
+
+.sidebar-footer button span {
+	color: var(--colour-3);
+	font-size: 14px;
+}
+
 @keyframes spinner {
 	to {
 		transform: rotate(360deg);
