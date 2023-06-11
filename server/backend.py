@@ -1,3 +1,4 @@
+import requests
 import threading
 import re
 from googletrans import Translator
@@ -28,6 +29,7 @@ class Backend_Api:
     def _conversation(self):
         try:
             jailbreak = request.json['jailbreak']
+            model = request.json['model']
             _conversation = request.json['meta']['content']['conversation']
             internet_access = request.json['meta']['content']['internet_access']
             prompt = request.json['meta']['content']['parts'][0]
@@ -62,30 +64,13 @@ class Backend_Api:
                 _conversation + [prompt]
 
             def stream():
-                response = None
+                if isGPT3Model(model):
+                    response = get_response_gpt3(
+                        conversation, self.use_auto_proxy)
+                if isGPT4Model(model):
+                    response = get_response_gpt4(conversation)
 
-                while self.use_auto_proxy:
-                    try:
-                        random_proxy = get_random_proxy()
-                        res = gpt3.Completion.create(
-                            prompt=conversation, proxy=random_proxy)
-                        response = res['text']
-                        break
-                    except Exception as e:
-                        print(f"Error with proxy {random_proxy}: {e}")
-                        remove_proxy(random_proxy)
-
-                while not self.use_auto_proxy:
-                    try:
-                        res = gpt3.Completion.create(prompt=conversation)
-                        response = res['text']
-                        break
-                    except Exception as e:
-                        print(f"Error: {e}")
-
-                if response is not None:
-                    response = filter_jailbroken_response(response)
-                    yield response
+                yield response
 
             return self.app.response_class(stream(), mimetype='text/event-stream')
 
@@ -106,10 +91,59 @@ def filter_jailbroken_response(response):
 
 
 def set_response_language(prompt, special_instructions_list):
-    print(prompt)
     translator = Translator()
     detected_language = translator.detect(prompt).lang
     language_instructions = f"You will respond in the language: {detected_language}. "
     if special_instructions_list:
         special_instructions_list[0]['content'] = language_instructions + \
             special_instructions_list[0]['content']
+
+
+def get_response_gpt3(conversation, use_proxy):
+    while use_proxy:
+        try:
+            random_proxy = get_random_proxy()
+            res = gpt3.Completion.create(
+                prompt=conversation, proxy=random_proxy)
+            response = res['text']
+            break
+        except Exception as e:
+            print(f"Error with proxy {random_proxy}: {e}")
+            remove_proxy(random_proxy)
+
+    while not use_proxy:
+        try:
+            res = gpt3.Completion.create(prompt=conversation)
+            response = res['text']
+            break
+        except Exception as e:
+            print(f"Error: {e}")
+
+    if response is not None:
+        response = filter_jailbroken_response(response)
+        return response
+
+
+def get_response_gpt4(conversation):  
+    api_url = f"http://127.0.0.1:3000/ask?prompt={conversation}&model=forefront"  
+  
+    while True:  
+        try:  
+            res = requests.get(api_url)  
+            res.raise_for_status()  
+            response = res.text  
+            break  
+        except Exception as e:  
+            print(f"Error: {e}")  
+  
+    if response is not None:  
+        response = filter_jailbroken_response(response)  
+        return response  
+
+
+def isGPT3Model(model):
+    return model == "text-gpt-0035"
+
+
+def isGPT4Model(model):
+    return model == "text-gpt-0040"
