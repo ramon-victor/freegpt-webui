@@ -130,6 +130,9 @@ The application interface was incorporated from the [chatgpt-clone](https://gith
 ### API FreeGPT
 The free GPT API was incorporated from the [freeGPT](https://github.com/Ruu3f/freeGPT) repository.
 
+### API GPT4Free
+The free GPT API was incorporated from the [GPT4Free](https://github.com/xiangsx/gpt4free-ts) repository.
+
 <br>
 
 ## Legal Notice
