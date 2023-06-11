@@ -1,11 +1,11 @@
 # freeGPT WebUI 
-  
-_with Jailbreak_   :unlock: 
+ GPT-3 / GPT-4
 
+_with Jailbreak_   :unlock: 
 
 This project showcases an unlocked version of ChatGPT with WebUI. <br>
 Experience the power of ChatGPT with a user-friendly interface, completely free. <br> <br>
-<strong>NOT REQUIRE ANY API KEY</strong> ❌🔑
+❌ <strong>NOT REQUIRE ANY API KEY</strong> 🔑
 
 ## Table of Contents  
 - [To-Do List](#to-do-list-%EF%B8%8F)  
@@ -31,13 +31,14 @@ Experience the power of ChatGPT with a user-friendly interface, completely free.
 - [x] Create Docker support
 - [x] Auto Proxy
 - [x] Improve the Jailbreak functionality
-- [ ] Add the GPT-4 model
+- [X] Add the GPT-4 model
 - [ ] Enhance the user interface
 - [ ] Enable editing and creating Jailbreaks in the WebUI
 - [ ] Migrate the interface to React.js (?)
 
 ## Getting Started :white_check_mark:  
-To get started with this project, you'll need to clone the repository and have [Python](https://www.python.org/downloads/) installed on your system.  
+To get started with this project, you'll need to clone the repository and have [Python](https://www.python.org/downloads/) and
+[Node.js](https://nodejs.org/en/download) installed on your system.  
   
 ### Cloning the Repository :inbox_tray:
 Run the following command to clone the repository:  
@@ -50,6 +51,11 @@ git clone https://github.com/ramonvc/gptfree-jailbreak-webui.git
 Navigate to the project directory:
 ```
 cd gptfree-jailbreak-webui
+```
+
+Install Yarn:
+```
+npm install --global yarn
 ```
 
 Install the dependencies:
