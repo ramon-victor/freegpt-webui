@@ -128,10 +128,10 @@ I highly recommend visiting and supporting both projects.
 The application interface was incorporated from the [chatgpt-clone](https://github.com/xtekky/chatgpt-clone) repository.
 
 ### API FreeGPT
-The free GPT API was incorporated from the [freeGPT](https://github.com/Ruu3f/freeGPT) repository.
+The free GPT-3.5 API was incorporated from the [freeGPT](https://github.com/Ruu3f/freeGPT) repository.
 
 ### API GPT4Free
-The free GPT API was incorporated from the [GPT4Free](https://github.com/xiangsx/gpt4free-ts) repository.
+The free GPT-4 API was incorporated from the [GPT4Free](https://github.com/xiangsx/gpt4free-ts) repository.
 
 <br>
 
