@@ -1,6 +1,6 @@
 import {Chat, ChatOptions, Request, Response, ResponseStream} from "../base";
 import {Browser, Page} from "puppeteer";
-import {BrowserPool} from "../../pool/puppeteer";
+import {BrowserPool, BrowserUser} from "../../pool/puppeteer";
 import {CreateEmail, TempEmailType, TempMailMessage} from "../../utils/emailFactory";
 import {CreateTlsProxy} from "../../utils/proxyAgent";
 import * as fs from "fs";
@@ -87,7 +87,7 @@ class AccountPool {
 }
 
 
-export class Forefrontnew extends Chat {
+export class Forefrontnew extends Chat implements BrowserUser<Account>{
     private pagePool: BrowserPool<Account>;
     private accountPool: AccountPool;
 
@@ -95,8 +95,7 @@ export class Forefrontnew extends Chat {
         super(options);
         this.accountPool = new AccountPool();
         const maxSize = +(process.env.POOL_SIZE || 2);
-        const initialAccounts = this.accountPool.multiGet(maxSize);
-        this.pagePool = new BrowserPool<Account>(maxSize, initialAccounts.map(item => item.id), this.init.bind(this));
+        this.pagePool = new BrowserPool<Account>(maxSize, this);
     }
 
     public async ask(req: Request): Promise<Response> {
@@ -139,8 +138,30 @@ export class Forefrontnew extends Chat {
     }
 
     private static async closeVIPPop(page: Page) {
-        await page.waitForSelector('.flex > .w-full:nth-child(1) > .grid:nth-child(2) > .flex > .text-sm')
-        await page.click('.flex > .w-full:nth-child(1) > .grid:nth-child(2) > .flex > .text-sm')
+        try {
+            await page.waitForSelector('.flex > .w-full:nth-child(1) > .grid:nth-child(2) > .flex > .text-sm', {timeout: 15 * 1000})
+            await page.click('.flex > .w-full:nth-child(1) > .grid:nth-child(2) > .flex > .text-sm')
+        } catch (e) {
+            console.log('not need close vip');
+        }
+    }
+
+    private static async closeWelcomePop(page: Page) {
+        try {
+            await page.waitForSelector('.flex > .modal > .modal-box > .flex > .px-3:nth-child(1)', {timeout: 120 * 1000})
+            await page.click('.flex > .modal > .modal-box > .flex > .px-3:nth-child(1)')
+        } catch (e) {
+            console.log('not need close welcome pop');
+        }
+    }
+
+    deleteID(id: string): void {
+        this.accountPool.delete(id);
+    }
+
+    newID(): string {
+        const account = this.accountPool.get();
+        return account.id;
     }
 
     private static async selectAssistant(page: Page) {
@@ -209,7 +230,7 @@ export class Forefrontnew extends Chat {
         }));
     }
 
-    private async init(id: string, browser: Browser): Promise<[Page | undefined, Account, string]> {
+    async init(id: string, browser: Browser): Promise<[Page | undefined, Account]> {
         const account = this.accountPool.getByID(id);
         try {
             if (!account) {
@@ -223,7 +244,7 @@ export class Forefrontnew extends Chat {
                 await Forefrontnew.closeVIPPop(page);
                 await Forefrontnew.switchToGpt4(page);
                 await this.allowClipboard(browser, page);
-                return [page, account, account.id];
+                return [page, account];
             }
             await page.goto("https://accounts.forefront.ai/sign-up");
             await page.setViewport({width: 1920, height: 1080});
@@ -256,18 +277,15 @@ export class Forefrontnew extends Chat {
             console.log('register successfully');
             account.login_time = moment().format(TimeFormat);
             this.accountPool.syncfile();
-            await page.waitForSelector('.flex > .modal > .modal-box > .flex > .px-3:nth-child(1)', {timeout: 120000})
-            await page.click('.flex > .modal > .modal-box > .flex > .px-3:nth-child(1)')
+            await Forefrontnew.closeWelcomePop(page);
             await Forefrontnew.closeVIPPop(page);
             await page.waitForSelector('.relative > .flex > .w-full > .text-th-primary-dark > div', {timeout: 120000})
             await Forefrontnew.switchToGpt4(page);
             await this.allowClipboard(browser, page);
-            return [page, account, account.id];
+            return [page, account];
         } catch (e) {
             console.warn('something error happened,err:', e);
-            this.accountPool.delete(account?.id || "")
-            const newAccount = this.accountPool.get();
-            return [undefined, this.accountPool.get(), newAccount.id] as any;
+            return [] as any;
         }
     }
 
@@ -301,8 +319,7 @@ export class Forefrontnew extends Chat {
             const md = mdList;
         } catch (e) {
             console.error(e);
-            const newAccount = this.accountPool.get();
-            destroy(newAccount.id);
+            destroy();
             pt.write("error", 'some thing error, try again later');
             pt.end();
             return {text: pt.stream}
@@ -346,8 +363,7 @@ export class Forefrontnew extends Chat {
                     account.gpt4times = 0;
                     account.last_use_time = moment().format(TimeFormat);
                     this.accountPool.syncfile();
-                    const newAccount = this.accountPool.get();
-                    destroy(newAccount.id);
+                    destroy();
                 } else {
                     done(account);
                 }
