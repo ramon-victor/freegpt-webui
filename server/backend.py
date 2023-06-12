@@ -59,18 +59,28 @@ class Backend_Api:
                 set_response_language(
                     prompt['content'], special_instructions[jailbreak])
 
-            conversation = [{'role': 'system', 'content': system_message}] + \
-                extra + special_instructions[jailbreak] + \
-                _conversation + [prompt]
+            # Initialize the conversation with the system message
+            conversation = [{'role': 'system', 'content': system_message}]
+
+            # Add extra results
+            conversation += extra
+
+            # Add jailbreak instructions, if any
+            jailbreak_instructions = isJailbreak(jailbreak)
+            if jailbreak_instructions:
+                conversation += jailbreak_instructions
+
+            # Add the existing conversation and the prompt
+            conversation += _conversation + [prompt]
 
             def stream():
                 if isGPT3Model(model):
                     response = get_response_gpt3(
-                        conversation, self.use_auto_proxy)
+                        conversation, self.use_auto_proxy, jailbreak)
+                    yield response
                 if isGPT4Model(model):
-                    response = get_response_gpt4(conversation)
-
-                yield response
+                    for response in get_response_gpt4(conversation, jailbreak):
+                        yield response
 
             return self.app.response_class(stream(), mimetype='text/event-stream')
 
@@ -85,8 +95,14 @@ class Backend_Api:
 
 
 def filter_jailbroken_response(response):
-    response = re.sub(r'GPT:.*?ACT:', '', response, flags=re.DOTALL)
-    response = re.sub(r'ACT:', '', response)
+    act_pattern = re.compile(r'ACT:', flags=re.DOTALL)
+    act_match = act_pattern.search(response)
+
+    if act_match:
+        response = response[act_match.end():]
+    else:
+        response = '[Please wait... Unlocking GPT 🔓]'
+
     return response
 
 
@@ -99,7 +115,7 @@ def set_response_language(prompt, special_instructions_list):
             special_instructions_list[0]['content']
 
 
-def get_response_gpt3(conversation, use_proxy):
+def get_response_gpt3(conversation, use_proxy, jailbreak):
     while use_proxy:
         try:
             random_proxy = get_random_proxy()
@@ -120,25 +136,33 @@ def get_response_gpt3(conversation, use_proxy):
             print(f"Error: {e}")
 
     if response is not None:
-        response = filter_jailbroken_response(response)
+        if isJailbreak(jailbreak):
+            response = filter_jailbroken_response(response)
+
         return response
 
 
-def get_response_gpt4(conversation):  
-    api_url = f"http://127.0.0.1:3000/ask?prompt={conversation}&model=forefront"  
-  
-    while True:  
-        try:  
-            res = requests.get(api_url)  
-            res.raise_for_status()  
-            response = res.text  
-            break  
-        except Exception as e:  
-            print(f"Error: {e}")  
-  
-    if response is not None:  
-        response = filter_jailbroken_response(response)  
-        return response  
+def get_response_gpt4(conversation, jailbreak):
+    api_url = f"http://127.0.0.1:3000/ask/stream?prompt={conversation}&model=forefront"
+
+    try:
+        with requests.get(api_url, stream=True) as res:
+            res.raise_for_status()
+            for response in res.iter_lines(chunk_size=1024, decode_unicode=True, delimiter='\n'):
+                if response.startswith("data: "):
+                    print(response)
+                    yield filter_response_gpt4(response, jailbreak)
+    except Exception as e:
+        print(f"Error: {e}")
+
+
+def filter_response_gpt4(response, jailbreak):
+    response = response[6:]  # Remove "data: " prefix
+    response = response[1:-1]  # Remove the quotation marks
+    if isJailbreak(jailbreak):
+        response = filter_jailbroken_response(response)
+
+    return response
 
 
 def isGPT3Model(model):
@@ -147,3 +171,10 @@ def isGPT3Model(model):
 
 def isGPT4Model(model):
     return model == "text-gpt-0040"
+
+
+def isJailbreak(jailbreak):
+    if jailbreak != "Default":
+        return special_instructions[jailbreak] if jailbreak in special_instructions else None
+    else:
+        return None
