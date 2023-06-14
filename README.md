@@ -42,8 +42,7 @@ _Coding to solve as quickly as possible_
 - [ ] Migrate the interface to React.js (?)
 
 ## Getting Started :white_check_mark:  
-To get started with this project, you'll need to clone the repository and have [Python](https://www.python.org/downloads/) and
-[Node.js](https://nodejs.org/en/download) installed on your system.  
+To get started with this project, you'll need to clone the repository and have [Python](https://www.python.org/downloads/) installed on your system.  
   
 ### Cloning the Repository :inbox_tray:
 Run the following command to clone the repository:  
