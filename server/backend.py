@@ -9,8 +9,6 @@ from requests import get
 from server.auto_proxy import get_random_proxy, update_working_proxies
 from server.config import special_instructions
 
-# Backend_Api class definition
-
 
 class Backend_Api:
     def __init__(self, app, config: dict) -> None:
@@ -47,7 +45,7 @@ class Backend_Api:
 
             # Generate response
             response = ChatCompletion.create(model=model, stream=True,
-                                             messages=messages, provider=g4f.Provider.Forefront)
+                                             messages=messages, provider=g4f.Provider.Yqcloud)
 
             return self.app.response_class(generate_stream(response, jailbreak), mimetype='text/event-stream')
 

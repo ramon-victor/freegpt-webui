@@ -9,14 +9,21 @@ url = 'https://phind.com'
 model = ['gpt-3.5-turbo', 'gpt-4']
 supports_stream = True
 
+
 def _create_completion(model: str, messages: list, stream: bool, **kwargs):
 
     path = os.path.dirname(os.path.realpath(__file__))
     config = json.dumps({
         'model': model,
-        'messages': messages}, separators=(',', ':'))
+        'messages': messages[:-1] if len(messages) > 1 else [],
+    })
 
-    cmd = ['python', f'{path}/helpers/phind.py', config]
+    try:
+        subprocess.run(["python3", "--version"],
+                       capture_output=True, check=True)
+        cmd = ["python3", f"{path}/helpers/phind.py", config]
+    except subprocess.CalledProcessError:
+        cmd = ["python", f"{path}/helpers/phind.py", config]
 
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
@@ -25,13 +32,13 @@ def _create_completion(model: str, messages: list, stream: bool, **kwargs):
             os.system('clear' if os.name == 'posix' else 'cls')
             yield 'Clouflare error, please try again...'
             os._exit(0)
-        
+
         else:
             if b'ping - 2023-' in line:
                 continue
-            
-            yield line.decode('utf-8', errors='ignore') #[:-1]
+            yield line.decode('utf-8', errors='ignore')  # [:-1]
 
-            
+
 params = f'g4f.Providers.{os.path.basename(__file__)[:-3]} supports: ' + \
-    '(%s)' % ', '.join([f"{name}: {get_type_hints(_create_completion)[name].__name__}" for name in _create_completion.__code__.co_varnames[:_create_completion.__code__.co_argcount]])
+    '(%s)' % ', '.join(
+        [f"{name}: {get_type_hints(_create_completion)[name].__name__}" for name in _create_completion.__code__.co_varnames[:_create_completion.__code__.co_argcount]])

@@ -7,6 +7,7 @@ url = 'forefront.com'
 model = ['gpt-3.5-turbo']
 supports_stream = True
 
+
 def _create_completion(model: str, messages: list, stream: bool, **kwargs):
     json_data = {
         'text': messages[-1]['content'],
@@ -19,18 +20,17 @@ def _create_completion(model: str, messages: list, stream: bool, **kwargs):
         'messages': messages[:-1] if len(messages) > 1 else [],
         'internetMode': 'auto'
     }
-    print(json_data)
-    response = requests.post( 'https://streaming.tenant-forefront-default.knative.chi.coreweave.com/free-chat',
-        json=json_data, stream=True)
 
-    for token in response.iter_lines(): 
+    response = requests.post('https://streaming.tenant-forefront-default.knative.chi.coreweave.com/free-chat',
+                             json=json_data, stream=True)
+
+    for token in response.iter_lines():
         if b'delta' in token:
             token = json.loads(token.decode().split('data: ')[1])['delta']
             yield (token)
 
+
 params = f'g4f.Providers.{os.path.basename(__file__)[:-3]} supports: ' + \
-    '(%s)' % ', '.join([f"{name}: {get_type_hints(_create_completion)[name].__name__}" for name in _create_completion.__code__.co_varnames[:_create_completion.__code__.co_argcount]])
-
-
-
-
+    '(%s)' % ', '.join(
+        [f"{name}: {get_type_hints(_create_completion)[name].__name__}" for name in 
+         _create_completion.__code__.co_varnames[:_create_completion.__code__.co_argcount]])

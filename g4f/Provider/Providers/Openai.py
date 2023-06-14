@@ -14,19 +14,19 @@ def _create_completion(model: str, messages: list, stream: bool, **kwargs):
 
     path = os.path.dirname(os.path.realpath(__file__))
     config = json.dumps({
-        'messages': messages,
-        'model': model}, separators=(',', ':'))
+        'model': model,
+        'messages': messages[:-1] if len(messages) > 1 else [],
+    })
     
     try:
         subprocess.run(["python3", "--version"], capture_output=True, check=True)
-        cmd = ["python3", f"{path}/helpers/bing.py", config]
+        cmd = ["python3", f"{path}/helpers/openai.py", config]
     except subprocess.CalledProcessError:
-        cmd = ["python", f"{path}/helpers/bing.py", config]
+        cmd = ["python", f"{path}/helpers/openai.py", config]
 
     p = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
 
     for line in iter(p.stdout.readline, b''):
-        #print(line)
         yield line.decode('utf-8', errors='ignore') #[:-1]
 
 params = f'g4f.Providers.{os.path.basename(__file__)[:-3]} supports: ' + \

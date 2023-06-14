@@ -198,7 +198,6 @@ class AsyncCompletion:
                     continue
                 
                 response = json.loads(obj)
-                #print(response, flush=True, end='')
                 if response.get('type') == 1 and response['arguments'][0].get('messages',):
                     response_text = response['arguments'][0]['messages'][0]['adaptiveCards'][0]['body'][0].get('text')
                     
