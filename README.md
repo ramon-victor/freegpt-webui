@@ -1,11 +1,16 @@
-# freeGPT WebUI 
- GPT-3 / GPT-4
+# FreeGPT WebUI 
+## GPT 3.5/4
 
-_with Jailbreak_   :unlock: 
+❌ <strong>NOT REQUIRE ANY API KEY</strong> 🔑
 
 This project showcases an unlocked version of ChatGPT with WebUI. <br>
 Experience the power of ChatGPT with a user-friendly interface, completely free. <br> <br>
-❌ <strong>NOT REQUIRE ANY API KEY</strong> 🔑
+
+🚧 Not working correctly:
+- Auto Proxy
+- Chat Context 
+
+_Coding to solve as quickly as possible_
 
 ## Table of Contents  
 - [To-Do List](#to-do-list-%EF%B8%8F)  
@@ -29,9 +34,9 @@ Experience the power of ChatGPT with a user-friendly interface, completely free.
 
 - [x] Integrate the free GPT API into the WebUI
 - [x] Create Docker support
-- [x] Auto Proxy
 - [x] Improve the Jailbreak functionality
 - [X] Add the GPT-4 model
+- [ ] Auto Proxy
 - [ ] Enhance the user interface
 - [ ] Enable editing and creating Jailbreaks in the WebUI
 - [ ] Migrate the interface to React.js (?)
@@ -51,11 +56,6 @@ git clone https://github.com/ramonvc/gptfree-jailbreak-webui.git
 Navigate to the project directory:
 ```
 cd gptfree-jailbreak-webui
-```
-
-Install Yarn:
-```
-npm install --global yarn
 ```
 
 Install the dependencies:
@@ -127,11 +127,8 @@ I highly recommend visiting and supporting both projects.
 ### WebUI
 The application interface was incorporated from the [chatgpt-clone](https://github.com/xtekky/chatgpt-clone) repository.
 
-### API FreeGPT
-The free GPT-3.5 API was incorporated from the [freeGPT](https://github.com/Ruu3f/freeGPT) repository.
-
-### API GPT4Free
-The free GPT-4 API was incorporated from the [GPT4Free](https://github.com/xiangsx/gpt4free-ts) repository.
+### API G4F
+The free GPT-4 API was incorporated from the [GPT4Free](https://github.com/xtekky/gpt4free) repository.
 
 <br>
 
