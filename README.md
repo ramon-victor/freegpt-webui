@@ -73,7 +73,7 @@ http://127.0.0.1:1338
 ```
 or
 ```
-http://172.17.0.2:1338
+http://localhost:1338
 ```
 ## Auto Proxy 🔑  
 The application includes an auto proxy feature that allows it to work with multiple free proxy servers. 
@@ -112,7 +112,7 @@ http://127.0.0.1:1338
 ```
 or
 ```
-http://172.17.0.2:1338
+http://localhost:1338
 ```
 
 When you're done using the application, stop the Docker containers using the following command:
