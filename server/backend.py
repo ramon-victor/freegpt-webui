@@ -27,10 +27,10 @@ class Backend_Api:
             }
         }
 
-        if self.use_auto_proxy:
-            update_proxies = threading.Thread(
-                target=update_working_proxies, daemon=True)
-            update_proxies.start()
+        #if self.use_auto_proxy:
+        #    update_proxies = threading.Thread(
+        #        target=update_working_proxies, daemon=True)
+        #    update_proxies.start()
 
     def _conversation(self):
         """  

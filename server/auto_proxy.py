@@ -2,7 +2,6 @@ import random
 import requests  
 import time  
 import threading  
-from freeGPT import gpt3  
   
   
 def fetch_proxies():  
@@ -31,7 +30,7 @@ def test_proxy(proxy, prompt, timeout):
     """  
     try:  
         start_time = time.time()  
-        res = gpt3.Completion.create(prompt=prompt, proxy=proxy)  
+        # res = gpt3.Completion.create(prompt=prompt, proxy=proxy)  
         end_time = time.time()  
         response_time = end_time - start_time  
   
