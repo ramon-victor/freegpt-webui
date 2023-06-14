@@ -27,7 +27,7 @@ class Backend_Api:
             }
         }
 
-        #if self.use_auto_proxy:
+        # if self.use_auto_proxy:
         #    update_proxies = threading.Thread(
         #        target=update_working_proxies, daemon=True)
         #    update_proxies.start()
@@ -137,23 +137,40 @@ def generate_stream(response, jailbreak):
             response_jailbreak += message
             if unlocked:
                 yield message
-            if response_jailbroken(response_jailbreak):
+            if response_jailbroken_success(response_jailbreak):
                 unlocked = True
+            if response_jailbroken_failed(response_jailbreak):
+                yield "Error: jailbreak failed. Try again."
+                break
     else:
         for message in response:
             yield message
 
 
-def response_jailbroken(response):
+def response_jailbroken_success(response: str) -> bool:
+    """Check if the response has been jailbroken.
+
+    :param response: Response string
+    :return: Boolean indicating if the response has been jailbroken
+    """
+    act_match = re.search(r'ACT:', response, flags=re.DOTALL)
+    return bool(act_match)
+
+
+def response_jailbroken_failed(response):
     """  
-    Check if the response has been jailbroken.  
+    Check if the response has not been jailbroken.  
 
     :param response: Response string  
-    :return: Boolean indicating if the response has been jailbroken  
+    :return: Boolean indicating if the response has not been jailbroken  
     """
-    act_pattern = re.compile(r'ACT:', flags=re.DOTALL)
-    act_match = act_pattern.search(response)
-    return act_match
+    if len(response) < 4:
+        return False
+
+    if not response.startswith("GPT:"):
+        return True
+    else:
+        return False
 
 
 def set_response_language(prompt):
