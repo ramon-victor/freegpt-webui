@@ -1,6 +1,6 @@
 models = {
-    'text-gpt-0035': 'gpt-3.5-turbo',
-    'text-gpt-0040': 'gpt-4',
+    'gpt-3.5-turbo',
+    'gpt-4',
 }
 
 special_instructions = {

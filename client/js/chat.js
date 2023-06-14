@@ -14,7 +14,7 @@ let prompt_lock = false;
 hljs.addPlugin(new CopyButtonPlugin());
 
 const format = (text) => {
-	return text.replace(/(?:\r\n|\r|\\n)/g, "\n");
+	return text.replace(/(?:\r\n|\r|\n)/g, "<br>");
 };
 
 message_input.addEventListener("blur", () => {
@@ -143,7 +143,7 @@ const ask_gpt = async (message) => {
 				chunk = `cloudflare token expired, please refresh the page.`;
 			}
 
-			text = format(chunk);
+			text += chunk;
 
 			document.getElementById(`gpt_${window.token}`).innerHTML = markdown.render(text);
 			document.querySelectorAll(`code`).forEach((el) => {
