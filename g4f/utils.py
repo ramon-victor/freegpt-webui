@@ -12,37 +12,28 @@ class Utils:
         browser_cookie3.vivaldi,  #  0.32% market share
     ]
 
-    def get_cookies(domain: str, setName: str = None, setBrowser: str = False) -> dict:
+    def get_cookies(self, setName: str = None, setBrowser: str = False) -> dict:
         cookies = {}
-        
-        if setBrowser != False:
-            for browser in Utils.browsers:
-                if browser.__name__ == setBrowser:
-                    try:
-                        for c in browser(domain_name=domain):
-                            if c.name not in cookies:
-                                cookies = cookies | {c.name: c.value} 
-                    
-                    except Exception as e:
-                        pass
-        
-        else:
-            for browser in Utils.browsers:
+
+        for browser in Utils.browsers:
+            if (
+                setBrowser != False
+                and browser.__name__ == setBrowser
+                or setBrowser == False
+            ):
                 try:
-                    for c in browser(domain_name=domain):
+                    for c in browser(domain_name=self):
                         if c.name not in cookies:
                             cookies = cookies | {c.name: c.value} 
-                
+
                 except Exception as e:
                     pass
-        
-        if setName:
-            try:
-                return {setName: cookies[setName]}
-            
-            except ValueError:
-                print(f'Error: could not find {setName} cookie in any browser.')
-                exit(1)
-        
-        else:
+
+        if not setName:
             return cookies
+        try:
+            return {setName: cookies[setName]}
+
+        except ValueError:
+            print(f'Error: could not find {setName} cookie in any browser.')
+            exit(1)

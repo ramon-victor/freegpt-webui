@@ -26,8 +26,8 @@ class Website:
         }
 
     def _chat(self, conversation_id):
-        if not '-' in conversation_id:
-            return redirect(f'/chat')
+        if '-' not in conversation_id:
+            return redirect('/chat')
 
         return render_template('index.html', chat_id=conversation_id)
 

@@ -4,20 +4,18 @@ import time
 import threading  
   
   
-def fetch_proxies():  
+def fetch_proxies():
     """Fetch a list of proxy servers from proxyscrape.com.  
   
     Returns:  
         list: A list of proxy servers in the format "IP:Port".  
     """  
-    url = "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all"  
-    response = requests.get(url)  
-    if response.status_code == 200:  
-        proxy_list = response.text.split("\r\n")[:-1]  
-        return proxy_list  
-    else:  
-        print(f"Error fetching proxies: {response.status_code}")  
-        return []  
+    url = "https://api.proxyscrape.com/v2/?request=displayproxies&protocol=http&timeout=10000&country=all&ssl=all&anonymity=all"
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.text.split("\r\n")[:-1]
+    print(f"Error fetching proxies: {response.status_code}")
+    return []  
   
   
 def test_proxy(proxy, prompt, timeout):  
