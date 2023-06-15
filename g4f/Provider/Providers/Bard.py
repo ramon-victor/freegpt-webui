@@ -10,17 +10,17 @@ supports_stream = False
 def _create_completion(model: str, messages: list, stream: bool, **kwargs):
     psid = {cookie.name: cookie.value for cookie in browser_cookie3.chrome(
         domain_name='.google.com')}['__Secure-1PSID']
-    
-    formatted = '\n'.join([
-        '%s: %s' % (message['role'], message['content']) for message in messages
-    ])
+
+    formatted = '\n'.join(
+        [f"{message['role']}: {message['content']}" for message in messages]
+    )
     prompt = f'{formatted}\nAssistant:'
 
     proxy = None
-    
-    if proxy == None:
+
+    if proxy is None:
         raise Exception('Proxy is required for Bard (set in g4f/Provider/Providers/Bard.py line 18)')
-    
+
     snlm0e = False
     conversation_id = None
     response_id = None
@@ -41,8 +41,13 @@ def _create_completion(model: str, messages: list, stream: bool, **kwargs):
         'cookie': f'__Secure-1PSID={psid}'
     }
 
-    snlm0e = re.search(r'SNlM0e\":\"(.*?)\"',
-                    client.get('https://bard.google.com/').text).group(1) if not snlm0e else snlm0e
+    snlm0e = (
+        re.search(
+            r'SNlM0e\":\"(.*?)\"', client.get('https://bard.google.com/').text
+        )[1]
+        if not snlm0e
+        else snlm0e
+    )
 
     params = {
         'bl': 'boq_assistant-bard-web-server_20230326.21_p0',
@@ -63,12 +68,11 @@ def _create_completion(model: str, messages: list, stream: bool, **kwargs):
     response = client.post(f'https://bard.google.com/_/BardChatUi/data/{intents}/StreamGenerate',
                         data=data, params=params)
 
-    chat_data = json.loads(response.content.splitlines()[3])[0][2]
-    if chat_data:
+    if chat_data := json.loads(response.content.splitlines()[3])[0][2]:
         json_chat_data = json.loads(chat_data)
 
         yield json_chat_data[0][0]
-        
+
     else:
         yield 'error'
 

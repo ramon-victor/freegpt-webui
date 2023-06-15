@@ -12,7 +12,7 @@ class Auth(requests.auth.AuthBase):
         self.token = 'sk-1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKL'
         
     def __call__(self, r):
-        r.headers["authorization"] = "Bearer " + self.token
+        r.headers["authorization"] = f"Bearer {self.token}"
         return r
 
 def _create_completion(model: str, messages: list, stream: bool, **kwargs):

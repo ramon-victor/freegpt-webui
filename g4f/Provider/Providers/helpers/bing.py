@@ -76,19 +76,9 @@ def format(msg: dict) -> str:
 
 def get_token():
     return
-    
-    try:
-        cookies = {c.name: c.value for c in browser_cookie3.edge(domain_name='bing.com')}
-        return cookies['_U']
-    except:
-        print('Error: could not find bing _U cookie in edge browser.')
-        exit(1)
 
 class AsyncCompletion:
-    async def create(
-        prompt     : str = None,
-        optionSets : list = None,
-        token     : str = None): # No auth required anymore
+    async def create(self, optionSets : list = None, token     : str = None): # No auth required anymore
         
         create = None
         for _ in range(5):
@@ -128,9 +118,7 @@ class AsyncCompletion:
 
             except Exception as e:
                 time.sleep(0.5)
-                continue
-        
-        if create == None: raise Exception('Failed to create conversation.')
+        if create is None: raise Exception('Failed to create conversation.')
 
         wss: websockets.WebSocketClientProtocol or None = None
 
@@ -165,48 +153,46 @@ class AsyncCompletion:
         struct = {
             'arguments': [
                 {
-                    'source': 'cib', 
-                    'optionsSets': optionSets, 
-                    'isStartOfSession': True, 
+                    'source': 'cib',
+                    'optionsSets': optionSets,
+                    'isStartOfSession': True,
                     'message': {
-                        'author': 'user', 
-                        'inputMethod': 'Keyboard', 
-                        'text': prompt, 
-                        'messageType': 'Chat'
-                    }, 
-                    'conversationSignature': conversationSignature, 
-                    'participant': {
-                        'id': clientId
-                    }, 
-                    'conversationId': conversationId
+                        'author': 'user',
+                        'inputMethod': 'Keyboard',
+                        'text': self,
+                        'messageType': 'Chat',
+                    },
+                    'conversationSignature': conversationSignature,
+                    'participant': {'id': clientId},
+                    'conversationId': conversationId,
                 }
-            ], 
-            'invocationId': '0', 
-            'target': 'chat', 
-            'type': 4
+            ],
+            'invocationId': '0',
+            'target': 'chat',
+            'type': 4,
         }
-        
+
         await wss.send(format(struct))
-        
+
         base_string = ''
-        
+
         final = False
         while not final:
             objects = str(await wss.recv()).split('\x1e')
             for obj in objects:
                 if obj is None or obj == '':
                     continue
-                
+
                 response = json.loads(obj)
                 if response.get('type') == 1 and response['arguments'][0].get('messages',):
                     response_text = response['arguments'][0]['messages'][0]['adaptiveCards'][0]['body'][0].get('text')
-                    
+
                     yield (response_text.replace(base_string, ''))
                     base_string = response_text
-        
+
                 elif response.get('type') == 2:
                     final = True
-        
+
         await wss.close()
 
 async def run(optionSets, messages):

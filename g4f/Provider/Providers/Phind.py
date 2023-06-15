@@ -33,9 +33,7 @@ def _create_completion(model: str, messages: list, stream: bool, **kwargs):
             yield 'Clouflare error, please try again...'
             os._exit(0)
 
-        else:
-            if b'ping - 2023-' in line:
-                continue
+        elif b'ping - 2023-' not in line:
             yield line.decode('utf-8', errors='ignore')  # [:-1]
 
 
