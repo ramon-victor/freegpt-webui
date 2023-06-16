@@ -1,6 +1,6 @@
 .stop-generating {
 	position: absolute;
-	bottom: 118px;
+	bottom: 128px;
 	left: 50%;
 	transform: translateX(-50%);
 	z-index: 1000000;
@@ -10,14 +10,7 @@
 	backdrop-filter: blur(20px);
 	-webkit-backdrop-filter: blur(20px);
 	background-color: var(--blur-bg);
-	border-radius: var(--border-radius-1);
-	border: 1px solid var(--blur-border);
-	padding: 10px 15px;
 	color: var(--colour-3);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 12px;
 	cursor: pointer;
 	animation: show_popup 0.4s;
 }

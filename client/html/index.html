@@ -16,54 +16,40 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
 		<link rel="manifest" href="/assets/img/site.webmanifest" />
-		<script src="/assets/js/icons.js"></script>
-		<script src="/assets/js/chat.js" defer></script>
-		<script src="https://cdn.jsdelivr.net/npm/markdown-it@latest/dist/markdown-it.min.js"></script>
 		<link
 			rel="stylesheet"
 			href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/base16/dracula.min.css" />
-		<script>
-			const user_image = `<img src="/assets/img/user.png" alt="User Avatar">`;
-			const gpt_image = `<img src="/assets/img/gpt.png" alt="GPT Avatar">`;
-		</script>
-		<script src="/assets/js/highlight.min.js"></script>
-		<script src="/assets/js/highlightjs-copy.min.js"></script>
-		<script>
-			window.conversation_id = `{{chat_id}}`;
-		</script>
-		<title>ChatGPT</title>
+		<title>FreeGPT</title>
 	</head>
 
 	<body>
-		<div class="background-gradient"></div>
 		<div class="main-container">
 			<div class="box sidebar">
 				<div class="top">
-					<button class="new-conversation" onclick="new_conversation()">
+					<button class="button" onclick="new_conversation()">
 						<i class="fa-regular fa-plus"></i>
 						<span>New Conversation</span>
 					</button>
 					<div class="spinner"></div>
 				</div>
 				<div class="sidebar-footer">
-					<button onclick="delete_conversations()">
+					<button class="button" onclick="delete_conversations()">
 						<i class="fa-regular fa-trash"></i>
 						<span>Clear Conversations</span>
 					</button>
 					<a class="info" href="https://github.com/ramonvc/gptfree-jailbreak-webui" target="_blank">
 						<i class="fa-brands fa-github"></i>
 						<span class="conversation-title">
-							@ramonvc<br />
-							Version: 0.0.4-Alpha<br />
+							Author: @ramonvc<br />
+							Version: 0.0.5-Alpha<br />
 						</span>
 					</a>
 				</div>
 			</div>
 			<div class="conversation">
 				<div class="stop-generating stop-generating-hidden">
-					<button id="cancelButton">
+					<button class="button" id="cancelButton">
 						<span>Stop Generating</span>
-						<i class="fa-regular fa-stop"></i>
 					</button>
 				</div>
 				<div class="box" id="messages"></div>
@@ -81,19 +67,19 @@
 					</div>
 				</div>
 				<div class="buttons">
-					<div class="field">
-						<input type="checkbox" id="switch" />
+					<div class="field" style="display: none">
+						<input type="checkbox" disabled id="switch" />
 						<label for="switch"></label>
 						<span class="about">Web Access</span>
 					</div>
 					<div class="field">
-						<select name="model" id="model">
+						<select class="dropdown" name="model" id="model">
 							<option value="gpt-3.5-turbo">GPT-3.5</option>
 							<option value="gpt-4" selected>GPT-4</option>
 						</select>
 					</div>
 					<div class="field">
-						<select name="jailbreak" id="jailbreak">
+						<select class="dropdown" name="jailbreak" id="jailbreak">
 							<option value="default" selected>Default</option>
 							<option value="gpt-dan-11.0">DAN</option>
 							<option value="gpt-evil">Evil</option>
@@ -105,5 +91,12 @@
 		<div class="mobile-sidebar">
 			<i class="fa-solid fa-bars"></i>
 		</div>
+
+		<!-- scripts -->
+		<script src="/assets/js/icons.js"></script>
+		<script src="/assets/js/chat.js" defer></script>
+		<script src="https://cdn.jsdelivr.net/npm/markdown-it@latest/dist/markdown-it.min.js"></script>
+		<script src="/assets/js/highlight.min.js"></script>
+		<script src="/assets/js/highlightjs-copy.min.js"></script>
 	</body>
 </html>

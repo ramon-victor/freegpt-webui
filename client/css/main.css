@@ -1,5 +1,7 @@
 .main-container {
 	display: flex;
-	gap: var(--section-gap);
-	height: 100%;
+	padding: var(--section-gap);
+	height: 100vh;
+	justify-content: center;
+	box-sizing: border-box;
 }

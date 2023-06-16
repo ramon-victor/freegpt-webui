@@ -1,29 +1,26 @@
 .conversation {
-	width: 100%;
+	width: 60%;
+	margin: 0px 16px;
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
 }
 
 .conversation #messages {
 	width: 100%;
-	height: 100%;
 	display: flex;
 	flex-direction: column;
 	overflow: auto;
 	overflow-wrap: break-word;
-	padding-bottom: 50px;
+	padding-bottom: 8px;
 }
 
 .conversation .user-input {
-	max-height: 200px;
+	max-height: 180px;
+	margin: 16px 0px;
 }
 
 .conversation .user-input input {
-	font-size: 15px;
-	width: 100%;
-	height: 100%;
-	padding: 12px 15px;
+	font-size: 1rem;
 	background: none;
 	border: none;
 	outline: none;
@@ -40,39 +37,17 @@
 }
 
 .conversation .user-input textarea {
-	font-size: 15px;
+	font-size: 1rem;
 	width: 100%;
 	height: 100%;
-	padding: 12px 15px;
+	padding: 12px;
 	background: none;
 	border: none;
 	outline: none;
 	color: var(--colour-3);
-
 	resize: vertical;
 	max-height: 150px;
 	min-height: 80px;
-}
-
-.new-conversation {
-	padding: 8px 12px;
-	display: flex;
-	gap: 18px;
-	align-items: center;
-	cursor: pointer;
-	user-select: none;
-	background: transparent;
-	border: 1px dashed var(--conversations);
-	border-radius: var(--border-radius-1);
-}
-
-.new-conversation span {
-	color: var(--colour-3);
-	font-size: 14px;
-}
-
-.new-conversation:hover {
-	border-style: solid;
 }
 
 .box {
@@ -88,7 +63,7 @@
 .input-box {
 	display: flex;
 	align-items: center;
-	padding-right: 15px;
+	padding: 8px;
 	cursor: pointer;
 }
 
@@ -126,5 +101,22 @@
 
 	100% {
 		background: #ffffff00;
+	}
+}
+
+@media screen and (max-width: 990px) {
+	.conversation {
+		width: 100%;
+		height: 90%;
+	}
+}
+
+@media screen and (max-height: 720px) {
+	.box {
+		height: 70%;
+	}
+
+	.conversation .user-input textarea {
+		font-size: 0.875rem;
 	}
 }

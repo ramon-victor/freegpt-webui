@@ -4,11 +4,13 @@
 	border-radius: var(--border-radius-1);
 	border: 1px solid var(--blur-border);
 	font-size: 15px;
+	word-wrap: break-word;
+	white-space: pre-wrap;
 }
 
 #message-input {
 	margin-right: 30px;
-	height: 80px;
+	height: 64px;
 }
 
 #message-input::-webkit-scrollbar {

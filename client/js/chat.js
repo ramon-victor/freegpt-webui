@@ -9,7 +9,10 @@ const box_conversations = document.querySelector(`.top`);
 const spinner = box_conversations.querySelector(".spinner");
 const stop_generating = document.querySelector(`.stop-generating`);
 const send_button = document.querySelector(`#send-button`);
+const user_image = `<img src="/assets/img/user.png" alt="User Avatar">`;
+const gpt_image = `<img src="/assets/img/gpt.png" alt="GPT Avatar">`;
 let prompt_lock = false;
+window.conversation_id = `{{chat_id}}`;
 
 hljs.addPlugin(new CopyButtonPlugin());
 
@@ -32,13 +35,12 @@ const delete_conversations = async () => {
 
 const handle_ask = async () => {
 	message_input.style.height = `80px`;
-	message_input.focus();
-
 	window.scrollTo(0, 0);
 	let message = message_input.value;
 
 	if (message.length > 0) {
 		message_input.value = ``;
+		message_input.dispatchEvent(new Event("input"));
 		await ask_gpt(message);
 	}
 };
@@ -72,7 +74,7 @@ const ask_gpt = async (message) => {
 
 		message_box.innerHTML += `
             <div class="message">
-                <div class="user">
+                <div class="avatar-container">
                     ${user_image}
                 </div>
                 <div class="content" id="user_${token}"> 
@@ -88,7 +90,7 @@ const ask_gpt = async (message) => {
 
 		message_box.innerHTML += `
             <div class="message">
-                <div class="user">
+                <div class="avatar-container">
                     ${gpt_image}
                 </div>
                 <div class="content" id="gpt_${window.token}">
@@ -259,7 +261,7 @@ const load_conversation = async (conversation_id) => {
 	for (item of conversation.items) {
 		message_box.innerHTML += `
             <div class="message">
-                <div class="user">
+                <div class="avatar-container">
                     ${item.role == "assistant" ? gpt_image : user_image}
                 </div>
                 <div class="content">
@@ -394,20 +396,21 @@ window.onload = async () => {
 		}
 	}
 
-	message_input.addEventListener(`keydown`, async (evt) => {
+	message_input.addEventListener("keydown", async (evt) => {
 		if (prompt_lock) return;
-		if (evt.keyCode === 13 && !evt.shiftKey) {
-			console.log("pressed enter");
+
+		if (evt.key === "Enter" && !evt.shiftKey) {
+			evt.preventDefault();
 			await handle_ask();
 		} else {
-			message_input.style.removeProperty("height");
-			message_input.style.height = message_input.scrollHeight + 4 + "px";
+			updateTextarea(evt.target);
 		}
 	});
 
-	send_button.addEventListener(`click`, async () => {
-		console.log("clicked send");
+	send_button.addEventListener("click", async (event) => {
+		event.preventDefault();
 		if (prompt_lock) return;
+		message_input.blur();
 		await handle_ask();
 	});
 
@@ -420,9 +423,11 @@ document.querySelector(".mobile-sidebar").addEventListener("click", (event) => {
 	if (sidebar.classList.contains("shown")) {
 		sidebar.classList.remove("shown");
 		event.target.classList.remove("rotated");
+		document.body.style.overflow = "auto";
 	} else {
 		sidebar.classList.add("shown");
 		event.target.classList.add("rotated");
+		document.body.style.overflow = "hidden";
 	}
 
 	window.scrollTo(0, 0);
@@ -465,3 +470,12 @@ const load_settings_localstorage = async () => {
 		}
 	});
 };
+
+function clearTextarea(textarea) {
+	textarea.style.removeProperty("height");
+	textarea.style.height = `${textarea.scrollHeight + 4}px`;
+
+	if (textarea.value.trim() === "" && textarea.value.includes("\n")) {
+		textarea.value = "";
+	}
+}

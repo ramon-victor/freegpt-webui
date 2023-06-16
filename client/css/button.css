@@ -1,0 +1,26 @@
+.button {
+	display: flex;
+	padding: 8px 12px;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid var(--conversations);
+	border-radius: var(--border-radius-1);
+	width: 100%;
+	background: transparent;
+	cursor: pointer;
+}
+
+.button span {
+	color: var(--colour-3);
+	font-size: 0.875rem;
+}
+
+.button i::before {
+	margin-right: 8px;
+}
+
+@media screen and (max-width: 990px) {
+	.button span {
+		font-size: 0.75rem;
+	}
+}
