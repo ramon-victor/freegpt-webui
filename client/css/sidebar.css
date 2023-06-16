@@ -39,6 +39,7 @@
 	flex-direction: column;
 	gap: 16px;
 	overflow: auto;
+	padding-right: 8px;
 }
 
 .sidebar .info {
@@ -93,11 +94,28 @@
 	overflow-y: auto;
 }
 
+
+
 @keyframes spinner {
 	to {
 		transform: rotate(360deg);
 	}
 }
+
+/* scrollbar */  
+.sidebar .top::-webkit-scrollbar {  
+	width: 4px;
+	padding: 8px 0px;
+}  
+  
+.sidebar .top::-webkit-scrollbar-track {  
+	background-color: #ffffff00;  
+}  
+  
+.sidebar .top::-webkit-scrollbar-thumb {  
+	background-color: #555555;  
+	border-radius: 10px;  
+}  
 
 .spinner:before {
 	content: "";
