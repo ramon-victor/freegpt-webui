@@ -35,9 +35,9 @@ _Coding to solve as quickly as possible_
 - [x] Integrate the free GPT API into the WebUI
 - [x] Create Docker support
 - [x] Improve the Jailbreak functionality
-- [X] Add the GPT-4 model
+- [x] Add the GPT-4 model
+- [x] Enhance the user interface
 - [ ] Auto Proxy
-- [ ] Enhance the user interface
 - [ ] Enable editing and creating Jailbreaks in the WebUI
 - [ ] Migrate the interface to React.js (?)
 
