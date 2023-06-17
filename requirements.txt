@@ -59,7 +59,6 @@ pyrsistent==0.19.3
 PySocks==1.7.1
 python-dateutil==2.8.2
 pytz==2023.3
-quickjs==1.19.2
 random-username==1.0.2
 requests==2.31.0
 rfc3986==1.5.0

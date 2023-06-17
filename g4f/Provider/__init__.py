@@ -10,7 +10,6 @@ from .Providers import (
     Ora,
     Aws,
     Bard,
-    Vercel,
     Pierangelo,
     Forefront
 )

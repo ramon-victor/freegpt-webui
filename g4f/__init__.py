@@ -23,7 +23,7 @@ class Model(metaclass=MetaModels):
     class davinvi_003:
         name: str = 'davinvi-003'
         base_provider: str = 'openai'
-        best_site: Provider.Provider = Provider.Vercel
+        best_site: Provider.Provider = Provider.Forefront
         
 class Utils:
     convert: dict = {
