@@ -1,7 +1,6 @@
 .sidebar {
 	max-width: 260px;
 	padding: var(--section-gap);
-	overflow: auto;
 	flex-shrink: 0;
 	display: flex;
 	flex-direction: column;
@@ -37,9 +36,13 @@
 .sidebar .top {
 	display: flex;
 	flex-direction: column;
+	overflow: hidden;
 	gap: 16px;
-	overflow: auto;
 	padding-right: 8px;
+}
+
+.sidebar .top:hover {
+	overflow: auto;
 }
 
 .sidebar .info {
@@ -66,9 +69,9 @@
 
 .sidebar-footer {
 	width: 100%;
+	margin-top: 16px;
 	display: flex;
 	flex-direction: column;
-	gap: 10px;
 }
 
 .sidebar-footer button {

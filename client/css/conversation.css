@@ -104,6 +104,21 @@
 	}
 }
 
+/* scrollbar */
+.conversation #messages::-webkit-scrollbar {
+	width: 4px;
+	padding: 8px 0px;
+}
+
+.conversation #messages::-webkit-scrollbar-track {
+	background-color: #ffffff00;
+}
+
+.conversation #messages::-webkit-scrollbar-thumb {
+	background-color: #555555;
+	border-radius: 10px;
+}
+
 @media screen and (max-width: 990px) {
 	.conversation {
 		width: 100%;
@@ -112,7 +127,7 @@
 }
 
 @media screen and (max-height: 720px) {
-	.box {
+	.conversation.box {
 		height: 70%;
 	}
 
