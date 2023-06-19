@@ -8,7 +8,6 @@ Experience the power of ChatGPT with a user-friendly interface, completely free.
 
 🚧 Not working correctly:
 - Auto Proxy
-- Chat Context 
 
 _Coding to solve as quickly as possible_
 
