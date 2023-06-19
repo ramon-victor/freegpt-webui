@@ -79,18 +79,23 @@ def build_messages(jailbreak):
         f'{set_response_language(prompt)}'
     )
 
-    extra = fetch_search_results(prompt["content"]) if internet_access else []
     # Initialize the conversation with the system message
     conversation = [{'role': 'system', 'content': system_message}]
 
-    # Add extra results
-    conversation += extra
-
-    if jailbreak_instructions := isJailbreak(jailbreak):
-        conversation += jailbreak_instructions
+    # Add web results if enabled
+    conversation += fetch_search_results(
+        prompt["content"]) if internet_access else []
 
     # Add the existing conversation and the prompt
-    conversation += [prompt]
+    conversation += _conversation + [prompt]
+
+    # Add jailbreak instructions if enabled
+    if jailbreak_instructions := isJailbreak(jailbreak):
+        index_last_object = len(conversation) - 1
+        conversation[index_last_object:index_last_object] = jailbreak_instructions
+
+    # Reduce conversation size to avoid API Token quantity error
+    conversation = conversation[-4:] if len(conversation) > 3 else conversation
 
     return conversation
 
