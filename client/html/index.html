@@ -66,24 +66,28 @@
 						</div>
 					</div>
 				</div>
-				<div class="buttons">
-					<div class="field" style="display: none">
-						<input type="checkbox" disabled id="switch" />
-						<label for="switch"></label>
-						<span class="about">Web Access</span>
-					</div>
-					<div class="field">
-						<select class="dropdown" name="model" id="model">
-							<option value="gpt-3.5-turbo">GPT-3.5</option>
-							<option value="gpt-4" selected>GPT-4</option>
-						</select>
-					</div>
-					<div class="field">
-						<select class="dropdown" name="jailbreak" id="jailbreak">
-							<option value="default" selected>Default</option>
-							<option value="gpt-dan-11.0">DAN</option>
-							<option value="gpt-evil">Evil</option>
-						</select>
+				<div>
+					<div class="options-container">
+						<div class="buttons">
+							<div class="field">
+								<select class="dropdown" name="model" id="model">
+									<option value="gpt-3.5-turbo">GPT-3.5</option>
+									<option value="gpt-4" selected>GPT-4</option>
+								</select>
+							</div>
+							<div class="field">
+								<select class="dropdown" name="jailbreak" id="jailbreak">
+									<option value="default" selected>Default</option>
+									<option value="gpt-dan-11.0">DAN</option>
+									<option value="gpt-evil">Evil</option>
+								</select>
+							</div>
+						</div>
+						<div class="field checkbox">
+							<input type="checkbox" id="switch" />
+							<label for="switch"></label>
+							<span>Web Access</span>
+						</div>
 					</div>
 				</div>
 			</div>

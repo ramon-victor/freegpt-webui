@@ -1,4 +1,3 @@
-import threading
 import re
 import g4f
 from g4f import ChatCompletion
@@ -82,17 +81,19 @@ def build_messages(jailbreak):
     # Initialize the conversation with the system message
     conversation = [{'role': 'system', 'content': system_message}]
 
+    # Add the existing conversation
+    conversation += _conversation
+
     # Add web results if enabled
     conversation += fetch_search_results(
         prompt["content"]) if internet_access else []
 
-    # Add the existing conversation and the prompt
-    conversation += _conversation + [prompt]
-
     # Add jailbreak instructions if enabled
     if jailbreak_instructions := isJailbreak(jailbreak):
-        index_last_object = len(conversation) - 1
-        conversation[index_last_object:index_last_object] = jailbreak_instructions
+        conversation += jailbreak_instructions
+
+    # Add the prompt
+    conversation += [prompt]
 
     # Reduce conversation size to avoid API Token quantity error
     conversation = conversation[-4:] if len(conversation) > 3 else conversation
@@ -110,14 +111,16 @@ def fetch_search_results(query):
     search = get('https://ddg-api.herokuapp.com/search',
                  params={
                      'query': query,
-                     'limit': 3,
+                     'limit': 5,
                  })
 
     results = []
+    snippets = ""
     for index, result in enumerate(search.json()):
-        snippet = f'[{index}] "{result["snippet"]}"\nURL:{result["link"]}\n\n'
-        results.append({'role': 'user', 'content': snippet})
-
+        snippet = f'[{index + 1}] "{result["snippet"]}" URL:{result["link"]}.'
+        snippets += snippet
+    results.append({'role': 'system', 'content': snippets})
+    
     return results
 
 
