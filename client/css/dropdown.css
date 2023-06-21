@@ -1,3 +1,10 @@
 .dropdown {
-    border: 1px solid var(--conversations);
+	border: 1px solid var(--conversations);
+}
+
+@media screen and (max-width: 990px) {
+	.dropdown {
+		padding: 4px 8px;
+		font-size: 0.75rem;
+	}
 }

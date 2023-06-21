@@ -14,16 +14,3 @@ label {
 	overflow: hidden;
 	transition: 0.33s;
 }
-
-label:after {
-	content: "";
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	left: 5px;
-	width: 20px;
-	height: 20px;
-	background: var(--colour-3);
-	border-radius: 90px;
-	transition: 0.33s;
-}

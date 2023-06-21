@@ -1,0 +1,10 @@
+.options-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+@media screen and (max-width: 990px) {
+	.options-container {
+		justify-content: space-between;
+	}
+}

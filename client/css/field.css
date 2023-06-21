@@ -1,18 +1,11 @@
 .field {
-	height: fit-content;
 	display: flex;
 	align-items: center;
-	gap: 16px;
-	padding-right: 15px;
-}
-
-.field .about {
-	font-size: 14px;
-	color: var(--colour-3);
+	padding: 4px;
 }
 
 @media screen and (max-width: 990px) {
 	.field {
-		width: fit-content;
+		flex-wrap: nowrap;
 	}
 }

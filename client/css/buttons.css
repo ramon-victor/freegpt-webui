@@ -1,14 +1,4 @@
 .buttons {
 	display: flex;
-	align-items: center;
 	justify-content: left;
-	width: 100%;
-}
-
-@media screen and (max-width: 990px) {
-	.buttons {
-		align-items: flex-start;
-		flex-wrap: wrap;
-		gap: 15px;
-	}
 }
