@@ -134,16 +134,17 @@ def generate_stream(response, jailbreak):
     """
     if isJailbreak(jailbreak):
         response_jailbreak = ''
-        unlocked = False
+        jailbroken_checked = False
         for message in response:
             response_jailbreak += message
-            if unlocked:
+            if jailbroken_checked:
                 yield message
-            if response_jailbroken_success(response_jailbreak):
-                unlocked = True
-            if response_jailbroken_failed(response_jailbreak):
-                yield "Error: jailbreak failed. Try again."
-                break
+            else:
+                if response_jailbroken_success(response_jailbreak):
+                    jailbroken_checked = True
+                if response_jailbroken_failed(response_jailbreak):
+                    yield response_jailbreak
+                    jailbroken_checked = True
     else:
         yield from response
 
@@ -165,7 +166,7 @@ def response_jailbroken_failed(response):
     :param response: Response string  
     :return: Boolean indicating if the response has not been jailbroken  
     """
-    return False if len(response) < 4 else not response.startswith("GPT:")
+    return False if len(response) < 4 else not (response.startswith ("GPT:") or response.startswith("ACT:"))
 
 
 def set_response_language(prompt):
