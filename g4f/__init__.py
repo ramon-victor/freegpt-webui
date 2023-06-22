@@ -3,13 +3,14 @@ import sys
 from .typing import MetaModels, Union
 from . import Provider
 
+
 class Model(metaclass=MetaModels):
-    
+
     class model:
         name: str
         base_provider: str
         best_site: str
-    
+
     class gpt_35_turbo:
         name: str = 'gpt-3.5-turbo'
         base_provider: str = 'openai'
@@ -18,18 +19,15 @@ class Model(metaclass=MetaModels):
     class gpt_4:
         name: str = 'gpt-4'
         base_provider: str = 'openai'
-        best_site: Provider.Provider = Provider.Bing
-        
-    class davinvi_003:
-        name: str = 'davinvi-003'
-        base_provider: str = 'openai'
         best_site: Provider.Provider = Provider.Forefront
-        
+
+
 class Utils:
     convert: dict = {
         'gpt-3.5-turbo': Model.gpt_35_turbo,
         'gpt-4': Model.gpt_4
     }
+
 
 class ChatCompletion:
     @staticmethod

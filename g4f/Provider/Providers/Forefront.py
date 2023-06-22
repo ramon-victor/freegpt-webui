@@ -4,7 +4,7 @@ import requests
 from ...typing import sha256, Dict, get_type_hints
 
 url = 'forefront.com'
-model = ['gpt-3.5-turbo']
+model = ['gpt-3.5-turbo', 'gpt-4']
 supports_stream = True
 
 
@@ -16,11 +16,11 @@ def _create_completion(model: str, messages: list, stream: bool, **kwargs):
         'parentId': '',
         'workspaceId': '',
         'messagePersona': '607e41fe-95be-497e-8e97-010a59b2e2c0',
-        'model': 'gpt-4',
+        'model': model,
         'messages': messages[:-1] if len(messages) > 1 else [],
         'internetMode': 'auto'
     }
-
+    
     response = requests.post('https://streaming.tenant-forefront-default.knative.chi.coreweave.com/free-chat',
                              json=json_data, stream=True)
 
