@@ -21,10 +21,11 @@ _Coding to solve as quickly as possible_
   - [Enable Auto Proxy](#enable-auto-proxy)
 - [Docker](#docker-)  
   - [Prerequisites](#prerequisites)  
-  - [Running the Docker](#running-the-docker)  
+  - [Running the Docker](#running-the-docker)
 - [Incorporated Projects](#incorporated-projects-busts_in_silhouette)
   - [WebUI](#webui) 
-  - [API FreeGPT](#api-freegpt)
+  - [API FreeGPT](#api-g4f)
+- [Star History](#star-history)
 - [Legal Notice](#legal-notice) 
 
 ##
@@ -127,6 +128,11 @@ The application interface was incorporated from the [chatgpt-clone](https://gith
 
 ### API G4F
 The free GPT-4 API was incorporated from the [GPT4Free](https://github.com/xtekky/gpt4free) repository.
+
+<br>
+
+## Star History
+[![Star History Chart](https://api.star-history.com/svg?repos=ramonvc/freegpt-webui&type=Timeline)](https://star-history.com/#ramonvc/freegpt-webui&Timeline)
 
 <br>
 
