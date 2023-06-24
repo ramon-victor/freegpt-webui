@@ -38,7 +38,7 @@ _Coding to solve as quickly as possible_
 - [x] Add the GPT-4 model
 - [x] Enhance the user interface
 - [ ] Auto Proxy
-- [ ] Enable editing and creating Jailbreaks in the WebUI
+- [ ] Enable editing and creating Jailbreaks/Roles in the WebUI
 - [ ] Migrate the interface to React.js (?)
 
 ## Getting Started :white_check_mark:  
