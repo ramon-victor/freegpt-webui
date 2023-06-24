@@ -96,14 +96,14 @@ To enable it, just go to the `config.json` file and change the value of the "use
 Before you start, make sure you have installed [Docker](https://www.docker.com/get-started) on your machine.
 
 ### Running the Docker
-Build the Docker image:
+Pull the Docker image from Docker Hub:
 ```
-docker-compose build
+docker pull ramonvc/freegpt-webui
 ```
 
-Run the application using Docker Compose:
+Run the application using Docker:
 ```
-docker-compose up
+docker run -p 1338:1338 ramonvc/freegpt-webui
 ```
 
 Access the application in your browser using the URL:
@@ -117,7 +117,7 @@ http://localhost:1338
 
 When you're done using the application, stop the Docker containers using the following command:
 ```
-docker-compose down
+docker stop <container-id>
 ```
 
 ## Incorporated Projects :busts_in_silhouette:
