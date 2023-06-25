@@ -16,10 +16,6 @@ window.conversation_id = `{{chat_id}}`;
 
 hljs.addPlugin(new CopyButtonPlugin());
 
-const format = (text) => {
-	return text.replace(/(?:\r\n|\r|\n)/g, "<br>");
-};
-
 message_input.addEventListener("blur", () => {
 	window.scrollTo(0, 0);
 });
@@ -72,16 +68,7 @@ const ask_gpt = async (message) => {
 
 		stop_generating.classList.remove(`stop-generating-hidden`);
 
-		message_box.innerHTML += `
-            <div class="message">
-                <div class="avatar-container">
-                    ${user_image}
-                </div>
-                <div class="content" id="user_${token}"> 
-                    ${format(message)}
-                </div>
-            </div>
-        `;
+		add_user_message_box(message);
 
 		message_box.scrollTop = message_box.scrollHeight;
 		window.scrollTo(0, 0);
@@ -199,6 +186,25 @@ const ask_gpt = async (message) => {
 	}
 };
 
+const add_user_message_box = (message) => {
+	const messageDiv = document.createElement("div");
+	messageDiv.classList.add("message");
+
+	const avatarContainer = document.createElement("div");
+	avatarContainer.classList.add("avatar-container");
+	avatarContainer.innerHTML = user_image;
+
+	const contentDiv = document.createElement("div");
+	contentDiv.classList.add("content");
+	contentDiv.id = `user_${token}`;
+	contentDiv.textContent = message;
+
+	messageDiv.appendChild(avatarContainer);
+	messageDiv.appendChild(contentDiv);
+
+	message_box.appendChild(messageDiv);
+};
+
 const decodeUnicode = (str) => {
 	return str.replace(/\\u([a-fA-F0-9]{4})/g, function (match, grp) {
 		return String.fromCharCode(parseInt(grp, 16));
@@ -259,16 +265,11 @@ const load_conversation = async (conversation_id) => {
 	console.log(conversation, conversation_id);
 
 	for (item of conversation.items) {
-		message_box.innerHTML += `
-            <div class="message">
-                <div class="avatar-container">
-                    ${item.role == "assistant" ? gpt_image : user_image}
-                </div>
-                <div class="content">
-                    ${item.role == "assistant" ? markdown.render(item.content) : item.content}
-                </div>
-            </div>
-        `;
+		if (is_assistant(item.role)) {
+			message_box.innerHTML += load_gpt_message_box(item.content);
+		} else {
+			message_box.innerHTML += load_user_message_box(item.content);
+		}
 	}
 
 	document.querySelectorAll(`code`).forEach((el) => {
@@ -280,6 +281,41 @@ const load_conversation = async (conversation_id) => {
 	setTimeout(() => {
 		message_box.scrollTop = message_box.scrollHeight;
 	}, 500);
+};
+
+const load_user_message_box = (content) => {
+	const messageDiv = document.createElement("div");
+	messageDiv.classList.add("message");
+
+	const avatarContainer = document.createElement("div");
+	avatarContainer.classList.add("avatar-container");
+	avatarContainer.innerHTML = user_image;
+
+	const contentDiv = document.createElement("div");
+	contentDiv.classList.add("content");
+	contentDiv.textContent = content;
+
+	messageDiv.appendChild(avatarContainer);
+	messageDiv.appendChild(contentDiv);
+
+	return messageDiv.outerHTML;
+};
+
+const load_gpt_message_box = (content) => {
+	return `
+            <div class="message">
+                <div class="avatar-container">
+                    ${gpt_image}
+                </div>
+                <div class="content">
+                    ${markdown.render(content)}
+                </div>
+            </div>
+        `;
+};
+
+const is_assistant = (role) => {
+	return role == "assistant";
 };
 
 const get_conversation = async (conversation_id) => {
