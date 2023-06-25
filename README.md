@@ -170,5 +170,5 @@ Please note the following:
    content and any changes made to this repository.
 
 By using this repository or any code related to it, you agree to these terms. The author is not responsible for any
-copies, forks, or reuploads made by other users. This is the author's only account and repository. To prevent
+copies, forks, or re-uploads made by other users. This is the author's only account and repository. To prevent
 impersonation or irresponsible actions, you may comply with the GNU GPL license this Repository uses.

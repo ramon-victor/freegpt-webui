@@ -9,6 +9,7 @@ supports_stream = True
 
 
 def _create_completion(model: str, messages: list, stream: bool, **kwargs):
+    """ Create a completion request for Forefront API """
     json_data = {
         'text': messages[-1]['content'],
         'action': 'noauth',

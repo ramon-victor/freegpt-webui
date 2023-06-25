@@ -13,6 +13,7 @@ class Utils:
     ]
 
     def get_cookies(self, setName: str = None, setBrowser: str = False) -> dict:
+        """ Get cookies from all browsers """
         cookies = {}
 
         for browser in Utils.browsers:
