@@ -159,7 +159,7 @@ const ask_gpt = async (message) => {
 		// if text contains :
 		if (text.includes(`instead. Maintaining this website and API costs a lot of money`)) {
 			document.getElementById(`gpt_${window.token}`).innerHTML =
-				"An error occured, please reload / refresh cache and try again.";
+				"An error occurred, please reload / refresh cache and try again.";
 		}
 
 		add_message(window.conversation_id, "user", message);
