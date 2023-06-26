@@ -197,7 +197,7 @@ const add_user_message_box = (message) => {
 	const contentDiv = document.createElement("div");
 	contentDiv.classList.add("content");
 	contentDiv.id = `user_${token}`;
-	contentDiv.textContent = message;
+	contentDiv.innerText = message;
 
 	messageDiv.appendChild(avatarContainer);
 	messageDiv.appendChild(contentDiv);
@@ -293,7 +293,7 @@ const load_user_message_box = (content) => {
 
 	const contentDiv = document.createElement("div");
 	contentDiv.classList.add("content");
-	contentDiv.textContent = content;
+	contentDiv.innerText = content;
 
 	messageDiv.appendChild(avatarContainer);
 	messageDiv.appendChild(contentDiv);
