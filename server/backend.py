@@ -1,5 +1,5 @@
 import re
-import g4f
+import time
 from g4f import ChatCompletion
 from googletrans import Translator
 from flask import request
@@ -30,32 +30,41 @@ class Backend_Api:
         #    update_proxies = threading.Thread(
         #        target=update_working_proxies, daemon=True)
         #    update_proxies.start()
-
-    def _conversation(self):
+  
+    def _conversation(self):  
+        """    
+        Handles the conversation route.    
+    
+        :return: Response object containing the generated conversation stream    
         """  
-        Handles the conversation route.  
+        max_retries = 3  
+        retries = 0  
+        
+        while retries < max_retries:  
+            try:  
+                jailbreak = request.json['jailbreak']  
+                model = request.json['model']  
+                messages = build_messages(jailbreak)  
+    
+                # Generate response  
+                response = ChatCompletion.create(model=model, stream=True,  
+                                                messages=messages)  
+    
+                return self.app.response_class(generate_stream(response, jailbreak), mimetype='text/event-stream')  
+    
+            except Exception as e:  
+                print(e)  
+                print(e.__traceback__.tb_next)  
+                
+                retries += 1  
+                if retries >= max_retries:  
+                    return {  
+                        '_action': '_ask',  
+                        'success': False,  
+                        "error": f"an error occurred {str(e)}"  
+                    }, 400  
+                time.sleep(3)  # Wait 3 second before trying again
 
-        :return: Response object containing the generated conversation stream  
-        """
-        try:
-            jailbreak = request.json['jailbreak']
-            model = request.json['model']
-            messages = build_messages(jailbreak)
-
-            # Generate response
-            response = ChatCompletion.create(model=model, stream=True,
-                                             messages=messages)
-
-            return self.app.response_class(generate_stream(response, jailbreak), mimetype='text/event-stream')
-
-        except Exception as e:
-            print(e)
-            print(e.__traceback__.tb_next)
-            return {
-                '_action': '_ask',
-                'success': False,
-                "error": f"an error occurred {str(e)}"
-            }, 400
 
 
 def build_messages(jailbreak):
