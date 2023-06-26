@@ -7,6 +7,7 @@ This project showcases an unlocked version of ChatGPT with WebUI. <br>
 Experience the power of ChatGPT with a user-friendly interface, completely free. <br> <br>
 
 🚧 Not working correctly:
+- API Provider redirecting GPT-4 model to GPT-3.5
 - Auto Proxy
 
 _Coding to solve as quickly as possible_
