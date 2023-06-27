@@ -1,10 +1,10 @@
 # FreeGPT WebUI 
 ## GPT 3.5/4
 
-❌ <strong>NOT REQUIRE ANY API KEY</strong> 🔑
+❌🔑 <strong>NOT REQUIRE ANY API KEY</strong> 
 
-This project showcases an unlocked version of ChatGPT with WebUI. <br>
-Experience the power of ChatGPT with a user-friendly interface, completely free. <br> <br>
+This project features a WebUI utilizing the [G4F API](https://github.com/xtekky/gpt4free). <br>
+Experience the power of ChatGPT with a user-friendly interface, enhanced jailbreaks, and completely free.
 
 🚧 Known bugs:
 - API Provider redirecting GPT-4 model to GPT-3.5;
