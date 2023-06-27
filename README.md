@@ -49,13 +49,13 @@ To get started with this project, you'll need to clone the repository and have [
 Run the following command to clone the repository:  
 
 ```
-git clone https://github.com/ramonvc/gptfree-jailbreak-webui.git
+git clone https://github.com/ramonvc/gptfree-webui.git
 ```
 
 ### Install Dependencies :wrench: 
 Navigate to the project directory:
 ```
-cd gptfree-jailbreak-webui
+cd gptfree-webui
 ```
 
 Install the dependencies:
@@ -88,7 +88,7 @@ To enable it, just go to the `config.json` file and change the value of the "use
 ```
 "use_auto_proxy": true
 ```
-![use-auto-proxy-gif](https://github.com/ramonvc/gptfree-jailbreak-webui/assets/13617054/f83c6217-411c-404c-9f4c-8ae700a486d1)
+![use-auto-proxy-gif](https://github.com/ramonvc/gptfree-webui/assets/13617054/f83c6217-411c-404c-9f4c-8ae700a486d1)
 
 
 
