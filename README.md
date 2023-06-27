@@ -30,7 +30,6 @@ _Coding to solve as quickly as possible_
 - [Legal Notice](#legal-notice) 
 
 ##
-
 ## To-Do List ✔️
 
 - [x] Integrate the free GPT API into the WebUI
@@ -89,7 +88,6 @@ To enable it, just go to the `config.json` file and change the value of the "use
 "use_auto_proxy": true
 ```
 ![use-auto-proxy-gif](https://github.com/ramonvc/gptfree-jailbreak-webui/assets/13617054/f83c6217-411c-404c-9f4c-8ae700a486d1)
-
 
 
 ## Docker 🐳
