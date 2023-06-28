@@ -1,5 +1,6 @@
 import re
 import time
+import g4f
 from g4f import ChatCompletion
 from googletrans import Translator
 from flask import request
@@ -30,41 +31,40 @@ class Backend_Api:
         #    update_proxies = threading.Thread(
         #        target=update_working_proxies, daemon=True)
         #    update_proxies.start()
-  
-    def _conversation(self):  
+
+    def _conversation(self):
         """    
         Handles the conversation route.    
-    
-        :return: Response object containing the generated conversation stream    
-        """  
-        max_retries = 3  
-        retries = 0  
-        
-        while retries < max_retries:  
-            try:  
-                jailbreak = request.json['jailbreak']  
-                model = request.json['model']  
-                messages = build_messages(jailbreak)  
-    
-                # Generate response  
-                response = ChatCompletion.create(model=model, stream=True,  
-                                                messages=messages)  
-    
-                return self.app.response_class(generate_stream(response, jailbreak), mimetype='text/event-stream')  
-    
-            except Exception as e:  
-                print(e)  
-                print(e.__traceback__.tb_next)  
-                
-                retries += 1  
-                if retries >= max_retries:  
-                    return {  
-                        '_action': '_ask',  
-                        'success': False,  
-                        "error": f"an error occurred {str(e)}"  
-                    }, 400  
-                time.sleep(3)  # Wait 3 second before trying again
 
+        :return: Response object containing the generated conversation stream    
+        """
+        max_retries = 3
+        retries = 0
+
+        while retries < max_retries:
+            try:
+                jailbreak = request.json['jailbreak']
+                model = request.json['model']
+                messages = build_messages(jailbreak)
+
+                # Generate response
+                response = ChatCompletion.create(model=model, stream=True,
+                                                 messages=messages)
+
+                return self.app.response_class(generate_stream(response, jailbreak), mimetype='text/event-stream')
+
+            except Exception as e:
+                print(e)
+                print(e.__traceback__.tb_next)
+
+                retries += 1
+                if retries >= max_retries:
+                    return {
+                        '_action': '_ask',
+                        'success': False,
+                        "error": f"an error occurred {str(e)}"
+                    }, 400
+                time.sleep(3)  # Wait 3 second before trying again
 
 
 def build_messages(jailbreak):
@@ -98,7 +98,7 @@ def build_messages(jailbreak):
         prompt["content"]) if internet_access else []
 
     # Add jailbreak instructions if enabled
-    if jailbreak_instructions := isJailbreak(jailbreak):
+    if jailbreak_instructions := getJailbreak(jailbreak):
         conversation += jailbreak_instructions
 
     # Add the prompt
@@ -129,7 +129,7 @@ def fetch_search_results(query):
         snippet = f'[{index + 1}] "{result["snippet"]}" URL:{result["link"]}.'
         snippets += snippet
     results.append({'role': 'system', 'content': snippets})
-    
+
     return results
 
 
@@ -141,7 +141,7 @@ def generate_stream(response, jailbreak):
     :param jailbreak: Jailbreak instruction string  
     :return: Generator object yielding messages in the conversation  
     """
-    if isJailbreak(jailbreak):
+    if getJailbreak(jailbreak):
         response_jailbreak = ''
         jailbroken_checked = False
         for message in response:
@@ -175,7 +175,7 @@ def response_jailbroken_failed(response):
     :param response: Response string  
     :return: Boolean indicating if the response has not been jailbroken  
     """
-    return False if len(response) < 4 else not (response.startswith ("GPT:") or response.startswith("ACT:"))
+    return False if len(response) < 4 else not (response.startswith("GPT:") or response.startswith("ACT:"))
 
 
 def set_response_language(prompt):
@@ -190,14 +190,19 @@ def set_response_language(prompt):
     return f"You will respond in the language: {detected_language}. "
 
 
-def isJailbreak(jailbreak):
+def getJailbreak(jailbreak):
     """  
     Check if jailbreak instructions are provided.  
 
     :param jailbreak: Jailbreak instruction string  
     :return: Jailbreak instructions if provided, otherwise None  
     """
-    if jailbreak != "Default":
-        return special_instructions[jailbreak] if jailbreak in special_instructions else None
+    if jailbreak != "default":
+        special_instructions[jailbreak][0]['content'] += special_instructions['two_responses_instruction']
+        if jailbreak in special_instructions:
+            special_instructions[jailbreak]
+            return special_instructions[jailbreak]
+        else:
+            return None
     else:
         return None
