@@ -55,7 +55,7 @@ git clone https://github.com/ramonvc/freegpt-webui.git
 ### Install Dependencies :wrench: 
 Navigate to the project directory:
 ```
-cd gptfree-webui
+cd freegpt-webui
 ```
 
 Install the dependencies:
