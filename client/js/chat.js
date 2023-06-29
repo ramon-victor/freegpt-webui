@@ -437,8 +437,6 @@ window.onload = async () => {
 		if (evt.key === "Enter" && !evt.shiftKey) {
 			evt.preventDefault();
 			await handle_ask();
-		} else {
-			updateTextarea(evt.target);
 		}
 	});
 
