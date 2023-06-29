@@ -12,7 +12,6 @@ const send_button = document.querySelector(`#send-button`);
 const user_image = `<img src="/assets/img/user.png" alt="User Avatar">`;
 const gpt_image = `<img src="/assets/img/gpt.png" alt="GPT Avatar">`;
 let prompt_lock = false;
-window.conversation_id = `{{chat_id}}`;
 
 hljs.addPlugin(new CopyButtonPlugin());
 
