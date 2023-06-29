@@ -121,7 +121,7 @@ def fetch_search_results(query):
     search = get('https://ddg-api.herokuapp.com/search',
                  params={
                      'query': query,
-                     'limit': 5,
+                     'limit': 3,
                  })
 
     results = []
