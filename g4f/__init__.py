@@ -14,7 +14,7 @@ class Model(metaclass=MetaModels):
     class gpt_35_turbo:
         name: str = 'gpt-3.5-turbo'
         base_provider: str = 'openai'
-        best_site: Provider.Provider = Provider.Forefront
+        best_site: Provider.Provider = Provider.Lockchat
 
     class gpt_4:
         name: str = 'gpt-4'
