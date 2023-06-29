@@ -21,7 +21,7 @@ def _create_completion(model: str, messages: list, stream: bool, chatId: str, **
     }
 
     json_data = {
-        'prompt': messages[-1]['content'],
+        'prompt': str(messages),
         'userId': f'#/chat/{chatId}',
         'network': True,
         'apikey': '',
