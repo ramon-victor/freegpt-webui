@@ -50,7 +50,7 @@ class Backend_Api:
 
                 # Generate response
                 response = ChatCompletion.create(model=model, stream=True, chatId=conversation_id,
-                                                 messages=messages, provider=g4f.Provider.Yqcloud)
+                                                 messages=messages, provider=g4f.Provider.Easychat)
 
                 return self.app.response_class(generate_stream(response, jailbreak), mimetype='text/event-stream')
 
