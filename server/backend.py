@@ -40,7 +40,8 @@ class Backend_Api:
         """
         max_retries = 3
         retries = 0
-
+        conversation_id = request.json['conversation_id']
+        
         while retries < max_retries:
             try:
                 jailbreak = request.json['jailbreak']
@@ -48,8 +49,8 @@ class Backend_Api:
                 messages = build_messages(jailbreak)
 
                 # Generate response
-                response = ChatCompletion.create(model=model, stream=True,
-                                                 messages=messages)
+                response = ChatCompletion.create(model=model, stream=True, chatId=conversation_id,
+                                                 messages=messages, provider=g4f.Provider.Yqcloud)
 
                 return self.app.response_class(generate_stream(response, jailbreak), mimetype='text/event-stream')
 
@@ -120,7 +121,7 @@ def fetch_search_results(query):
     search = get('https://ddg-api.herokuapp.com/search',
                  params={
                      'query': query,
-                     'limit': 5,
+                     'limit': 3,
                  })
 
     results = []
