@@ -49,8 +49,12 @@ class Backend_Api:
                 messages = build_messages(jailbreak)
 
                 # Generate response
-                response = ChatCompletion.create(model=model, stream=True, chatId=conversation_id,
-                                                 messages=messages, provider=g4f.Provider.Easychat)
+                response = ChatCompletion.create(
+                    model=model, 
+                    stream=True, 
+                    chatId=conversation_id,
+                    messages=messages
+                )
 
                 return self.app.response_class(generate_stream(response, jailbreak), mimetype='text/event-stream')
 
