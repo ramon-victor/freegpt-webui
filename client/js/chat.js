@@ -119,9 +119,13 @@ const ask_gpt = async (message) => {
       }),
     });
 
-    if (response.status === 400 || 500) {
+    if (response.status === 400 || response.status === 500) {
       document.getElementById(`gpt_${window.token}`).innerHTML =
         "There is an error, please try again";
+      message_box.scrollTo({ top: message_box.scrollHeight, behavior: "auto" });
+      await remove_cancel_button();
+      prompt_lock = false;
+
       return;
     }
 
