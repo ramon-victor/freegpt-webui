@@ -3,7 +3,7 @@ import os
 import json
 from ...typing import sha256, Dict, get_type_hints
 
-url = 'https://hteyun.com'
+url = 'https://gpt4.ezchat.top'
 model = ['gpt-3.5-turbo', 'gpt-3.5-turbo-16k', 'gpt-3.5-turbo-16k-0613', 'gpt-3.5-turbo-0613']
 supports_stream = True
 needs_auth = False
@@ -18,7 +18,7 @@ def _create_completion(model: str, messages: list, stream: bool, temperature: fl
         'presence_penalty': 0,
         'messages': messages,
     }
-    response = requests.post(url + '/api/chat-stream',
+    response = requests.post(url + '/api/openai/v1/chat/completions',
                              json=data, stream=True)
     
     if stream:

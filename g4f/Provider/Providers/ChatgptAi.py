@@ -4,7 +4,7 @@ from ...typing import sha256, Dict, get_type_hints
 
 url = 'https://chatgpt.ai/gpt-4/'
 model = ['gpt-4']
-supports_stream = False
+supports_stream = True
 needs_auth = False
 
 def _create_completion(model: str, messages: list, stream: bool, **kwargs):

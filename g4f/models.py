@@ -10,12 +10,40 @@ class Model:
     class gpt_35_turbo:
         name: str = 'gpt-3.5-turbo'
         base_provider: str = 'openai'
-        best_provider: Provider.Provider = Provider.Forefront
+        best_provider: Provider.Provider = Provider.Fakeopen
+        best_providers: list = [Provider.Fakeopen,  Provider.Lockchat, Provider.Yqcloud, Provider.Forefront,]
+
+    class gpt_35_turbo_0613:
+        name: str = 'gpt-3.5-turbo-0613'
+        base_provider: str = 'openai'
+        best_provider: Provider.Provider = Provider.Fakeopen
+
+    class gpt_35_turbo_16k_0613:
+        name: str = 'gpt-3.5-turbo-16k-0613'
+        base_provider: str = 'openai'
+        best_provider: Provider.Provider = Provider.Fakeopen
+        best_providers: list = [Provider.Easychat, Provider.Ezcht, Provider.Fakeopen]
+
+    class gpt_35_turbo_16k:
+        name: str = 'gpt-3.5-turbo-16k'
+        base_provider: str = 'openai'
+        best_provider: Provider.Provider = Provider.Fakeopen
+
+    class gpt_4_dev:
+        name: str = 'gpt-4-for-dev'
+        base_provider: str = 'openai'
+        best_provider: Provider.Provider = Provider.Phind
 
     class gpt_4:
         name: str = 'gpt-4'
         base_provider: str = 'openai'
-        best_provider: Provider.Provider = Provider.Bing
+        best_provider: Provider.Provider = Provider.Lockchat
+        best_providers: list = [Provider.Bing, Provider.Lockchat]
+    
+    class gpt_4_0613:
+        name: str = 'gpt-4-0613'
+        base_provider: str = 'openai'
+        best_provider: Provider.Provider = Provider.Liaobots
         best_providers: list = [Provider.Bing, Provider.Lockchat]
 
     class claude_instant_v1_100k:
@@ -129,7 +157,7 @@ class Model:
         best_provider: Provider.Provider = Provider.Vercel
         
     class palm:
-        name: str = 'palm'
+        name: str = 'palm2'
         base_provider: str = 'google'
         best_provider: Provider.Provider = Provider.Bard
         
@@ -156,7 +184,12 @@ class Model:
 class ModelUtils:
     convert: dict = {
         'gpt-3.5-turbo': Model.gpt_35_turbo,
+        'gpt-3.5-turbo-0613': Model.gpt_35_turbo_0613,
         'gpt-4': Model.gpt_4,
+        'gpt-4-0613': Model.gpt_4_0613,
+        'gpt-4-for-dev': Model.gpt_4_dev,
+        'gpt-3.5-turbo-16k': Model.gpt_35_turbo_16k,
+        'gpt-3.5-turbo-16k-0613': Model.gpt_35_turbo_16k_0613,
         
         'claude-instant-v1-100k': Model.claude_instant_v1_100k,
         'claude-v1-100k': Model.claude_v1_100k,

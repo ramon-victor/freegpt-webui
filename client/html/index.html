@@ -71,7 +71,10 @@
 						<div class="buttons">
 							<div class="field">
 								<select class="dropdown" name="model" id="model">
-									<option value="gpt-3.5-turbo" selected>GPT-3.5</option>
+									<option value="gpt-3.5-turbo">GPT-3.5</option>
+									<option value="gpt-3.5-turbo-0613">GPT-3.5-0613</option>
+									<option value="gpt-3.5-turbo-16k">GPT-3.5-turbo-16k</option>
+									<option value="gpt-3.5-turbo-16k-0613" selected>GPT-3.5-turbo-16k-0613</option>
 									<option value="gpt-4" disabled>GPT-4 (maintenance)</option>
 								</select>
 							</div>
@@ -97,7 +100,9 @@
 		</div>
 
 		<!-- scripts -->
-		<script>window.conversation_id = "{{ chat_id }}";</script>  
+		<script>
+			window.conversation_id = "{{ chat_id }}";
+		</script>
 		<script src="/assets/js/icons.js"></script>
 		<script src="/assets/js/chat.js" defer></script>
 		<script src="https://cdn.jsdelivr.net/npm/markdown-it@latest/dist/markdown-it.min.js"></script>
