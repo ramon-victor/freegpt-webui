@@ -40,7 +40,6 @@ def _create_completion(model: str, messages: list, stream: bool, **kwargs):
         if decoded.startswith('data: '):
             data_str = decoded.replace('data: ', '')
             data = json.loads(data_str)
-            print(data)
             if 'choices' in data and 'delta' in data['choices'][0]:
                 delta = data['choices'][0]['delta']
                 content = delta.get('content', '')
