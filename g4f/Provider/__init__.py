@@ -2,6 +2,7 @@ from . import Provider
 from .Providers import (
     Aichat,
     Bard,
+    Better,
     Bing,
     ChatgptAi,
     ChatgptLogin,
