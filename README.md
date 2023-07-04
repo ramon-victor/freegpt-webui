@@ -7,7 +7,6 @@ This project features a WebUI utilizing the [G4F API](https://github.com/xtekky/
 Experience the power of ChatGPT with a user-friendly interface, enhanced jailbreaks, and completely free.
 
 ## 🚧 Known bugs:
-- API Provider redirecting GPT-4 model to GPT-3.5;
 - Auto Proxy is not working.
 
 _Coding to solve as quickly as possible_
