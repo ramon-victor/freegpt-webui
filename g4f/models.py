@@ -21,7 +21,7 @@ class Model:
     class gpt_35_turbo_16k_0613:
         name: str = 'gpt-3.5-turbo-16k-0613'
         base_provider: str = 'openai'
-        best_provider: Provider.Provider = Provider.Better
+        best_provider: Provider.Provider = Provider.Gravityengine
         best_providers: list = [Provider.Easychat, Provider.Ezcht, Provider.Better]
 
     class gpt_35_turbo_16k:
