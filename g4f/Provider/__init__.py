@@ -24,6 +24,7 @@ from .Providers import (
     Theb,
     Vercel,
     Weuseing,
+    Xiaor,
     Yqcloud,
     You,
 )
