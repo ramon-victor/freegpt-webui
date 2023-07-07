@@ -4,6 +4,7 @@ from server.backend import Backend_Api
 from json import load
 from gevent import pywsgi
 import socket
+from ngrok import connect
 
 if __name__ == '__main__':
 
@@ -31,6 +32,10 @@ if __name__ == '__main__':
 
     hostname = socket.gethostname()
     ip_address = socket.gethostbyname(hostname)
+
+    # Create ngrok tunnel
+    tunnel = connect(site_config['port'], authtoken="2QdcLVBn6xt0FKJecbJZ3dqjUGk_77uhEZi4skD67i4uUc2zV")
+    print(f"Ingress established at {tunnel.url()}")
 
     # Run the Flask server by WSGI
     print(f"Running on http://127.0.0.1:{site_config['port']}")
