@@ -37,6 +37,7 @@ _Coding to solve as quickly as possible_
 - [x] Improve the Jailbreak functionality
 - [x] Add the GPT-4 model
 - [x] Enhance the user interface
+- [ ] Check status of API Providers (online/offline)
 - [ ] Auto Proxy
 - [ ] Enable editing and creating Jailbreaks/Roles in the WebUI
 - [ ] Migrate the interface to React.js (?)
