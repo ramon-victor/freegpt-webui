@@ -16,7 +16,6 @@ from .Providers import (
     Gravityengine,
     H2o,
     hteyun,
-    Lsdev,
     Liaobots,
     Lockchat,
     Mishalsgpt,
