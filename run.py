@@ -2,8 +2,7 @@ from server.app import app
 from server.website import Website
 from server.backend import Backend_Api
 from json import load
-from gevent import pywsgi
-import socket
+
 
 if __name__ == '__main__':
 
@@ -29,14 +28,7 @@ if __name__ == '__main__':
             methods=backend_api.routes[route]['methods'],
         )
 
-    hostname = socket.gethostname()
-    ip_address = socket.gethostbyname(hostname)
-
-    # Run the Flask server by WSGI
-    print(f"Running on http://127.0.0.1:{site_config['port']}")
-    print(f"Running on http://{ip_address}:{site_config['port']}")
-    
-    server = pywsgi.WSGIServer(('0.0.0.0', site_config['port']), app)
-    server.serve_forever()
-    
-    print(f"Closing {ip_address}:{site_config['port']}")
+    # Run the Flask server
+    print(f"Running on port {site_config['port']}")
+    app.run(**site_config)
+    print(f"Closing port {site_config['port']}")
