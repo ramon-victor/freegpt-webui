@@ -8,6 +8,7 @@ from .Providers import (
     ChatgptLogin,
     ChatgptLogin,
     DeepAi,
+    Dfehub,
     Easychat,
     Ezcht,
     Fakeopen,
