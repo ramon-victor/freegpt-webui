@@ -91,6 +91,11 @@
 							<label for="switch"></label>
 							<span>Web Access</span>
 						</div>
+						<div class="field checkbox">
+							<input type="checkbox" id="lightmode" />
+							<label for="lightmode"></label>
+							<span>Light Mode</span>
+						</div>	
 					</div>
 				</div>
 			</div>
@@ -108,5 +113,20 @@
 		<script src="https://cdn.jsdelivr.net/npm/markdown-it@latest/dist/markdown-it.min.js"></script>
 		<script src="/assets/js/highlight.min.js"></script>
 		<script src="/assets/js/highlightjs-copy.min.js"></script>
+		<script>
+			var lightmode = document.getElementById("lightmode");
+			var styleLink = document.createElement("link");
+			styleLink.rel = "stylesheet";
+			styleLink.href = "/assets/css/global.css";
+			document.head.appendChild(styleLink);
+
+			lightmode.addEventListener("change", function() {
+				if (lightmode.checked) {
+					styleLink.href = "/assets/css/global-light.css";
+				} else {
+					styleLink.href = "/assets/css/global.css";
+				}
+			});
+		</script>
 	</body>
 </html>
