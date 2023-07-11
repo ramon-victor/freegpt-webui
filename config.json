@@ -1,7 +1,7 @@
 {
 	"site_config": {
 		"host": "0.0.0.0",
-		"port": 1342,
+		"port": 1338,
 		"debug": false
 	},
 	"use_auto_proxy": false
