@@ -37,11 +37,15 @@
 						<i class="fa-regular fa-trash"></i>
 						<span>Clear Conversations</span>
 					</button>
+					<div class="field checkbox theme-toggler-container">
+						<input type="checkbox" id="theme-toggler" />
+						<label for="theme-toggler"></label>
+						<span>Dark Mode</span>
+					</div>
 					<a class="info" href="https://github.com/ramonvc/gptfree-jailbreak-webui" target="_blank">
 						<i class="fa-brands fa-github"></i>
 						<span class="conversation-title">
-							Author: @ramonvc<br />
-							Version: 0.0.9-Alpha<br />
+							Version: 0.0.10-Alpha
 						</span>
 					</a>
 				</div>
@@ -74,7 +78,9 @@
 									<option value="gpt-3.5-turbo">GPT-3.5</option>
 									<option value="gpt-3.5-turbo-0613">GPT-3.5-0613</option>
 									<option value="gpt-3.5-turbo-16k">GPT-3.5-turbo-16k</option>
-									<option value="gpt-3.5-turbo-16k-0613" selected>GPT-3.5-turbo-16k-0613</option>
+									<option value="gpt-3.5-turbo-16k-0613" selected>
+										GPT-3.5-turbo-16k-0613
+									</option>
 									<option value="gpt-4" disabled>GPT-4 (offline)</option>
 								</select>
 							</div>
@@ -108,5 +114,6 @@
 		<script src="https://cdn.jsdelivr.net/npm/markdown-it@latest/dist/markdown-it.min.js"></script>
 		<script src="/assets/js/highlight.min.js"></script>
 		<script src="/assets/js/highlightjs-copy.min.js"></script>
+		<script src="/assets/js/theme-toggler.js"></script>
 	</body>
 </html>

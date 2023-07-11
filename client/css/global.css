@@ -1,10 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
-:root {
+* {
 	--font-1: "Inter", sans-serif;
 	--section-gap: 24px;
 	--border-radius-1: 8px;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	position: relative;
+	font-family: var(--font-1);
+}
 
+.theme-light {  
+    --colour-1: #f5f5f5;  
+    --colour-2: #222222;  
+    --colour-3: #333333;  
+    --colour-4: #444444;  
+    --colour-5: #fafafa;  
+    --colour-6: #e0e0e0;  
+  
+    --accent: #3a3a3a;  
+    --blur-bg: #f9f9f9;  
+    --blur-border: #ebebeb;  
+    --user-input: #333333;  
+    --conversations: #555555;  
+}  
+
+
+.theme-dark {
 	--colour-1: #181818;
 	--colour-2: #ccc;
 	--colour-3: #dadada;
@@ -17,14 +39,6 @@
 	--blur-border: #242627;
 	--user-input: #f5f5f5;
 	--conversations: #555555;
-}
-
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	position: relative;
-	font-family: var(--font-1);
 }
 
 html,

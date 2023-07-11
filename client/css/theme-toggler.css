@@ -1,0 +1,33 @@
+.theme-toggler-container {
+    margin: 24px 0px 8px 0px;
+    justify-content: center;
+}
+
+.theme-toggler-container.checkbox input + label,
+.theme-toggler-container.checkbox input:checked + label:after {
+	background: var(--colour-1);
+}
+
+.theme-toggler-container.checkbox input + label:after,
+.theme-toggler-container.checkbox input:checked + label {
+	background: var(--colour-3);
+}
+
+.theme-toggler-container.checkbox span {
+    font-size: 0.75rem;
+}
+
+.theme-toggler-container.checkbox label {
+    width: 24px;
+    height: 16px;
+}
+
+.theme-toggler-container.checkbox label:after {
+    left: 2px;
+    width: 10px;
+    height: 10px;
+}
+
+.theme-toggler-container.checkbox input:checked + label:after {
+    left: calc(100% - 2px - 10px);
+}
