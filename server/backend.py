@@ -183,16 +183,19 @@ def response_jailbroken_failed(response):
     return False if len(response) < 4 else not (response.startswith("GPT:") or response.startswith("ACT:"))
 
 
-def set_response_language(prompt):
+def set_response_language(prompt):  
     """  
     Set the response language based on the prompt content.  
-
+  
     :param prompt: Prompt dictionary  
     :return: String indicating the language to be used for the response  
-    """
-    translator = Translator()
-    detected_language = translator.detect(prompt['content']).lang
-    return f"You will respond in the language: {detected_language}. "
+    """  
+    translator = Translator()  
+    max_chars = 256  
+    content_sample = prompt['content'][:max_chars]  
+    detected_language = translator.detect(content_sample).lang  
+    return f"You will respond in the language: {detected_language}. "  
+
 
 
 def getJailbreak(jailbreak):
