@@ -21,3 +21,6 @@ COPY . .
 ENV PATH=/root/.local/bin:$PATH    
     
 CMD ["python3", "./run.py"]  
+
+FROM ramonvc/freegpt-webui
+# nothing to do.
