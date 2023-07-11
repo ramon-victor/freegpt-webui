@@ -10,20 +10,21 @@
 	font-family: var(--font-1);
 }
 
-.theme-light {
-	--colour-1: #ededed;
-	--colour-2: #000000;
-	--colour-3: #000000;
-	--colour-4: #000000;
-	--colour-5: #f4f4f4;
-	--colour-6: #d3d3d3;
+.theme-light {  
+    --colour-1: #f5f5f5;  
+    --colour-2: #222222;  
+    --colour-3: #333333;  
+    --colour-4: #444444;  
+    --colour-5: #fafafa;  
+    --colour-6: #e0e0e0;  
+  
+    --accent: #3a3a3a;  
+    --blur-bg: #f9f9f9;  
+    --blur-border: #ebebeb;  
+    --user-input: #333333;  
+    --conversations: #555555;  
+}  
 
-	--accent: #303030;
-	--blur-bg: #f4f4f4;
-	--blur-border: #e8e8e8;
-	--user-input: #000000;
-	--conversations: #555555;
-}
 
 .theme-dark {
 	--colour-1: #181818;
