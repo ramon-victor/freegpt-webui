@@ -12,11 +12,11 @@ function toggleTheme() {
 	var newTheme = currentTheme === "theme-dark" ? "theme-light" : "theme-dark";
 
 	setTheme(newTheme);
-	switch_theme_toggler.checked = newTheme === "theme-light";
+	switch_theme_toggler.checked = newTheme === "theme-dark";
 }
 
 (function () {
 	var currentTheme = localStorage.getItem("theme") || "theme-dark";
 	setTheme(currentTheme);
-	switch_theme_toggler.checked = currentTheme === "theme-light";
+	switch_theme_toggler.checked = currentTheme === "theme-dark";
 })();
