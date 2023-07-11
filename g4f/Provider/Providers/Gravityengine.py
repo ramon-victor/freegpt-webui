@@ -3,7 +3,7 @@ import os
 import json
 from ...typing import sha256, Dict, get_type_hints
 
-url = 'https://gpt4.gravityengine.cc'
+url = 'https://gpt4.xunika.uk/'
 model = ['gpt-3.5-turbo-16k', 'gpt-3.5-turbo-0613']
 supports_stream = True
 needs_auth = False
