@@ -4,5 +4,6 @@
 		"port": 1338,
 		"debug": false
 	},
+	"url_prefix": "/",
 	"use_auto_proxy": false
 }
