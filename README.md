@@ -7,7 +7,7 @@ This project features a WebUI utilizing the [G4F API](https://github.com/xtekky/
 Experience the power of ChatGPT with a user-friendly interface, enhanced jailbreaks, and completely free.
 
 ## Known bugs 🚧
-- Auto Proxy is not working.
+- GPT-4 model offline.
 
 _Coding to solve as quickly as possible_
 
@@ -28,8 +28,6 @@ Please note that the choice and integration of additional Providers are the user
   - [Cloning the Repository](#cloning-the-repository-inbox_tray)  
   - [Install Dependencies](#install-dependencies-wrench)  
 - [Running the Application](#running-the-application-rocket)  
-- [Auto Proxy](#auto-proxy-)
-  - [Enable Auto Proxy](#enable-auto-proxy)
 - [Docker](#docker-)  
   - [Prerequisites](#prerequisites)  
   - [Running the Docker](#running-the-docker)
@@ -49,9 +47,8 @@ Please note that the choice and integration of additional Providers are the user
 - [x] Add the GPT-4 model
 - [x] Enhance the user interface
 - [ ] Check status of API Providers (online/offline)
-- [ ] Auto Proxy
 - [ ] Enable editing and creating Jailbreaks/Roles in the WebUI
-- [ ] Migrate the interface to React.js (?)
+- [ ] Refactor web client
 
 ## Getting Started :white_check_mark:  
 To get started with this project, you'll need to clone the repository and have [Python](https://www.python.org/downloads/) installed on your system.  
@@ -87,20 +84,6 @@ or
 ```
 http://localhost:1338
 ```
-## Auto Proxy 🔑  
-The application includes an auto proxy feature that allows it to work with multiple free proxy servers. 
-The freeGPT API refuses some connections, especially when hosted in the cloud (Azure, AWS, Google Cloud). 
-Auto proxy solves this problem automatically for you. 
-When enabled, the application will automatically fetch and test proxy servers, updating the list of working proxies every 30 minutes.  
-  
-### Enable Auto Proxy
-To enable it, just go to the `config.json` file and change the value of the "use_auto_proxy" to `true`.  
-
-```
-"use_auto_proxy": true
-```
-![use-auto-proxy-gif](https://github.com/ramonvc/gptfree-webui/assets/13617054/f83c6217-411c-404c-9f4c-8ae700a486d1)
-
 
 
 ## Docker 🐳

@@ -6,7 +6,6 @@ from googletrans import Translator
 from flask import request
 from datetime import datetime
 from requests import get
-from server.auto_proxy import get_random_proxy, update_working_proxies
 from server.config import special_instructions
 
 
@@ -19,18 +18,12 @@ class Backend_Api:
         :param config: Configuration dictionary  
         """
         self.app = app
-        self.use_auto_proxy = config['use_auto_proxy']
         self.routes = {
             '/backend-api/v2/conversation': {
                 'function': self._conversation,
                 'methods': ['POST']
             }
         }
-
-        # if self.use_auto_proxy:
-        #    update_proxies = threading.Thread(
-        #        target=update_working_proxies, daemon=True)
-        #    update_proxies.start()
 
     def _conversation(self):
         """    
@@ -41,7 +34,7 @@ class Backend_Api:
         max_retries = 3
         retries = 0
         conversation_id = request.json['conversation_id']
-        
+
         while retries < max_retries:
             try:
                 jailbreak = request.json['jailbreak']
@@ -50,8 +43,8 @@ class Backend_Api:
 
                 # Generate response
                 response = ChatCompletion.create(
-                    model=model, 
-                    stream=True, 
+                    model=model,
+                    stream=True,
                     chatId=conversation_id,
                     messages=messages
                 )
@@ -183,19 +176,18 @@ def response_jailbroken_failed(response):
     return False if len(response) < 4 else not (response.startswith("GPT:") or response.startswith("ACT:"))
 
 
-def set_response_language(prompt):  
+def set_response_language(prompt):
     """  
     Set the response language based on the prompt content.  
-  
+
     :param prompt: Prompt dictionary  
     :return: String indicating the language to be used for the response  
-    """  
-    translator = Translator()  
-    max_chars = 256  
-    content_sample = prompt['content'][:max_chars]  
-    detected_language = translator.detect(content_sample).lang  
-    return f"You will respond in the language: {detected_language}. "  
-
+    """
+    translator = Translator()
+    max_chars = 256
+    content_sample = prompt['content'][:max_chars]
+    detected_language = translator.detect(content_sample).lang
+    return f"You will respond in the language: {detected_language}. "
 
 
 def getJailbreak(jailbreak):
