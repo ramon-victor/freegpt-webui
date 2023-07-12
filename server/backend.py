@@ -128,14 +128,11 @@ def fetch_search_results(query):
                      'limit': 3,
                  })
 
-    results = []
     snippets = ""
     for index, result in enumerate(search.json()):
         snippet = f'[{index + 1}] "{result["snippet"]}" URL:{result["link"]}.'
         snippets += snippet
-    results.append({'role': 'system', 'content': snippets})
-
-    return results
+    return [{'role': 'system', 'content': snippets}]
 
 
 def generate_stream(response, jailbreak):
@@ -205,12 +202,10 @@ def getJailbreak(jailbreak):
     :param jailbreak: Jailbreak instruction string
     :return: Jailbreak instructions if provided, otherwise None
     """
-    if jailbreak != "default":
-        special_instructions[jailbreak][0]['content'] += special_instructions['two_responses_instruction']
-        if jailbreak in special_instructions:
-            special_instructions[jailbreak]
-            return special_instructions[jailbreak]
-        else:
-            return None
-    else:
+    if jailbreak == "default":
         return None
+    special_instructions[jailbreak][0]['content'] += special_instructions['two_responses_instruction']
+    if jailbreak not in special_instructions:
+        return None
+    special_instructions[jailbreak]
+    return special_instructions[jailbreak]
