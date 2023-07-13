@@ -1,6 +1,5 @@
 import re
 import time
-import g4f
 from g4f import ChatCompletion
 from googletrans import Translator
 from flask import request

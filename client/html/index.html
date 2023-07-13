@@ -16,6 +16,19 @@
 		<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
 		<link rel="manifest" href="/assets/img/site.webmanifest" />
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-37DR8X9F09"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag("js", new Date());
+
+			gtag("config", "G-37DR8X9F09");
+		</script>
+
 		<link
 			rel="stylesheet"
 			href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/base16/dracula.min.css" />
@@ -42,11 +55,13 @@
 						<label for="theme-toggler"></label>
 						<span>Dark Mode</span>
 					</div>
-					<a class="info" href="https://github.com/ramonvc/gptfree-jailbreak-webui" target="_blank">
+					<a class="info" href="https://github.com/ramonvc/freegpt-webui-chimera" target="_blank">
 						<i class="fa-brands fa-github"></i>
-						<span class="conversation-title">
-							Version: 0.0.10-Alpha
-						</span>
+						<span class="conversation-title">FreeGPT-webui-chimera</span>
+					</a>
+					<a class="info" href="https://discord.gg/Fg2HSJgN" target="_blank">
+						<i class="fa-brands fa-discord"></i>
+						<span class="conversation-title">ChimeraGPT</span>
 					</a>
 				</div>
 			</div>
@@ -75,13 +90,32 @@
 						<div class="buttons">
 							<div class="field">
 								<select class="dropdown" name="model" id="model">
-									<option value="gpt-3.5-turbo">GPT-3.5</option>
-									<option value="gpt-3.5-turbo-0613">GPT-3.5-0613</option>
-									<option value="gpt-3.5-turbo-16k">GPT-3.5-turbo-16k</option>
-									<option value="gpt-3.5-turbo-16k-0613" selected>
-										GPT-3.5-turbo-16k-0613
-									</option>
-									<option value="gpt-4" disabled>GPT-4 (offline)</option>
+									<optgroup label="GPT">
+										<option value="gpt-3.5-turbo">GPT-3.5-turbo</option>
+										<option value="gpt-3.5-turbo-poe">GPT-3.5-turbo-poe</option>
+										<option value="gpt-3.5-turbo-openai">GPT-3.5-turbo-openai</option>
+										<option value="gpt-3.5-turbo-16k">GPT-3.5-turbo-16k</option>
+										<option value="gpt-3.5-turbo-16k-openai">
+											GPT-3.5-turbo-16k-openai
+										</option>
+										<option value="gpt-3.5-turbo-16k-poe">GPT-3.5-turbo-16k-poe</option>
+										<option value="gpt-4">GPT-4</option>
+										<option value="gpt-4-0613">GPT-4-0613</option>
+										<option value="gpt-4-poe">GPT-4-poe</option>
+										<option value="gpt-4-32k">GPT-4-32k</option>
+										<option value="gpt-4-32k-poe">GPT-4-32k-poe</option>
+									</optgroup>
+									<optgroup label="SAGE">
+										<option value="sage">Sage</option>
+									</optgroup>
+									<optgroup label="CLAUDE">
+										<option value="claude-instant">Claude-Instant</option>
+										<option value="claude-2-100k">Claude-2-100k</option>
+										<option value="claude-instant-100k">Claude-Instant-100k</option>
+									</optgroup>
+									<optgroup label="IMAGE">
+										<option value="" disabled>Kandinsky (soon)</option>
+									</optgroup>
 								</select>
 							</div>
 							<div class="field">
