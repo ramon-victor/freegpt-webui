@@ -135,7 +135,7 @@ The API controller has been built in from [GPT4Free](https://github.com/xtekky/g
 <br>
 
 ## Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=ramonvc/freegpt-webui-chimera&type=Timeline)](https://star-history.com/#ramonvc/freegpt-webui-chimera&Timeline)
+[![Star History Chart](https://api.star-history.com/svg?repos=ramonvc/freegpt-webui&type=Timeline)](https://star-history.com/#ramonvc/freegpt-webui&Timeline)
 
 <br>
 
