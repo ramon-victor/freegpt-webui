@@ -45,16 +45,17 @@ To get started with this project, you'll need to clone the repository and have [
 Run the following command to clone the repository:  
 
 ```
-git clone https://github.com/ramonvc/freegpt-webui-chimera.git
+git clone https://github.com/ramonvc/freegpt-webui.git
+```
+
+## Switching to the chimeragpt-version Branch
+Run the following command to switch to the chimeragpt-version branch:
+```
+git checkout chimeragpt-version  
 ```
 
 ## Install Dependencies :wrench: 
-Navigate to the project directory:
-```
-cd freegpt-webui-chimera
-```
-
-Install the dependencies:
+In the project directory, install the dependencies:
 ```
 pip install -r requirements.txt
 ```
