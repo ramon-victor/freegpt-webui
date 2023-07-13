@@ -48,7 +48,7 @@ Run the following command to clone the repository:
 git clone https://github.com/ramonvc/freegpt-webui.git
 ```
 
-## Switching to the chimeragpt-version Branch
+### Switching to the chimeragpt-version Branch :arrows_counterclockwise:
 Run the following command to switch to the chimeragpt-version branch:
 ```
 git checkout chimeragpt-version  
