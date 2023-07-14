@@ -22,7 +22,7 @@ class ChatCompletion:
 
             engine = model.best_provider if not provider else provider
 
-            if not engine.supports_stream and stream == True:
+            if not engine.supports_stream and stream:
                 print(
                     f"ValueError: {engine.__name__} does not support 'stream' argument", file=sys.stderr)
                 sys.exit(1)
