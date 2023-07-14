@@ -2,6 +2,7 @@ const query = (obj) =>
 	Object.keys(obj)
 		.map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(obj[k]))
 		.join("&");
+const url_prefix = document.querySelector('body').getAttribute('data-urlprefix')
 const markdown = window.markdownit();
 const message_box = document.getElementById(`messages`);
 const message_input = document.getElementById(`message-input`);
@@ -9,8 +10,8 @@ const box_conversations = document.querySelector(`.top`);
 const spinner = box_conversations.querySelector(".spinner");
 const stop_generating = document.querySelector(`.stop-generating`);
 const send_button = document.querySelector(`#send-button`);
-const user_image = `<img src="/assets/img/user.png" alt="User Avatar">`;
-const gpt_image = `<img src="/assets/img/gpt.png" alt="GPT Avatar">`;
+const user_image = `<img src="${url_prefix}/assets/img/user.png" alt="User Avatar">`;
+const gpt_image = `<img src="${url_prefix}/assets/img/gpt.png" alt="GPT Avatar">`;
 let prompt_lock = false;
 
 hljs.addPlugin(new CopyButtonPlugin());
@@ -90,7 +91,7 @@ const ask_gpt = async (message) => {
 		await new Promise((r) => setTimeout(r, 1000));
 		window.scrollTo(0, 0);
 
-		const response = await fetch(`/backend-api/v2/conversation`, {
+		const response = await fetch(`${url_prefix}/backend-api/v2/conversation`, {
 			method: `POST`,
 			signal: window.controller.signal,
 			headers: {
@@ -127,7 +128,7 @@ const ask_gpt = async (message) => {
 
 			chunk = decodeUnicode(new TextDecoder().decode(value));
 
-			if (chunk.includes(`<form id="challenge-form" action="/backend-api/v2/conversation?`)) {
+			if (chunk.includes(`<form id="challenge-form" action="${url_prefix}/backend-api/v2/conversation?`)) {
 				chunk = `cloudflare token expired, please refresh the page.`;
 			}
 
@@ -243,7 +244,7 @@ const delete_conversation = async (conversation_id) => {
 };
 
 const set_conversation = async (conversation_id) => {
-	history.pushState({}, null, `/chat/${conversation_id}`);
+	history.pushState({}, null, `${url_prefix}/chat/${conversation_id}`);
 	window.conversation_id = conversation_id;
 
 	await clear_conversation();
@@ -252,7 +253,7 @@ const set_conversation = async (conversation_id) => {
 };
 
 const new_conversation = async () => {
-	history.pushState({}, null, `/chat/`);
+	history.pushState({}, null, `${url_prefix}/chat/`);
 	window.conversation_id = uuid();
 
 	await clear_conversation();
@@ -426,7 +427,7 @@ window.onload = async () => {
 	}, 1);
 
 	if (!window.location.href.endsWith(`#`)) {
-		if (/\/chat\/.+/.test(window.location.href)) {
+		if (/\/chat\/.+/.test(window.location.href.slice(url_prefix.length))) {
 			await load_conversation(window.conversation_id);
 		}
 	}

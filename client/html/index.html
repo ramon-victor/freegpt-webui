@@ -11,31 +11,18 @@
 			property="og:description"
 			content="A conversational AI system that listens, learns, and challenges" />
 		<meta property="og:url" content="https://chat.acy.dev" />
-		<link rel="stylesheet" href="/assets/css/style.css" />
-		<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png" />
-		<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png" />
-		<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png" />
-		<link rel="manifest" href="/assets/img/site.webmanifest" />
-
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-37DR8X9F09"></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag("js", new Date());
-
-			gtag("config", "G-37DR8X9F09");
-		</script>
-
+		<link rel="stylesheet" href="{{ url_for('bp.static', filename='css/style.css') }}" />
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('bp.static', filename='img/apple-touch-icon.png') }}" />
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('bp.static', filename='img/favicon-32x32.png') }}" />
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('bp.static', filename='img/favicon-16x16.png') }}" />
+		<link rel="manifest" href="{{ url_for('bp.static', filename='img/site.webmanifest') }}" />
 		<link
 			rel="stylesheet"
 			href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@latest/build/styles/base16/dracula.min.css" />
 		<title>FreeGPT</title>
 	</head>
 
-	<body>
+	<body data-urlprefix="{{ url_prefix}}">
 		<div class="main-container">
 			<div class="box sidebar">
 				<div class="top">
@@ -143,11 +130,11 @@
 		<script>
 			window.conversation_id = "{{ chat_id }}";
 		</script>
-		<script src="/assets/js/icons.js"></script>
-		<script src="/assets/js/chat.js" defer></script>
+		<script src="{{ url_for('bp.static', filename='js/icons.js') }}"></script>
+		<script src="{{ url_for('bp.static', filename='js/chat.js') }}" defer></script>
 		<script src="https://cdn.jsdelivr.net/npm/markdown-it@latest/dist/markdown-it.min.js"></script>
-		<script src="/assets/js/highlight.min.js"></script>
-		<script src="/assets/js/highlightjs-copy.min.js"></script>
-		<script src="/assets/js/theme-toggler.js"></script>
+		<script src="{{ url_for('bp.static', filename='js/highlight.min.js') }}"></script>
+		<script src="{{ url_for('bp.static', filename='js/highlightjs-copy.min.js') }}"></script>
+		<script src="{{ url_for('bp.static', filename='js/theme-toggler.js') }}"></script>
 	</body>
 </html>
