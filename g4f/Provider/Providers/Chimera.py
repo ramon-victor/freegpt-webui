@@ -42,20 +42,18 @@ def _create_completion(model: str, messages: list, stream: bool, **kwargs):
 
         for chunk in response:
             yield chunk.choices[0].delta.get("content", "")
-            
+
     except openai.error.APIError as e:
-        if e.http_status == 429:
-            detail_pattern = re.compile(r'{"detail":"(.*?)"}')
-            match = detail_pattern.search(e.user_message)
-            if match:
-                error_message = match.group(1)
-                print(error_message)
-                yield error_message
-            else:
-                print(e.user_message)
-                yield e.user_message
-        else:
+        if e.http_status != 429:
             raise
+        detail_pattern = re.compile(r'{"detail":"(.*?)"}')
+        if match := detail_pattern.search(e.user_message):
+            error_message = match[1]
+            print(error_message)
+            yield error_message
+        else:
+            print(e.user_message)
+            yield e.user_message
 
 
 params = f'g4f.Providers.{os.path.basename(__file__)[:-3]} supports: ' + \
