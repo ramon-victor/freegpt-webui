@@ -6,7 +6,6 @@ from googletrans import Translator
 from flask import request, Response, stream_with_context
 from datetime import datetime
 from requests import get
-from server.auto_proxy import get_random_proxy, update_working_proxies
 from server.config import special_instructions
 
 
@@ -14,24 +13,17 @@ class Backend_Api:
     def __init__(self, bp, config: dict) -> None:
         """
         Initialize the Backend_Api class.
-
         :param app: Flask application instance
         :param config: Configuration dictionary
         """
         self.bp = bp
-        self.use_auto_proxy = config['use_auto_proxy']
         self.routes = {
             '/backend-api/v2/conversation': {
                 'function': self._conversation,
                 'methods': ['POST']
             }
         }
-
-        # if self.use_auto_proxy:
-        #    update_proxies = threading.Thread(
-        #        target=update_working_proxies, daemon=True)
-        #    update_proxies.start()
-
+        
     def _conversation(self):
         """
         Handles the conversation route.
@@ -181,11 +173,11 @@ def response_jailbroken_failed(response):
 
 
 def set_response_language(prompt):
-    """
-    Set the response language based on the prompt content.
+    """  
+    Set the response language based on the prompt content.  
 
-    :param prompt: Prompt dictionary
-    :return: String indicating the language to be used for the response
+    :param prompt: Prompt dictionary  
+    :return: String indicating the language to be used for the response  
     """
     translator = Translator()
     max_chars = 256
@@ -194,18 +186,19 @@ def set_response_language(prompt):
     return f"You will respond in the language: {detected_language}. "
 
 
-
 def getJailbreak(jailbreak):
-    """
-    Check if jailbreak instructions are provided.
+    """  
+    Check if jailbreak instructions are provided.  
 
-    :param jailbreak: Jailbreak instruction string
-    :return: Jailbreak instructions if provided, otherwise None
+    :param jailbreak: Jailbreak instruction string  
+    :return: Jailbreak instructions if provided, otherwise None  
     """
-    if jailbreak == "default":
+    if jailbreak != "default":
+        special_instructions[jailbreak][0]['content'] += special_instructions['two_responses_instruction']
+        if jailbreak in special_instructions:
+            special_instructions[jailbreak]
+            return special_instructions[jailbreak]
+        else:
+            return None
+    else:
         return None
-    special_instructions[jailbreak][0]['content'] += special_instructions['two_responses_instruction']
-    if jailbreak not in special_instructions:
-        return None
-    special_instructions[jailbreak]
-    return special_instructions[jailbreak]
