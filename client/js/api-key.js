@@ -26,8 +26,8 @@ window.addEventListener("DOMContentLoaded", () => {
 });  
 
 (function () {  
-  function getApiKeyFromLocalStorage() {  
-    return localStorage.getItem("API-key");  
+  function get_api_key_from_input() {  
+    return apiKeyInput.value;  
   }  
-  window.getApiKeyFromLocalStorage = getApiKeyFromLocalStorage;  
+  window.get_api_key_from_input = get_api_key_from_input;
 })();  

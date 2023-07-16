@@ -99,7 +99,7 @@ const ask_gpt = async (message) => {
 				accept: `text/event-stream`,
 			},
 			body: JSON.stringify({
-				api_key: getApiKeyFromLocalStorage(),
+				api_key: get_api_key_from_input(),
 				conversation_id: window.conversation_id,
 				action: `_ask`,
 				model: model.options[model.selectedIndex].value,
