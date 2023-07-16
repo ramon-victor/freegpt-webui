@@ -35,7 +35,7 @@ needs_auth = False
 def _create_completion(api_key: str, model: str, messages: list, stream: bool, **kwargs):
 
     openai.api_key = api_key if api_key else api_key_env
-    
+
     try:
         response = openai.ChatCompletion.create(
             model=model,
@@ -47,18 +47,16 @@ def _create_completion(api_key: str, model: str, messages: list, stream: bool, *
             yield chunk.choices[0].delta.get("content", "")
             
     except openai.error.APIError as e:
-        if e.http_status == 429:
-            detail_pattern = re.compile(r'{"detail":"(.*?)"}')
-            match = detail_pattern.search(e.user_message)
-            if match:
-                error_message = match.group(1)
-                print(error_message)
-                yield error_message
-            else:
-                print(e.user_message)
-                yield e.user_message
+        detail_pattern = re.compile(r'{"detail":"(.*?)"}')
+        match = detail_pattern.search(e.user_message)
+        if match:
+            error_message = match.group(1)
+            print(error_message)
+            yield error_message
         else:
-            raise
+            print(e.user_message)
+            yield e.user_message
+
 
 
 params = f'g4f.Providers.{os.path.basename(__file__)[:-3]} supports: ' + \
