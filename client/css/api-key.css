@@ -1,0 +1,22 @@
+.api-key-container {
+    margin: 24px 12px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.api-key-container .button {
+    color: var(--colour-3);
+}
+
+.api-key-container #api-key-ok-button {
+    width: 30%;
+}
+
+.api-key-container input {
+    color: var(--colour-3);
+    margin: 0px 4px;
+    border: 1px solid var(--conversations);
+	border-radius: var(--border-radius-1);
+    background: transparent;
+    width: 70%;
+}

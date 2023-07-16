@@ -90,7 +90,7 @@ const ask_gpt = async (message) => {
 		window.scrollTo(0, 0);
 		await new Promise((r) => setTimeout(r, 1000));
 		window.scrollTo(0, 0);
-
+		
 		const response = await fetch(`${url_prefix}/backend-api/v2/conversation`, {
 			method: `POST`,
 			signal: window.controller.signal,
@@ -99,6 +99,7 @@ const ask_gpt = async (message) => {
 				accept: `text/event-stream`,
 			},
 			body: JSON.stringify({
+				api_key: getApiKeyFromLocalStorage(),
 				conversation_id: window.conversation_id,
 				action: `_ask`,
 				model: model.options[model.selectedIndex].value,

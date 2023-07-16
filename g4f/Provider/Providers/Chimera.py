@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 from ...typing import sha256, Dict, get_type_hints
 
 load_dotenv()
-openai.api_key = os.environ.get("CHIMERA_API_KEY")
+api_key_env = os.environ.get("CHIMERA_API_KEY")
 openai.api_base = "https://chimeragpt.adventblocks.cc/v1"
 
 url = 'https://chimeragpt.adventblocks.cc/'
@@ -32,7 +32,10 @@ supports_stream = True
 needs_auth = False
 
 
-def _create_completion(model: str, messages: list, stream: bool, **kwargs):
+def _create_completion(api_key: str, model: str, messages: list, stream: bool, **kwargs):
+
+    openai.api_key = api_key if api_key else api_key_env
+    
     try:
         response = openai.ChatCompletion.create(
             model=model,

@@ -12,9 +12,20 @@
 			content="A conversational AI system that listens, learns, and challenges" />
 		<meta property="og:url" content="https://chat.acy.dev" />
 		<link rel="stylesheet" href="{{ url_for('bp.static', filename='css/style.css') }}" />
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('bp.static', filename='img/apple-touch-icon.png') }}" />
-		<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('bp.static', filename='img/favicon-32x32.png') }}" />
-		<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('bp.static', filename='img/favicon-16x16.png') }}" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="{{ url_for('bp.static', filename='img/apple-touch-icon.png') }}" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="{{ url_for('bp.static', filename='img/favicon-32x32.png') }}" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="{{ url_for('bp.static', filename='img/favicon-16x16.png') }}" />
 		<link rel="manifest" href="{{ url_for('bp.static', filename='img/site.webmanifest') }}" />
 		<link
 			rel="stylesheet"
@@ -37,12 +48,20 @@
 						<i class="fa-regular fa-trash"></i>
 						<span>Clear Conversations</span>
 					</button>
+					<div class="api-key-container" id="api-key-container">
+						<button id="show-api-key-button" class="button">API Key</button>
+						<input type="password" id="API-key" class="hidden fade-in" />
+						<button id="api-key-ok-button" class="button hidden fade-in">Ok</button>
+					</div>
 					<div class="field checkbox theme-toggler-container">
 						<input type="checkbox" id="theme-toggler" />
 						<label for="theme-toggler"></label>
 						<span>Dark Mode</span>
 					</div>
-					<a class="info" href="https://github.com/ramonvc/freegpt-webui/tree/chimeragpt-version" target="_blank">
+					<a
+						class="info"
+						href="https://github.com/ramonvc/freegpt-webui/tree/chimeragpt-version"
+						target="_blank">
 						<i class="fa-brands fa-github"></i>
 						<span class="conversation-title">freegpt-webui-chimera</span>
 					</a>
@@ -130,6 +149,7 @@
 		<script>
 			window.conversation_id = "{{ chat_id }}";
 		</script>
+		<script src="{{ url_for('bp.static', filename='js/api-key.js') }}"></script>
 		<script src="{{ url_for('bp.static', filename='js/icons.js') }}"></script>
 		<script src="{{ url_for('bp.static', filename='js/chat.js') }}" defer></script>
 		<script src="https://cdn.jsdelivr.net/npm/markdown-it@latest/dist/markdown-it.min.js"></script>

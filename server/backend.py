@@ -35,12 +35,14 @@ class Backend_Api:
 
         while retries < max_retries:
             try:
+                api_key = request.json['api_key']
                 jailbreak = request.json['jailbreak']
                 model = request.json['model']
                 messages = build_messages(jailbreak)
-
+                
                 # Generate response
                 response = ChatCompletion.create(
+                    api_key=api_key,
                     model=model,
                     stream=True,
                     chatId=conversation_id,
