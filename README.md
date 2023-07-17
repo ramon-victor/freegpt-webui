@@ -17,7 +17,7 @@
 <br>
 
 ## 🔑 <strong>REQUIRE API KEY BUT IT'S FREE</strong> 
-Get your API key from the [ChimeraGPT Discord](https://discord.gg/Fg2HSJgN).
+Get your API key from the [ChimeraGPT Discord](https://discord.gg/chimeragpt).
 
 ## Project Hosting and Demonstration 🌐🚀
 The project is hosted on multiple platforms to be tested and modified.
@@ -69,7 +69,7 @@ pip install -r requirements.txt
 Before starting the application, you need to obtain an API key from ChimeraGPT and set up the .env file.
 
 ### Get your API key
-Get your API key from the [ChimeraGPT Discord](https://discord.gg/Fg2HSJgN).
+Get your API key from the [ChimeraGPT Discord](https://discord.gg/chimeragpt).
 
 ### Create .env
 In the project directory, create a file called .env.
@@ -99,7 +99,7 @@ http://localhost:1338
 Before you start, make sure you have installed [Docker](https://www.docker.com/get-started) on your machine.
 
 ### Get your API key
-Get your API key from the [ChimeraGPT Discord](https://discord.gg/Fg2HSJgN).
+Get your API key from the [ChimeraGPT Discord](https://discord.gg/chimeragpt).
 
 ### Running the Docker
 Pull the Docker image from Docker Hub:
