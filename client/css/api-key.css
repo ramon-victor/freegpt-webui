@@ -8,6 +8,10 @@
     color: var(--colour-3);
 }
 
+.api-key-container #show-api-key-button {
+    width: 90%;
+}
+
 .api-key-container #api-key-ok-button {
     width: 30%;
 }
