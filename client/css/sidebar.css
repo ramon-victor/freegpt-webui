@@ -138,15 +138,10 @@
 	top: 0;
 	left: 0;
 	margin: 10px;
-	font-size: 20px;
+	font-size: 1rem;
 	cursor: pointer;
-	backdrop-filter: blur(20px);
-	-webkit-backdrop-filter: blur(20px);
-	background-color: var(--blur-bg);
-	border-radius: 10px;
-	border: 1px solid var(--blur-border);
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	justify-content: center;
 	align-items: center;
 	transition: 0.33s;
