@@ -2,9 +2,7 @@ import re
 import time
 import g4f
 from g4f import ChatCompletion
-from googletrans import Translator
 from flask import request, Response, stream_with_context
-from datetime import datetime
 from requests import get
 from server.config import special_instructions
 
@@ -23,7 +21,7 @@ class Backend_Api:
                 'methods': ['POST']
             }
         }
-        
+
     def _conversation(self):
         """
         Handles the conversation route.
@@ -75,20 +73,8 @@ def build_messages(jailbreak):
     internet_access = request.json['meta']['content']['internet_access']
     prompt = request.json['meta']['content']['parts'][0]
 
-    # Generate system message
-    current_date = datetime.now().strftime("%Y-%m-%d")
-    system_message = (
-        f'You are ChatGPT also known as ChatGPT, a large language model trained by OpenAI. '
-        f'Strictly follow the users instructions. '
-        f'Knowledge cutoff: 2021-09-01 Current date: {current_date}. '
-        f'{set_response_language(prompt)}'
-    )
-
-    # Initialize the conversation with the system message
-    conversation = [{'role': 'system', 'content': system_message}]
-
     # Add the existing conversation
-    conversation += _conversation
+    conversation = _conversation
 
     # Add web results if enabled
     conversation += fetch_search_results(
@@ -170,20 +156,6 @@ def response_jailbroken_failed(response):
     :return: Boolean indicating if the response has not been jailbroken
     """
     return False if len(response) < 4 else not (response.startswith("GPT:") or response.startswith("ACT:"))
-
-
-def set_response_language(prompt):
-    """  
-    Set the response language based on the prompt content.  
-
-    :param prompt: Prompt dictionary  
-    :return: String indicating the language to be used for the response  
-    """
-    translator = Translator()
-    max_chars = 256
-    content_sample = prompt['content'][:max_chars]
-    detected_language = translator.detect(content_sample).lang
-    return f"You will respond in the language: {detected_language}. "
 
 
 def getJailbreak(jailbreak):
