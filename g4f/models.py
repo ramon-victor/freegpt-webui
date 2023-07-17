@@ -35,7 +35,7 @@ class Model:
     class gpt_4:
         name: str = 'gpt-4'
         base_provider: str = 'openai'
-        best_provider: Provider.Provider = Provider.Dfehub
+        best_provider: Provider.Provider = Provider.ChatgptAi
     
     class gpt_4_0613:
         name: str = 'gpt-4-0613'
