@@ -19,8 +19,15 @@
 <br>
 
 ## 🔑 <strong>REQUIRE API KEY BUT IT'S FREE</strong> 
-
 Get your API key from the [ChimeraGPT Discord](https://discord.gg/Fg2HSJgN).
+
+## Project Hosting and Demonstration 🌐🚀
+The project is hosted on multiple platforms to be tested and modified.
+|Plataform|Status|Repo|Demo|
+|--|--|--|--|
+|[replit](https://replit.com/)|![Active](https://img.shields.io/badge/Active-brightgreen)|[FreeGPT WebUI](https://replit.com/@ramonvc/freegpt-webui)|[Chat](https://freegpt-webui.ramonvc.repl.co/chat/)
+|[hugging face](https://huggingface.co)|![Active](https://img.shields.io/badge/Active-brightgreen)|[FreeGPT WebUI](https://huggingface.co/spaces/monra/freegpt-webui/tree/main)|[Chat](https://huggingface.co/spaces/monra/freegpt-webui)
+|[replit](https://replit.com/)|![Active](https://img.shields.io/badge/Active-brightgreen)|[FreeGPT WebUI - Chimera Version](https://replit.com/@ramonvc/freegpt-webui-chimera)|[Chat](https://freegpt-webui-chimera.ramonvc.repl.co/chat/)
 
 ## Table of Contents  
 - [Getting Started](#getting-started-white_check_mark)  
