@@ -7,7 +7,7 @@ This project features a WebUI utilizing the [G4F API](https://github.com/xtekky/
 Experience the power of ChatGPT with a user-friendly interface, enhanced jailbreaks, and completely free.
 
 ## Known bugs 🚧
-- GPT-4 model offline.
+- Stream mode not working properly.
 
 ## News 📢
 I have created a new version of FreeGPT WebUI using the [ChimeraGPT API](https://chimeragpt.adventblocks.cc/). 
