@@ -17,19 +17,9 @@ class Model:
         base_provider: str = 'poe'
         best_provider: Provider.Provider = Provider.Chimera
 
-    class gpt_35_turbo_openai:
-        name: str = 'gpt-3.5-turbo-openai'
-        base_provider: str = 'openai'
-        best_provider: Provider.Provider = Provider.Chimera
-
     class gpt_35_turbo_16k:
         name: str = 'gpt-3.5-turbo-16k'
         base_provider: str = 'reversed'
-        best_provider: Provider.Provider = Provider.Chimera
-
-    class gpt_35_turbo_16k_openai:
-        name: str = 'gpt-3.5-turbo-16k-openai'
-        base_provider: str = 'openai'
         best_provider: Provider.Provider = Provider.Chimera
 
     class gpt_35_turbo_16k_poe:
@@ -87,9 +77,7 @@ class ModelUtils:
     convert: dict = {
         'gpt-3.5-turbo': Model.gpt_35_turbo,
         'gpt-3.5-turbo-poe': Model.gpt_35_turbo_poe,
-        'gpt-3.5-turbo-openai': Model.gpt_35_turbo_openai,
         'gpt-3.5-turbo-16k': Model.gpt_35_turbo_16k,
-        'gpt-3.5-turbo-16k-openai': Model.gpt_35_turbo_16k_openai,
         'gpt-3.5-turbo-16k-poe': Model.gpt_35_turbo_16k_poe,
         'gpt-4': Model.gpt_4,
         'gpt-4-0613': Model.gpt_4_0613,
