@@ -1,6 +1,4 @@
 import re
-import time
-import g4f
 from datetime import datetime
 from g4f import ChatCompletion
 from flask import request, Response, stream_with_context
