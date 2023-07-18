@@ -1,5 +1,5 @@
 import re
-import time
+from datetime import datetime
 from g4f import ChatCompletion
 from flask import request, Response, stream_with_context
 from requests import get
@@ -22,53 +22,47 @@ class Backend_Api:
         }
 
     def _conversation(self):
-        """
-        Handles the conversation route.
+        """  
+        Handles the conversation route.  
 
-        :return: Response object containing the generated conversation stream
+        :return: Response object containing the generated conversation stream  
         """
-        max_retries = 3
-        retries = 0
         conversation_id = request.json['conversation_id']
 
-        while retries < max_retries:
-            try:
-                api_key = request.json['api_key']
-                jailbreak = request.json['jailbreak']
-                model = request.json['model']
-                messages = build_messages(jailbreak)
-                
-                # Generate response
-                response = ChatCompletion.create(
-                    api_key=api_key,
-                    model=model,
-                    stream=True,
-                    chatId=conversation_id,
-                    messages=messages
-                )
+        try:
+            api_key = request.json['api_key']
+            jailbreak = request.json['jailbreak']
+            model = request.json['model']
+            messages = build_messages(jailbreak)
 
-                return Response(stream_with_context(generate_stream(response, jailbreak)), mimetype='text/event-stream')
+            # Generate response
+            response = ChatCompletion.create(
+                api_key=api_key,
+                model=model,
+                stream=True,
+                chatId=conversation_id,
+                messages=messages
+            )
 
-            except Exception as e:
-                print(e)
-                print(e.__traceback__.tb_next)
+            return Response(stream_with_context(generate_stream(response, jailbreak)), mimetype='text/event-stream')
 
-                retries += 1
-                if retries >= max_retries:
-                    return {
-                        '_action': '_ask',
-                        'success': False,
-                        "error": f"an error occurred {str(e)}"
-                    }, 400
-                time.sleep(3)  # Wait 3 second before trying again
+        except Exception as e:
+            print(e)
+            print(e.__traceback__.tb_next)
+
+            return {
+                '_action': '_ask',
+                'success': False,
+                "error": f"an error occurred {str(e)}"
+            }, 400
 
 
 def build_messages(jailbreak):
-    """
-    Build the messages for the conversation.
+    """  
+    Build the messages for the conversation.  
 
-    :param jailbreak: Jailbreak instruction string
-    :return: List of messages for the conversation
+    :param jailbreak: Jailbreak instruction string  
+    :return: List of messages for the conversation  
     """
     _conversation = request.json['meta']['content']['conversation']
     internet_access = request.json['meta']['content']['internet_access']
@@ -78,28 +72,32 @@ def build_messages(jailbreak):
     conversation = _conversation
 
     # Add web results if enabled
-    conversation += fetch_search_results(
-        prompt["content"]) if internet_access else []
+    if internet_access:
+        current_date = datetime.now().strftime("%Y-%m-%d")
+        query = f'Current date: {current_date}. ' + prompt["content"]
+        search_results = fetch_search_results(query)
+        conversation.extend(search_results)
 
     # Add jailbreak instructions if enabled
     if jailbreak_instructions := getJailbreak(jailbreak):
-        conversation += jailbreak_instructions
+        conversation.extend(jailbreak_instructions)
 
     # Add the prompt
-    conversation += [prompt]
+    conversation.append(prompt)
 
     # Reduce conversation size to avoid API Token quantity error
-    conversation = conversation[-4:] if len(conversation) > 3 else conversation
+    if len(conversation) > 3:
+        conversation = conversation[-4:]
 
     return conversation
 
 
 def fetch_search_results(query):
-    """
-    Fetch search results for a given query.
+    """  
+    Fetch search results for a given query.  
 
-    :param query: Search query string
-    :return: List of search results
+    :param query: Search query string  
+    :return: List of search results  
     """
     search = get('https://ddg-api.herokuapp.com/search',
                  params={
@@ -111,7 +109,11 @@ def fetch_search_results(query):
     for index, result in enumerate(search.json()):
         snippet = f'[{index + 1}] "{result["snippet"]}" URL:{result["link"]}.'
         snippets += snippet
-    return [{'role': 'system', 'content': snippets}]
+
+    response = "Here are some updated web searches. Use this to improve user response:"
+    response += snippets
+
+    return [{'role': 'system', 'content': response}]
 
 
 def generate_stream(response, jailbreak):

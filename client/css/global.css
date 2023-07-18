@@ -12,17 +12,17 @@
 
 .theme-light {
 	--colour-1: #f5f5f5;
-	--colour-2: #222222;
-	--colour-3: #333333;
-	--colour-4: #444444;
-	--colour-5: #fafafa;
-	--colour-6: #e0e0e0;
+	--colour-2: #000000;
+	--colour-3: #474747;
+	--colour-4: #949494;
+	--colour-5: #ebebeb;
+	--colour-6: #dadada;
 
 	--accent: #3a3a3a;
-	--blur-bg: #f9f9f9;
-	--blur-border: #ebebeb;
-	--user-input: #333333;
-	--conversations: #555555;
+	--blur-bg: #ffffff;
+	--blur-border: #dbdbdb;
+	--user-input: #282828;
+	--conversations: #666666;
 }
 
 .theme-dark {
