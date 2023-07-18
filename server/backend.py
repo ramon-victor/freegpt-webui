@@ -24,43 +24,37 @@ class Backend_Api:
         }
 
     def _conversation(self):
-        """
-        Handles the conversation route.
+        """  
+        Handles the conversation route.  
 
-        :return: Response object containing the generated conversation stream
+        :return: Response object containing the generated conversation stream  
         """
-        max_retries = 3
-        retries = 0
         conversation_id = request.json['conversation_id']
 
-        while retries < max_retries:
-            try:
-                jailbreak = request.json['jailbreak']
-                model = request.json['model']
-                messages = build_messages(jailbreak)
+        try:
+            jailbreak = request.json['jailbreak']
+            model = request.json['model']
+            messages = build_messages(jailbreak)
 
-                # Generate response
-                response = ChatCompletion.create(
-                    model=model,
-                    stream=True,
-                    chatId=conversation_id,
-                    messages=messages
-                )
+            # Generate response
+            response = ChatCompletion.create(
+                model=model,
+                stream=True,
+                chatId=conversation_id,
+                messages=messages
+            )
 
-                return Response(stream_with_context(generate_stream(response, jailbreak)), mimetype='text/event-stream')
+            return Response(stream_with_context(generate_stream(response, jailbreak)), mimetype='text/event-stream')
 
-            except Exception as e:
-                print(e)
-                print(e.__traceback__.tb_next)
+        except Exception as e:
+            print(e)
+            print(e.__traceback__.tb_next)
 
-                retries += 1
-                if retries >= max_retries:
-                    return {
-                        '_action': '_ask',
-                        'success': False,
-                        "error": f"an error occurred {str(e)}"
-                    }, 400
-                time.sleep(3)  # Wait 3 second before trying again
+            return {
+                '_action': '_ask',
+                'success': False,
+                "error": f"an error occurred {str(e)}"
+            }, 400
 
 
 def build_messages(jailbreak):
