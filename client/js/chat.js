@@ -56,7 +56,7 @@ const ask_gpt = async (message) => {
 		message_input.innerHTML = ``;
 		message_input.innerText = ``;
 
-		add_conversation(window.conversation_id, message.substr(0, 20));
+		add_conversation(window.conversation_id, message.substr(0, 16));
 		window.scrollTo(0, 0);
 		window.controller = new AbortController();
 
