@@ -69,9 +69,10 @@
 
 #send-button {
 	position: absolute;
-	bottom: 40%;
+	bottom: 25%;
 	right: 10px;
 	z-index: 1;
+	padding: 16px;
 }
 
 #cursor {
@@ -124,13 +125,6 @@
 .conversation #messages::-webkit-scrollbar-thumb {
 	background-color: #555555;
 	border-radius: 10px;
-}
-
-@media screen and (max-width: 990px) {
-	.conversation {
-		width: 100%;
-		height: 90%;
-	}
 }
 
 @media screen and (max-height: 720px) {
