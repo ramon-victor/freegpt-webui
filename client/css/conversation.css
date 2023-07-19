@@ -60,11 +60,18 @@
 	border: 1px solid var(--blur-border);
 }
 
-.input-box {
-	display: flex;
+.box.input-box {
+	position: relative;
 	align-items: center;
 	padding: 8px;
 	cursor: pointer;
+}
+
+#send-button {
+	position: absolute;
+	bottom: 40%;
+	right: 10px;
+	z-index: 1;
 }
 
 #cursor {
