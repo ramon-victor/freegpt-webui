@@ -7,14 +7,14 @@ model = ['gpt-4']
 supports_stream = True
 needs_auth = False
 
+
 def _create_completion(model: str, messages: list, stream: bool, **kwargs):
     chat = ''
     for message in messages:
         chat += '%s: %s\n' % (message['role'], message['content'])
     chat += 'assistant: '
 
-    response = requests.get('https://chatgpt.ai/gpt-4/')
-
+    response = requests.get('https://chatgpt.ai/')
     nonce, post_id, _, bot_id = re.findall(r'data-nonce="(.*)"\n     data-post-id="(.*)"\n     data-url="(.*)"\n     data-bot-id="(.*)"\n     data-width', response.text)[0]
 
     headers = {

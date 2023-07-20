@@ -26,7 +26,7 @@ class Website:
         if '-' not in conversation_id:
             return redirect(url_for('._index'))
 
-        return render_template('index.html', chat_id=conversation_id)
+        return render_template('index.html', chat_id=conversation_id, url_prefix=self.url_prefix)
 
     def _index(self):
         return render_template('index.html', chat_id=f'{urandom(4).hex()}-{urandom(2).hex()}-{urandom(2).hex()}-{urandom(2).hex()}-{hex(int(time() * 1000))[2:]}', url_prefix=self.url_prefix)

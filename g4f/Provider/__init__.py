@@ -1,6 +1,7 @@
 from . import Provider
 from .Providers import (
     Aichat,
+    Ails,
     Bard,
     Better,
     Bing,

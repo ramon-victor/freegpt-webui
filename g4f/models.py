@@ -10,22 +10,22 @@ class Model:
     class gpt_35_turbo:
         name: str = 'gpt-3.5-turbo'
         base_provider: str = 'openai'
-        best_provider: Provider.Provider = random.choice([Provider.DeepAi, Provider.Easychat])
+        best_provider: Provider.Provider = Provider.DeepAi
 
     class gpt_35_turbo_0613:
         name: str = 'gpt-3.5-turbo-0613'
         base_provider: str = 'openai'
-        best_provider: Provider.Provider = random.choice([Provider.Gravityengine, Provider.Easychat])
+        best_provider: Provider.Provider = Provider.Gravityengine
 
     class gpt_35_turbo_16k_0613:
         name: str = 'gpt-3.5-turbo-16k-0613'
         base_provider: str = 'openai'
-        best_provider: Provider.Provider = random.choice([Provider.Gravityengine, Provider.Easychat])
+        best_provider: Provider.Provider = Provider.Gravityengine
 
     class gpt_35_turbo_16k:
         name: str = 'gpt-3.5-turbo-16k'
         base_provider: str = 'openai'
-        best_provider: Provider.Provider = random.choice([Provider.Gravityengine, Provider.Easychat])
+        best_provider: Provider.Provider = Provider.Gravityengine
 
     class gpt_4_dev:
         name: str = 'gpt-4-for-dev'
@@ -35,7 +35,7 @@ class Model:
     class gpt_4:
         name: str = 'gpt-4'
         base_provider: str = 'openai'
-        best_provider: Provider.Provider = Provider.Dfehub
+        best_provider: Provider.Provider = Provider.ChatgptAi
     
     class gpt_4_0613:
         name: str = 'gpt-4-0613'
