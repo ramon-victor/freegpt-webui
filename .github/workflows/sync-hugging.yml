@@ -1,0 +1,19 @@
+name: Sync with Hugging Face Hub
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Sync with Hugging Face
+      uses: ramonvc/huggingface-sync-action@v0.0.1
+      with:
+        github_repo_id: ramonvc/freegpt-webui
+        huggingface_repo_id: monra/freegpt-webui
+        repo_type: space
+        space_sdk: docker
+        hf_token: ${{ secrets.HF_TOKEN }}
