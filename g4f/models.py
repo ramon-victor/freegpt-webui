@@ -12,6 +12,11 @@ class Model:
         base_provider: str = 'openai'
         best_provider: Provider.Provider = Provider.Chimera
 
+    class gpt_35_turbo_0301:
+        name: str = 'gpt-3.5-turbo-0301'
+        base_provider: str = 'openai'
+        best_provider: Provider.Provider = Provider.Chimera
+
     class gpt_35_turbo_poe:
         name: str = 'gpt-3.5-turbo-poe'
         base_provider: str = 'poe'
@@ -76,6 +81,7 @@ class Model:
 class ModelUtils:
     convert: dict = {
         'gpt-3.5-turbo': Model.gpt_35_turbo,
+        'gpt-3.5-turbo-0301': Model.gpt_35_turbo_0301,
         'gpt-3.5-turbo-poe': Model.gpt_35_turbo_poe,
         'gpt-3.5-turbo-16k': Model.gpt_35_turbo_16k,
         'gpt-3.5-turbo-16k-poe': Model.gpt_35_turbo_16k_poe,
