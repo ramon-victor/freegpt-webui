@@ -32,8 +32,8 @@ class Model:
         base_provider: str = 'reversed'
         best_provider: Provider.Provider = Provider.Chimera
 
-    class gpt_4_0613:
-        name: str = 'gpt-4-0613'
+    class gpt_4_0314:
+        name: str = 'gpt-4-0314'
         base_provider: str = 'reversed'
         best_provider: Provider.Provider = Provider.Chimera
 
@@ -80,7 +80,7 @@ class ModelUtils:
         'gpt-3.5-turbo-16k': Model.gpt_35_turbo_16k,
         'gpt-3.5-turbo-16k-poe': Model.gpt_35_turbo_16k_poe,
         'gpt-4': Model.gpt_4,
-        'gpt-4-0613': Model.gpt_4_0613,
+        'gpt-4-0314': Model.gpt_4_0314,
         'gpt-4-poe': Model.gpt_4_poe,
         'gpt-4-32k': Model.gpt_4_32k,
         'gpt-4-32k-poe': Model.gpt_4_32k_poe,
