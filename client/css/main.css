@@ -5,3 +5,10 @@
 	justify-content: center;
 	box-sizing: border-box;
 }
+
+@media screen and (max-width: 360px) {
+	.main-container {
+		padding: 0px;
+		height: 90vh;
+	}
+}
