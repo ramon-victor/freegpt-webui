@@ -68,6 +68,10 @@ a:-webkit-any-link {
 	animation: fadeIn 1s forwards;
 }
 
+pre {
+	white-space: pre-wrap;
+}
+
 @keyframes fadeIn {
 	to {
 		opacity: 1;

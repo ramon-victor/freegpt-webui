@@ -1,0 +1,27 @@
+#message-input {
+	margin-right: 30px;
+	height: 64px;
+}
+
+#message-input::-webkit-scrollbar {
+	width: 5px;
+}
+
+#message-input::-webkit-scrollbar-track {
+	background: #f1f1f1;
+}
+
+#message-input::-webkit-scrollbar-thumb {
+	background: #c7a2ff;
+}
+
+#message-input::-webkit-scrollbar-thumb:hover {
+	background: #8b3dff;
+}
+
+@media screen and (max-width: 360px) {
+	#message-input {
+		margin: 0;
+	}
+}
+

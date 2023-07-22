@@ -2,7 +2,7 @@ const query = (obj) =>
 	Object.keys(obj)
 		.map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(obj[k]))
 		.join("&");
-const url_prefix = document.querySelector('body').getAttribute('data-urlprefix')
+const url_prefix = document.querySelector("body").getAttribute("data-urlprefix");
 const markdown = window.markdownit();
 const message_box = document.getElementById(`messages`);
 const message_input = document.getElementById(`message-input`);
@@ -129,7 +129,9 @@ const ask_gpt = async (message) => {
 
 			chunk = decodeUnicode(new TextDecoder().decode(value));
 
-			if (chunk.includes(`<form id="challenge-form" action="${url_prefix}/backend-api/v2/conversation?`)) {
+			if (
+				chunk.includes(`<form id="challenge-form" action="${url_prefix}/backend-api/v2/conversation?`)
+			) {
 				chunk = `cloudflare token expired, please refresh the page.`;
 			}
 
@@ -188,21 +190,15 @@ const ask_gpt = async (message) => {
 };
 
 const add_user_message_box = (message) => {
-	const messageDiv = document.createElement("div");
-	messageDiv.classList.add("message");
+	const messageDiv = createElement("div", { classNames: ["message"] });
+	const avatarContainer = createElement("div", { classNames: ["avatar-container"], innerHTML: user_image });
+	const contentDiv = createElement("div", {
+		classNames: ["content"],
+		id: `user_${token}`,
+		textContent: message,
+	});
 
-	const avatarContainer = document.createElement("div");
-	avatarContainer.classList.add("avatar-container");
-	avatarContainer.innerHTML = user_image;
-
-	const contentDiv = document.createElement("div");
-	contentDiv.classList.add("content");
-	contentDiv.id = `user_${token}`;
-	contentDiv.innerText = message;
-
-	messageDiv.appendChild(avatarContainer);
-	messageDiv.appendChild(contentDiv);
-
+	messageDiv.append(avatarContainer, contentDiv);
 	message_box.appendChild(messageDiv);
 };
 
@@ -285,19 +281,14 @@ const load_conversation = async (conversation_id) => {
 };
 
 const load_user_message_box = (content) => {
-	const messageDiv = document.createElement("div");
-	messageDiv.classList.add("message");
+	const messageDiv = createElement("div", { classNames: ["message"] });
+	const avatarContainer = createElement("div", { classNames: ["avatar-container"], innerHTML: user_image });
+	const contentDiv = createElement("div", { classNames: ["content"] });
+	const preElement = document.createElement("pre");
+	preElement.textContent = content;
+	contentDiv.appendChild(preElement);
 
-	const avatarContainer = document.createElement("div");
-	avatarContainer.classList.add("avatar-container");
-	avatarContainer.innerHTML = user_image;
-
-	const contentDiv = document.createElement("div");
-	contentDiv.classList.add("content");
-	contentDiv.innerText = content;
-
-	messageDiv.appendChild(avatarContainer);
-	messageDiv.appendChild(contentDiv);
+	messageDiv.append(avatarContainer, contentDiv);
 
 	return messageDiv.outerHTML;
 };
@@ -452,22 +443,6 @@ window.onload = async () => {
 	register_settings_localstorage();
 };
 
-document.querySelector(".mobile-sidebar").addEventListener("click", (event) => {
-	const sidebar = document.querySelector(".sidebar");
-
-	if (sidebar.classList.contains("shown")) {
-		sidebar.classList.remove("shown");
-		event.target.classList.remove("rotated");
-		document.body.style.overflow = "auto";
-	} else {
-		sidebar.classList.add("shown");
-		event.target.classList.add("rotated");
-		document.body.style.overflow = "hidden";
-	}
-
-	window.scrollTo(0, 0);
-});
-
 const register_settings_localstorage = async () => {
 	settings_ids = ["switch", "model", "jailbreak"];
 	settings_elements = settings_ids.map((id) => document.getElementById(id));
@@ -509,8 +484,26 @@ const load_settings_localstorage = async () => {
 function clearTextarea(textarea) {
 	textarea.style.removeProperty("height");
 	textarea.style.height = `${textarea.scrollHeight + 4}px`;
-
 	if (textarea.value.trim() === "" && textarea.value.includes("\n")) {
 		textarea.value = "";
 	}
+}
+
+function createElement(tag, { classNames, id, innerHTML, textContent } = {}) {
+	const el = document.createElement(tag);
+	if (classNames) {
+		el.classList.add(...classNames);
+	}
+	if (id) {
+		el.id = id;
+	}
+	if (innerHTML) {
+		el.innerHTML = innerHTML;
+	}
+	if (textContent) {
+		const preElement = document.createElement("pre");
+		preElement.textContent = textContent;
+		el.appendChild(preElement);
+	}
+	return el;
 }
