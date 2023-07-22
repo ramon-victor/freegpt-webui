@@ -59,6 +59,10 @@ a:-webkit-any-link {
 	color: var(--accent);
 }
 
+pre {
+	white-space: pre-wrap;
+}
+
 @media screen and (max-height: 720px) {
 	:root {
 		--section-gap: 16px;
