@@ -1,25 +1,34 @@
+const sidebar = document.querySelector(".sidebar");
+const menuButton = document.querySelector(".menu-button");
+
 function toggleSidebar(event) {
-    const sidebar = document.querySelector(".sidebar");
-
     if (sidebar.classList.contains("shown")) {
-        hideSidebar(sidebar, event.target);
+        hideSidebar(event.target);
     } else {
-        showSidebar(sidebar, event.target);
+        showSidebar(event.target);
     }
-
     window.scrollTo(0, 0);
 }
 
-function showSidebar(sidebar, target) {
+function showSidebar(target) {
     sidebar.classList.add("shown");
     target.classList.add("rotated");
     document.body.style.overflow = "hidden";
 }
 
-function hideSidebar(sidebar, target) {
+function hideSidebar(target) {
     sidebar.classList.remove("shown");
     target.classList.remove("rotated");
     document.body.style.overflow = "auto";
 }
 
-document.querySelector(".menu-button").addEventListener("click", toggleSidebar);
+menuButton.addEventListener("click", toggleSidebar);
+
+document.body.addEventListener('click', function(event) {
+    if (event.target.matches('.conversation-title')) {
+        const menuButtonStyle = window.getComputedStyle(menuButton);
+        if (menuButtonStyle.display !== 'none') {
+            hideSidebar(menuButton);
+        }
+    }
+});
