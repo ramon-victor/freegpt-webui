@@ -8,30 +8,6 @@
 	white-space: pre-wrap;
 }
 
-#message-input {
-	margin-right: 30px;
-	height: 64px;
-}
-
-#message-input::-webkit-scrollbar {
-	width: 5px;
-}
-
-/* Track */
-#message-input::-webkit-scrollbar-track {
-	background: #f1f1f1;
-}
-
-/* Handle */
-#message-input::-webkit-scrollbar-thumb {
-	background: #c7a2ff;
-}
-
-/* Handle on hover */
-#message-input::-webkit-scrollbar-thumb:hover {
-	background: #8b3dff;
-}
-
 /* style for hljs copy */
 .hljs-copy-wrapper {
 	position: relative;

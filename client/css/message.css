@@ -40,6 +40,16 @@
 }
 
 @media screen and (max-height: 720px) {
+	.message {
+		padding: 12px;
+		gap: 0;
+	}
+
+	.message .content {
+		margin-left: 8px;
+		width: 80%;
+	}
+
 	.message .avatar-container img {
 		max-width: 32px;
 		max-height: 32px;
