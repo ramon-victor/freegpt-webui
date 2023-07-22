@@ -442,22 +442,6 @@ window.onload = async () => {
 	register_settings_localstorage();
 };
 
-document.querySelector(".mobile-sidebar").addEventListener("click", (event) => {
-	const sidebar = document.querySelector(".sidebar");
-
-	if (sidebar.classList.contains("shown")) {
-		sidebar.classList.remove("shown");
-		event.target.classList.remove("rotated");
-		document.body.style.overflow = "auto";
-	} else {
-		sidebar.classList.add("shown");
-		event.target.classList.add("rotated");
-		document.body.style.overflow = "hidden";
-	}
-
-	window.scrollTo(0, 0);
-});
-
 const register_settings_localstorage = async () => {
 	settings_ids = ["switch", "model", "jailbreak"];
 	settings_elements = settings_ids.map((id) => document.getElementById(id));

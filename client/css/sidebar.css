@@ -131,7 +131,7 @@
 	animation: spinner 0.6s linear infinite;
 }
 
-.mobile-sidebar {
+.menu-button {
 	display: none !important;
 	position: absolute;
 	z-index: 100000;
@@ -147,7 +147,7 @@
 	transition: 0.33s;
 }
 
-.mobile-sidebar i {
+.menu-button i {
 	transition: 0.33s;
 }
 
@@ -155,7 +155,7 @@
 	transform: rotate(360deg);
 }
 
-.mobile-sidebar.rotated {
+.menu-button.rotated {
 	position: fixed;
 	top: 10px;
 	left: 10px;
@@ -169,7 +169,7 @@
 		max-width: none;
 	}
 
-	.mobile-sidebar {
+	.menu-button {
 		display: flex !important;
 	}
 }
