@@ -7,7 +7,7 @@ from ...typing import sha256, Dict, get_type_hints
 
 load_dotenv()
 api_key_env = os.environ.get("CHIMERA_API_KEY")
-openai.api_base = "https://chimeragpt.adventblocks.cc/v1"
+openai.api_base = "https://chimeragpt.adventblocks.cc/api/v1"
 
 url = 'https://chimeragpt.adventblocks.cc/'
 model = [
