@@ -1,31 +1,24 @@
 from flask import request, session, jsonify
 from flask_babel import Babel
 
-BABEL_DEFAULT_LOCALE = 'en'
+BABEL_DEFAULT_LOCALE = 'en_US'
 BABEL_LANGUAGES = [
-    'ar',
-    'bn',
-    'de',
-    'en',
-    'es',
-    'fr',
-    'hi',
-    'id',
-    'ja',
-    'jv',
-    'ko',
-    'mr',
-    'pa',
-    'pt_BR',
-    'ru',
-    'ta',
-    'te',
-    'tr',
-    'uk',
-    'ur',
-    'vi',
-    'zh',
+    'en_US',  
+    'es_MX',  
+    'pt_BR',  
+    'ru_RU',  
+    'zh_CN',  
+    'zh_TW',  
+    'fr_FR', 
+    'de_DE',  
+    'it_IT', 
+    'ja_JP',  
+    'ko_KR', 
+    'ar_SA', 
+    'hi_IN',  
+    'tr_TR',  
 ]
+
 
 
 def create_babel(app):
