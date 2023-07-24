@@ -9,7 +9,6 @@ from .Providers import (
     ChatgptLogin,
     ChatgptLogin,
     DeepAi,
-    Dfehub,
     Easychat,
     Ezcht,
     Fakeopen,
@@ -28,6 +27,7 @@ from .Providers import (
     Xiaor,
     Yqcloud,
     You,
+    Zeabur
 )
 
 Palm = Bard

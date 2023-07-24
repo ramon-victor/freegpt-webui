@@ -12,9 +12,20 @@
 			content="A conversational AI system that listens, learns, and challenges" />
 		<meta property="og:url" content="https://chat.acy.dev" />
 		<link rel="stylesheet" href="{{ url_for('bp.static', filename='css/style.css') }}" />
-		<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('bp.static', filename='img/apple-touch-icon.png') }}" />
-		<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('bp.static', filename='img/favicon-32x32.png') }}" />
-		<link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('bp.static', filename='img/favicon-16x16.png') }}" />
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="{{ url_for('bp.static', filename='img/apple-touch-icon.png') }}" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="{{ url_for('bp.static', filename='img/favicon-32x32.png') }}" />
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="{{ url_for('bp.static', filename='img/favicon-16x16.png') }}" />
 		<link rel="manifest" href="{{ url_for('bp.static', filename='img/site.webmanifest') }}" />
 		<link
 			rel="stylesheet"
@@ -44,9 +55,7 @@
 					</div>
 					<a class="info" href="https://github.com/ramonvc/gptfree-jailbreak-webui" target="_blank">
 						<i class="fa-brands fa-github"></i>
-						<span class="conversation-title">
-							Version: 0.0.10-Alpha
-						</span>
+						<span class="conversation-title"> Version: 0.0.10-Alpha </span>
 					</a>
 				</div>
 			</div>
@@ -76,11 +85,8 @@
 							<div class="field">
 								<select class="dropdown" name="model" id="model">
 									<option value="gpt-3.5-turbo" selected>GPT-3.5</option>
-									<option value="gpt-3.5-turbo-0613">GPT-3.5-0613</option>
+									<option value="gpt-3.5-turbo-0301">GPT-3.5-turbo-0301</option>
 									<option value="gpt-3.5-turbo-16k">GPT-3.5-turbo-16k</option>
-									<option value="gpt-3.5-turbo-16k-0613">
-										GPT-3.5-turbo-16k-0613
-									</option>
 									<option value="gpt-4">GPT-4</option>
 								</select>
 							</div>

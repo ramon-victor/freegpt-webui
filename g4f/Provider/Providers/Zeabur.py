@@ -2,8 +2,9 @@ import os
 import requests
 from ...typing import sha256, Dict, get_type_hints
 
-url = "https://chat.dfehub.com"
-model = ['gpt-3.5-turbo', 'gpt-3.5-turbo-16k', 'gpt-4']
+url = "https://gptleg.zeabur.app"
+model = ['gpt-3.5-turbo', 'gpt-3.5-turbo-0301',
+         'gpt-3.5-turbo-16k', 'gpt-4', 'gpt-4-0613']
 supports_stream = True
 needs_auth = False
 
@@ -18,8 +19,8 @@ def _create_completion(model: str, messages: list, stream: bool, **kwargs):
         'Accept': 'text/event-stream',
         'Accept-Language': 'pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7,zh-CN;q=0.6,zh;q=0.5',
         'Content-Type': 'application/json',
-        'Origin': 'https://chat.dfehub.com',
-        'Referer': 'https://chat.dfehub.com/',
+        'Origin': 'https://gptleg.zeabur.app',
+        'Referer': 'https://gptleg.zeabur.app/',
         'Sec-Ch-Ua': '"Not.A/Brand";v="8", "Chromium";v="114", "Google Chrome";v="114"',
         'Sec-Ch-Ua-Mobile': '?0',
         'Sec-Ch-Ua-Platform': '"Windows"',
@@ -33,11 +34,11 @@ def _create_completion(model: str, messages: list, stream: bool, **kwargs):
     data = {
         'model': model,
         'temperature': 0.7,
-        'max_tokens': '8000',
+        'max_tokens': '16000',
         'presence_penalty': 0,
         'messages': messages,
     }
-    
+
     response = requests.post(url + '/api/openai/v1/chat/completions',
                              headers=headers, json=data, stream=stream)
 
