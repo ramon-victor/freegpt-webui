@@ -1,10 +1,11 @@
 import secrets
+
 from server.bp import bp
 from server.website import Website
 from server.backend import Backend_Api
+from server.babel import create_babel
 from json import load
-from flask import Flask, session
-from flask_babel import Babel
+from flask import Flask
 
 if __name__ == '__main__':
 
@@ -15,15 +16,10 @@ if __name__ == '__main__':
 
     # Create the app
     app = Flask(__name__)
-    app.secret_key = secrets.token_hex(16) 
-    
+    app.secret_key = secrets.token_hex(16)
+
     # Set up Babel
-    babel = Babel(app)
-    app.config['BABEL_DEFAULT_LOCALE'] = 'es'
-    app.config['BABEL_LANGUAGES'] = ['en', 'es', 'pt-br']
-    def get_locale():
-        return session.get('language', 'en')
-    babel.init_app(app, locale_selector=get_locale)
+    create_babel(app)
 
     # Set up the website routes
     site = Website(bp, url_prefix)
@@ -42,7 +38,7 @@ if __name__ == '__main__':
             view_func=backend_api.routes[route]['function'],
             methods=backend_api.routes[route]['methods'],
         )
-    
+
     # Register the blueprint
     app.register_blueprint(bp, url_prefix=url_prefix)
 
