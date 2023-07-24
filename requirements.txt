@@ -8,6 +8,7 @@ curl_cffi
 aiohttp
 flask
 flask_cors
+flask-babel
 streamlit
 selenium
 fake-useragent

@@ -6,7 +6,7 @@
 
 .checkbox span {
 	font-size: 0.875rem;
-	color: var(--colour-3);
+	color: var(--colour-2);
 	margin-left: 4px;
 }
 
@@ -38,10 +38,6 @@
 }
 
 @media screen and (max-width: 990px) {
-	.checkbox span {
-		font-size: 0.75rem;
-	}
-
 	.checkbox label {
 		width: 25px;
 		height: 15px;
