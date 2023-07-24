@@ -35,5 +35,5 @@ if __name__ == '__main__':
 
     # Run the Flask server
     print(f"Running on {site_config['port']}{url_prefix}")
-    app.run(**site_config)
+    app.run(host="0.0.0.0", port=5000, debug=True)
     print(f"Closing port {site_config['port']}")
