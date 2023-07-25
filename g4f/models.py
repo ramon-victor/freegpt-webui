@@ -77,6 +77,22 @@ class Model:
         base_provider: str = 'poe'
         best_provider: Provider.Provider = Provider.Chimera
 
+    class llama_2_7b_chat:
+        name: str = 'llama-2-7b-chat'
+        base_provider: str = 'llama'
+        best_provider: Provider.Provider = Provider.Chimera
+
+    class llama_2_13b_chat:
+        name: str = 'llama-2-13b-chat'
+        base_provider: str = 'llama'
+        best_provider: Provider.Provider = Provider.Chimera
+
+    class llama_2_70b_chat:
+        name: str = 'llama-2-70b-chat'
+        base_provider: str = 'llama'
+        best_provider: Provider.Provider = Provider.Chimera
+
+
 
 class ModelUtils:
     convert: dict = {
@@ -94,6 +110,10 @@ class ModelUtils:
         'claude-instant-100k': Model.claude_instant_100k,
         'claude-instant': Model.claude_instant,
         'claude-2-100k': Model.claude_2_100k,
+
+        'llama-2-7b-chat': Model.llama_2_7b_chat,
+        'llama-2-13b-chat': Model.llama_2_13b_chat,
+        'llama-2-70b-chat': Model.llama_2_70b_chat,
 
         'sage': Model.sage,
     }
