@@ -1,0 +1,76 @@
+# Spanish (Mexico) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui"
+"/issuesMIME-Version: 1.0\n"
+"POT-Creation-Date: 2023-07-24 21:10-0300\n"
+"PO-Revision-Date: 2023-07-24 21:10-0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es_MX\n"
+"Language-Team: es_MX <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#: client/html/index.html:42
+msgid "New Conversation"
+msgstr ""
+
+#: client/html/index.html:49
+msgid "Clear Conversations"
+msgstr ""
+
+#: client/html/index.html:54
+msgid "API Key"
+msgstr ""
+
+#: client/html/index.html:57
+msgid "Ok"
+msgstr ""
+
+#: client/html/index.html:61
+msgid "Dark Mode"
+msgstr ""
+
+#: client/html/index.html:66
+msgid "Language"
+msgstr ""
+
+#: client/html/index.html:89
+msgid "Stop Generating"
+msgstr ""
+
+#: client/html/index.html:97
+msgid "Ask a question"
+msgstr ""
+
+#: client/html/index.html:131
+msgid "IMAGE"
+msgstr ""
+
+#: client/html/index.html:138
+msgid "Default"
+msgstr ""
+
+#: client/html/index.html:139
+msgid "DAN"
+msgstr ""
+
+#: client/html/index.html:140
+msgid "Evil"
+msgstr ""
+
+#: client/html/index.html:147
+msgid "Web Access"
+msgstr ""
+

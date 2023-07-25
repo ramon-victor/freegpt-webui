@@ -1,6 +1,8 @@
-from flask import render_template, redirect, url_for
+from flask import render_template, redirect, url_for, request, session
+from flask_babel import refresh
 from time import time
 from os import urandom
+from server.babel import get_locale, get_languages
 
 
 class Website:
@@ -19,6 +21,18 @@ class Website:
             '/chat/<conversation_id>': {
                 'function': self._chat,
                 'methods': ['GET', 'POST']
+            },
+            '/change-language': {
+                'function': self.change_language,
+                'methods': ['POST']
+            },
+            '/get-locale': {
+                'function': self.get_locale,
+                'methods': ['GET']
+            },
+            '/get-languages': {
+                'function': self.get_languages,
+                'methods': ['GET']
             }
         }
 
@@ -30,3 +44,15 @@ class Website:
 
     def _index(self):
         return render_template('index.html', chat_id=f'{urandom(4).hex()}-{urandom(2).hex()}-{urandom(2).hex()}-{urandom(2).hex()}-{hex(int(time() * 1000))[2:]}', url_prefix=self.url_prefix)
+
+    def change_language(self):
+        data = request.get_json()
+        session['language'] = data.get('language')
+        refresh()
+        return '', 204
+
+    def get_locale(self):
+        return get_locale()
+    
+    def get_languages(self):  
+        return get_languages()

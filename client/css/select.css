@@ -18,3 +18,18 @@ select {
 
 	appearance: none;
 }
+
+/* scrollbar */
+select.dropdown::-webkit-scrollbar {
+	width: 4px;
+	padding: 8px 0px;
+}
+
+select.dropdown::-webkit-scrollbar-track {
+	background-color: #ffffff00;
+}
+
+select.dropdown::-webkit-scrollbar-thumb {
+	background-color: #555555;
+	border-radius: 10px;
+}
