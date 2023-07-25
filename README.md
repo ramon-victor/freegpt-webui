@@ -14,6 +14,9 @@
 - claude_instant
 - claude-instant-100k
 - claude-2-100k
+- llama-2-7b-chat 🆕
+- llama-2-13b-chat 🆕
+- llama-2-70b-chat 🆕
 
 <br>
 
