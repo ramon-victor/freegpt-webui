@@ -1,0 +1,74 @@
+# Thai (Thailand) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: th_TH\n"
+"Language-Team: th_TH <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "การสนทนาใหม่"
+
+#:
+msgid "Clear Conversations"
+msgstr "ล้างการสนทนา"
+
+#:
+msgid "API Key"
+msgstr "คีย์ API"
+
+#:
+msgid "Ok"
+msgstr "ตกลง"
+
+#:
+msgid "Dark Mode"
+msgstr "โหมดมืด"
+
+#:
+msgid "Language"
+msgstr "ภาษา"
+
+#:
+msgid "Stop Generating"
+msgstr "หยุดการสร้าง"
+
+#:
+msgid "Ask a question"
+msgstr "ถามคำถาม"
+
+#:
+msgid "IMAGE"
+msgstr "ภาพ"
+
+#:
+msgid "Default"
+msgstr "ค่าเริ่มต้น"
+
+#:
+msgid "DAN"
+msgstr "DAN"
+
+#:
+msgid "Evil"
+msgstr "ชั่วร้าย"
+
+#:
+msgid "Web Access"
+msgstr "การเข้าถึงเว็บ"
+
+#:
+msgid "Version"
+msgstr "เวอร์ชัน"

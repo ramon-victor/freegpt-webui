@@ -1,0 +1,73 @@
+# Portuguese (Brazil) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# Ramon - github.com/ramonvc/
+# ...
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: pt_BR\n"
+"Language-Team: pt_BR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "Nova Conversa"
+
+#:
+msgid "Clear Conversations"
+msgstr "Limpar Conversas"
+
+#:
+msgid "API Key"
+msgstr "Chave API"
+
+#:
+msgid "Ok"
+msgstr "Ok"
+
+#:
+msgid "Dark Mode"
+msgstr "Modo Escuro"
+
+#:
+msgid "Language"
+msgstr "Idioma"
+
+#:
+msgid "Stop Generating"
+msgstr "Parar de Gerar"
+
+#:
+msgid "Ask a question"
+msgstr "Faça uma pergunta"
+
+#:
+msgid "IMAGE"
+msgstr "IMAGEM"
+
+#:
+msgid "Default"
+msgstr "Padrão"
+
+#:
+msgid "DAN"
+msgstr "DAN"
+
+#:
+msgid "Evil"
+msgstr "Mal"
+
+#:
+msgid "Web Access"
+msgstr "Acesso Web"
+
+#:
+msgid "Version"
+msgstr "Versão"

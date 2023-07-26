@@ -39,30 +39,39 @@
 				<div class="top">
 					<button class="button" onclick="new_conversation()">
 						<i class="fa-regular fa-plus"></i>
-						<span>New Conversation</span>
+						<span>{{_('New Conversation')}}</span>
 					</button>
 					<div class="spinner"></div>
 				</div>
 				<div class="sidebar-footer">
 					<button class="button" onclick="delete_conversations()">
 						<i class="fa-regular fa-trash"></i>
-						<span>Clear Conversations</span>
+						<span>{{_('Clear Conversations')}}</span>
 					</button>
-					<div class="field checkbox theme-toggler-container">
-						<input type="checkbox" id="theme-toggler" />
-						<label for="theme-toggler"></label>
-						<span>Dark Mode</span>
+					<div class="settings-container">
+						<div class="checkbox field">
+							<span>{{_('Dark Mode')}}</span>
+							<input type="checkbox" id="theme-toggler" />
+							<label for="theme-toggler"></label>
+						</div>
+						<div class="field">
+							<span>{{_('Language')}}</span>
+							<select
+								class="dropdown"
+								id="language"
+								onchange="changeLanguage(this.value)"></select>
+						</div>
 					</div>
 					<a class="info" href="https://github.com/ramonvc/gptfree-jailbreak-webui" target="_blank">
 						<i class="fa-brands fa-github"></i>
-						<span class="conversation-title"> Version: 0.0.10-Alpha </span>
+						<span class="conversation-title"> {{_('Version')}}: 0.1.0 </span>
 					</a>
 				</div>
 			</div>
 			<div class="conversation">
 				<div class="stop-generating stop-generating-hidden">
 					<button class="button" id="cancelButton">
-						<span>Stop Generating</span>
+						<span>{{_('Stop Generating')}}</span>
 					</button>
 				</div>
 				<div class="box" id="messages"></div>
@@ -70,7 +79,7 @@
 					<div class="box input-box">
 						<textarea
 							id="message-input"
-							placeholder="Ask a question"
+							placeholder="{{_('Ask a question')}}"
 							cols="30"
 							rows="10"
 							style="white-space: pre-wrap"></textarea>
@@ -91,16 +100,16 @@
 							</div>
 							<div class="field">
 								<select class="dropdown" name="jailbreak" id="jailbreak">
-									<option value="default" selected>Default</option>
-									<option value="gpt-dan-11.0">DAN</option>
-									<option value="gpt-evil">Evil</option>
+									<option value="default" selected>{{_('Default')}}</option>
+									<option value="gpt-dan-11.0">{{_('DAN')}}</option>
+									<option value="gpt-evil">{{_('Evil')}}</option>
 								</select>
 							</div>
 						</div>
 						<div class="field checkbox">
 							<input type="checkbox" id="switch" />
 							<label for="switch"></label>
-							<span>Web Access</span>
+							<span>{{_('Web Access')}}</span>
 						</div>
 					</div>
 				</div>
@@ -121,5 +130,6 @@
 		<script src="{{ url_for('bp.static', filename='js/highlightjs-copy.min.js') }}"></script>
 		<script src="{{ url_for('bp.static', filename='js/theme-toggler.js') }}"></script>
 		<script src="{{ url_for('bp.static', filename='js/sidebar-toggler.js') }}"></script>
+		<script src="{{ url_for('bp.static', filename='js/change-language.js') }}"></script>
 	</body>
 </html>

@@ -1,0 +1,75 @@
+# Arabic (Saudi Arabia) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: ar_SA\n"
+"Language-Team: ar_SA <LL@li.org>\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "محادثة جديدة"
+
+#:
+msgid "Clear Conversations"
+msgstr "مسح المحادثات"
+
+#:
+msgid "API Key"
+msgstr "مفتاح API"
+
+#:
+msgid "Ok"
+msgstr "حسنا"
+
+#:
+msgid "Dark Mode"
+msgstr "الوضع الداكن"
+
+#:
+msgid "Language"
+msgstr "اللغة"
+
+#:
+msgid "Stop Generating"
+msgstr "توقف عن التوليد"
+
+#:
+msgid "Ask a question"
+msgstr "اسأل سؤال"
+
+#:
+msgid "IMAGE"
+msgstr "صورة"
+
+#:
+msgid "Default"
+msgstr "افتراضي"
+
+#:
+msgid "DAN"
+msgstr "دان"
+
+#:
+msgid "Evil"
+msgstr "شرير"
+
+#:
+msgid "Web Access"
+msgstr "الوصول إلى الويب"
+
+#:
+msgid "Version"
+msgstr "الإصدار"

@@ -1,0 +1,74 @@
+# German (Germany) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: de_DE\n"
+"Language-Team: de_DE <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "Neues Gespräch"
+
+#:
+msgid "Clear Conversations"
+msgstr "Unterhaltungen löschen"
+
+#:
+msgid "API Key"
+msgstr "API-Schlüssel"
+
+#:
+msgid "Ok"
+msgstr "Okay"
+
+#:
+msgid "Dark Mode"
+msgstr "Dunkler Modus"
+
+#:
+msgid "Language"
+msgstr "Sprache"
+
+#:
+msgid "Stop Generating"
+msgstr "Generierung stoppen"
+
+#:
+msgid "Ask a question"
+msgstr "Stelle eine Frage"
+
+#:
+msgid "IMAGE"
+msgstr "BILD"
+
+#:
+msgid "Default"
+msgstr "Standard"
+
+#:
+msgid "DAN"
+msgstr "DAN"
+
+#:
+msgid "Evil"
+msgstr "Böse"
+
+#:
+msgid "Web Access"
+msgstr "Webzugang"
+
+#:
+msgid "Version"
+msgstr "Version"

@@ -1,0 +1,74 @@
+# Czech (Czechia) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: cs_CZ\n"
+"Language-Team: cs_CZ <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "Nová konverzace"
+
+#:
+msgid "Clear Conversations"
+msgstr "Vymazat konverzace"
+
+#:
+msgid "API Key"
+msgstr "API klíč"
+
+#:
+msgid "Ok"
+msgstr "Dobře"
+
+#:
+msgid "Dark Mode"
+msgstr "Tmavý režim"
+
+#:
+msgid "Language"
+msgstr "Jazyk"
+
+#:
+msgid "Stop Generating"
+msgstr "Zastavit generování"
+
+#:
+msgid "Ask a question"
+msgstr "Zeptejte se na otázku"
+
+#:
+msgid "IMAGE"
+msgstr "OBRAZ"
+
+#:
+msgid "Default"
+msgstr "Výchozí"
+
+#:
+msgid "DAN"
+msgstr "DAN"
+
+#:
+msgid "Evil"
+msgstr "Zlo"
+
+#:
+msgid "Web Access"
+msgstr "Webový přístup"
+
+#:
+msgid "Version"
+msgstr "Verze"

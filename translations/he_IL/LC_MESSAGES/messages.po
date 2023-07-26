@@ -1,0 +1,74 @@
+# Hebrew (Israel) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: he_IL\n"
+"Language-Team: he_IL <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "שיחה חדשה"
+
+#:
+msgid "Clear Conversations"
+msgstr "נקה שיחות"
+
+#:
+msgid "API Key"
+msgstr "מפתח API"
+
+#:
+msgid "Ok"
+msgstr "אוקיי"
+
+#:
+msgid "Dark Mode"
+msgstr "מצב כהה"
+
+#:
+msgid "Language"
+msgstr "שפה"
+
+#:
+msgid "Stop Generating"
+msgstr "הפסק ליצור"
+
+#:
+msgid "Ask a question"
+msgstr "שאל שאלה"
+
+#:
+msgid "IMAGE"
+msgstr "תמונה"
+
+#:
+msgid "Default"
+msgstr "ברירת מחדל"
+
+#:
+msgid "DAN"
+msgstr "DAN" 
+
+#:
+msgid "Evil"
+msgstr "רשע"
+
+#:
+msgid "Web Access"
+msgstr "גישה לאינטרנט"
+
+#:
+msgid "Version"
+msgstr "גרסה"

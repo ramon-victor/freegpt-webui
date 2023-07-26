@@ -1,0 +1,74 @@
+# Hungarian (Hungary) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: hu_HU\n"
+"Language-Team: hu_HU <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "Új beszélgetés"
+
+#:
+msgid "Clear Conversations"
+msgstr "Beszélgetések törlése"
+
+#:
+msgid "API Key"
+msgstr "API kulcs"
+
+#:
+msgid "Ok"
+msgstr "Rendben"
+
+#:
+msgid "Dark Mode"
+msgstr "Sötét mód"
+
+#:
+msgid "Language"
+msgstr "Nyelv"
+
+#:
+msgid "Stop Generating"
+msgstr "Generálás leállítása"
+
+#:
+msgid "Ask a question"
+msgstr "Kérdés feltevése"
+
+#:
+msgid "IMAGE"
+msgstr "KÉP"
+
+#:
+msgid "Default"
+msgstr "Alapértelmezett"
+
+#:
+msgid "DAN"
+msgstr "DAN"
+
+#:
+msgid "Evil"
+msgstr "Gonosz"
+
+#:
+msgid "Web Access"
+msgstr "Webhozzáférés"
+
+#:
+msgid "Version"
+msgstr "Verzió"

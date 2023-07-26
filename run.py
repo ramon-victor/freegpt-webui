@@ -1,6 +1,9 @@
+import secrets
+
 from server.bp import bp
 from server.website import Website
 from server.backend import Backend_Api
+from server.babel import create_babel
 from json import load
 from flask import Flask
 
@@ -10,6 +13,13 @@ if __name__ == '__main__':
     config = load(open('config.json', 'r'))
     site_config = config['site_config']
     url_prefix = config.pop('url_prefix')
+
+    # Create the app
+    app = Flask(__name__)
+    app.secret_key = secrets.token_hex(16)
+
+    # Set up Babel
+    create_babel(app)
 
     # Set up the website routes
     site = Website(bp, url_prefix)
@@ -29,8 +39,7 @@ if __name__ == '__main__':
             methods=backend_api.routes[route]['methods'],
         )
 
-    # Create the app and register the blueprint
-    app = Flask(__name__)
+    # Register the blueprint
     app.register_blueprint(bp, url_prefix=url_prefix)
 
     # Run the Flask server

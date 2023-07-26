@@ -1,0 +1,74 @@
+# Indonesian (Indonesia) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: id_ID\n"
+"Language-Team: id_ID <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "Percakapan Baru"
+
+#:
+msgid "Clear Conversations"
+msgstr "Hapus Percakapan"
+
+#:
+msgid "API Key"
+msgstr "Kunci API"
+
+#:
+msgid "Ok"
+msgstr "Oke"
+
+#:
+msgid "Dark Mode"
+msgstr "Mode Gelap"
+
+#:
+msgid "Language"
+msgstr "Bahasa"
+
+#:
+msgid "Stop Generating"
+msgstr "Berhenti Menghasilkan"
+
+#:
+msgid "Ask a question"
+msgstr "Ajukan pertanyaan"
+
+#:
+msgid "IMAGE"
+msgstr "GAMBAR"
+
+#:
+msgid "Default"
+msgstr "Default"
+
+#:
+msgid "DAN"
+msgstr "DAN"
+
+#:
+msgid "Evil"
+msgstr "Jahat"
+
+#:
+msgid "Web Access"
+msgstr "Akses Web"
+
+#:
+msgid "Version"
+msgstr "Versi"
