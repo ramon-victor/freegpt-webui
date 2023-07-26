@@ -1,4 +1,4 @@
-# Spanish (Mexico) translations for FreeGPT WebUI.
+# Dutch (Netherlands) translations for FreeGPT WebUI.
 # Copyright (C) 2023 FreeGPT WebUI.
 # This file is distributed under the same license as the FreeGPT WebUI
 # project.
@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
 "MIME-Version: 1.0\n"
-"Language: es_MX\n"
-"Language-Team: es_MX <LL@li.org>\n"
+"Language: nl_NL\n"
+"Language-Team: nl_NL <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,15 +19,15 @@ msgstr ""
 
 #:
 msgid "New Conversation"
-msgstr "Nueva conversación"
+msgstr "Nieuw gesprek"
 
 #:
 msgid "Clear Conversations"
-msgstr "Borrar conversaciones"
+msgstr "Gesprekken wissen"
 
 #:
 msgid "API Key"
-msgstr "Clave API"
+msgstr "API-sleutel"
 
 #:
 msgid "Ok"
@@ -35,27 +35,27 @@ msgstr "Ok"
 
 #:
 msgid "Dark Mode"
-msgstr "Modo oscuro"
+msgstr "Donkere modus"
 
 #:
 msgid "Language"
-msgstr "Idioma"
+msgstr "Taal"
 
 #:
 msgid "Stop Generating"
-msgstr "Detener generación"
+msgstr "Stop met genereren"
 
 #:
 msgid "Ask a question"
-msgstr "Haz una pregunta"
+msgstr "Stel een vraag"
 
 #:
 msgid "IMAGE"
-msgstr "IMAGEN"
+msgstr "AFBEELDING"
 
 #:
 msgid "Default"
-msgstr "Por defecto"
+msgstr "Standaard"
 
 #:
 msgid "DAN"
@@ -63,12 +63,12 @@ msgstr "DAN"
 
 #:
 msgid "Evil"
-msgstr "Malvado"
+msgstr "Kwaad"
 
 #:
 msgid "Web Access"
-msgstr "Acceso web"
+msgstr "Webtoegang"
 
 #:
 msgid "Version"
-msgstr "Versión"
+msgstr "Versie"

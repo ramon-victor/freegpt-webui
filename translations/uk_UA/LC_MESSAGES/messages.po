@@ -1,4 +1,4 @@
-# Spanish (Mexico) translations for FreeGPT WebUI.
+# Ukrainian (Ukraine) translations for FreeGPT WebUI.
 # Copyright (C) 2023 FreeGPT WebUI.
 # This file is distributed under the same license as the FreeGPT WebUI
 # project.
@@ -10,52 +10,53 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
 "MIME-Version: 1.0\n"
-"Language: es_MX\n"
-"Language-Team: es_MX <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: uk_UA\n"
+"Language-Team: uk_UA <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
 #:
 msgid "New Conversation"
-msgstr "Nueva conversación"
+msgstr "Нова розмова"
 
 #:
 msgid "Clear Conversations"
-msgstr "Borrar conversaciones"
+msgstr "Очистити розмови"
 
 #:
 msgid "API Key"
-msgstr "Clave API"
+msgstr "API-ключ"
 
 #:
 msgid "Ok"
-msgstr "Ok"
+msgstr "Добре"
 
 #:
 msgid "Dark Mode"
-msgstr "Modo oscuro"
+msgstr "Темний режим"
 
 #:
 msgid "Language"
-msgstr "Idioma"
+msgstr "Мова"
 
 #:
 msgid "Stop Generating"
-msgstr "Detener generación"
+msgstr "Зупинити генерацію"
 
 #:
 msgid "Ask a question"
-msgstr "Haz una pregunta"
+msgstr "Задати питання"
 
 #:
 msgid "IMAGE"
-msgstr "IMAGEN"
+msgstr "ЗОБРАЖЕННЯ"
 
 #:
 msgid "Default"
-msgstr "Por defecto"
+msgstr "За замовчуванням"
 
 #:
 msgid "DAN"
@@ -63,12 +64,12 @@ msgstr "DAN"
 
 #:
 msgid "Evil"
-msgstr "Malvado"
+msgstr "Зло"
 
 #:
 msgid "Web Access"
-msgstr "Acceso web"
+msgstr "Веб-доступ"
 
 #:
 msgid "Version"
-msgstr "Versión"
+msgstr "Версія"

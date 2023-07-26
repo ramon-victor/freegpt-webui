@@ -1,4 +1,4 @@
-# Spanish (Mexico) translations for FreeGPT WebUI.
+# Polish (Poland) translations for FreeGPT WebUI.
 # Copyright (C) 2023 FreeGPT WebUI.
 # This file is distributed under the same license as the FreeGPT WebUI
 # project.
@@ -10,24 +10,25 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
 "MIME-Version: 1.0\n"
-"Language: es_MX\n"
-"Language-Team: es_MX <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: pl_PL\n"
+"Language-Team: pl_PL <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && "
+"(n%100<10 || n%100>=20) ? 1 : 2);\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
 #:
 msgid "New Conversation"
-msgstr "Nueva conversación"
+msgstr "Nowa rozmowa"
 
 #:
 msgid "Clear Conversations"
-msgstr "Borrar conversaciones"
+msgstr "Wyczyść rozmowy"
 
 #:
 msgid "API Key"
-msgstr "Clave API"
+msgstr "Klucz API"
 
 #:
 msgid "Ok"
@@ -35,27 +36,27 @@ msgstr "Ok"
 
 #:
 msgid "Dark Mode"
-msgstr "Modo oscuro"
+msgstr "Tryb ciemny"
 
 #:
 msgid "Language"
-msgstr "Idioma"
+msgstr "Język"
 
 #:
 msgid "Stop Generating"
-msgstr "Detener generación"
+msgstr "Zatrzymaj generowanie"
 
 #:
 msgid "Ask a question"
-msgstr "Haz una pregunta"
+msgstr "Zadaj pytanie"
 
 #:
 msgid "IMAGE"
-msgstr "IMAGEN"
+msgstr "OBRAZ"
 
 #:
 msgid "Default"
-msgstr "Por defecto"
+msgstr "Domyślny"
 
 #:
 msgid "DAN"
@@ -63,12 +64,12 @@ msgstr "DAN"
 
 #:
 msgid "Evil"
-msgstr "Malvado"
+msgstr "Zło"
 
 #:
 msgid "Web Access"
-msgstr "Acceso web"
+msgstr "Dostęp do sieci"
 
 #:
 msgid "Version"
-msgstr "Versión"
+msgstr "Wersja"

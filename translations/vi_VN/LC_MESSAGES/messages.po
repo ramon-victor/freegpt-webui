@@ -1,4 +1,4 @@
-# Spanish (Mexico) translations for FreeGPT WebUI.
+# Vietnamese (Vietnam) translations for FreeGPT WebUI.
 # Copyright (C) 2023 FreeGPT WebUI.
 # This file is distributed under the same license as the FreeGPT WebUI
 # project.
@@ -10,52 +10,52 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
 "MIME-Version: 1.0\n"
-"Language: es_MX\n"
-"Language-Team: es_MX <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: vi_VN\n"
+"Language-Team: vi_VN <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
 #:
 msgid "New Conversation"
-msgstr "Nueva conversación"
+msgstr "Cuộc trò chuyện mới"
 
 #:
 msgid "Clear Conversations"
-msgstr "Borrar conversaciones"
+msgstr "Xóa cuộc trò chuyện"
 
 #:
 msgid "API Key"
-msgstr "Clave API"
+msgstr "Khóa API"
 
 #:
 msgid "Ok"
-msgstr "Ok"
+msgstr "Đồng ý"
 
 #:
 msgid "Dark Mode"
-msgstr "Modo oscuro"
+msgstr "Chế độ tối"
 
 #:
 msgid "Language"
-msgstr "Idioma"
+msgstr "Ngôn ngữ"
 
 #:
 msgid "Stop Generating"
-msgstr "Detener generación"
+msgstr "Dừng sinh"
 
 #:
 msgid "Ask a question"
-msgstr "Haz una pregunta"
+msgstr "Đặt một câu hỏi"
 
 #:
 msgid "IMAGE"
-msgstr "IMAGEN"
+msgstr "HÌNH ẢNH"
 
 #:
 msgid "Default"
-msgstr "Por defecto"
+msgstr "Mặc định"
 
 #:
 msgid "DAN"
@@ -63,12 +63,12 @@ msgstr "DAN"
 
 #:
 msgid "Evil"
-msgstr "Malvado"
+msgstr "Ác"
 
 #:
 msgid "Web Access"
-msgstr "Acceso web"
+msgstr "Truy cập web"
 
 #:
 msgid "Version"
-msgstr "Versión"
+msgstr "Phiên bản"

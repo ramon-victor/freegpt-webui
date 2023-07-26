@@ -1,4 +1,4 @@
-# Spanish (Mexico) translations for FreeGPT WebUI.
+# Slovak (Slovakia) translations for FreeGPT WebUI.
 # Copyright (C) 2023 FreeGPT WebUI.
 # This file is distributed under the same license as the FreeGPT WebUI
 # project.
@@ -10,24 +10,24 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
 "MIME-Version: 1.0\n"
-"Language: es_MX\n"
-"Language-Team: es_MX <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: sk_SK\n"
+"Language-Team: sk_SK <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
 #:
 msgid "New Conversation"
-msgstr "Nueva conversación"
+msgstr "Nová konverzácia"
 
 #:
 msgid "Clear Conversations"
-msgstr "Borrar conversaciones"
+msgstr "Vymazať konverzácie"
 
 #:
 msgid "API Key"
-msgstr "Clave API"
+msgstr "API Kľúč"
 
 #:
 msgid "Ok"
@@ -35,27 +35,27 @@ msgstr "Ok"
 
 #:
 msgid "Dark Mode"
-msgstr "Modo oscuro"
+msgstr "Tmavý režim"
 
 #:
 msgid "Language"
-msgstr "Idioma"
+msgstr "Jazyk"
 
 #:
 msgid "Stop Generating"
-msgstr "Detener generación"
+msgstr "Zastaviť generovanie"
 
 #:
 msgid "Ask a question"
-msgstr "Haz una pregunta"
+msgstr "Opýtať sa otázku"
 
 #:
 msgid "IMAGE"
-msgstr "IMAGEN"
+msgstr "OBRÁZOK"
 
 #:
 msgid "Default"
-msgstr "Por defecto"
+msgstr "Predvolené"
 
 #:
 msgid "DAN"
@@ -63,12 +63,12 @@ msgstr "DAN"
 
 #:
 msgid "Evil"
-msgstr "Malvado"
+msgstr "Zlo"
 
 #:
 msgid "Web Access"
-msgstr "Acceso web"
+msgstr "Prístup na web"
 
 #:
 msgid "Version"
-msgstr "Versión"
+msgstr "Verzia"

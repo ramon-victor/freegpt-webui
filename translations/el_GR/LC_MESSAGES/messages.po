@@ -1,4 +1,4 @@
-# Spanish (Mexico) translations for FreeGPT WebUI.
+# Greek (Greece) translations for FreeGPT WebUI.
 # Copyright (C) 2023 FreeGPT WebUI.
 # This file is distributed under the same license as the FreeGPT WebUI
 # project.
@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
 "MIME-Version: 1.0\n"
-"Language: es_MX\n"
-"Language-Team: es_MX <LL@li.org>\n"
+"Language: el_GR\n"
+"Language-Team: el_GR <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,43 +19,43 @@ msgstr ""
 
 #:
 msgid "New Conversation"
-msgstr "Nueva conversación"
+msgstr "Νέα Συνομιλία"
 
 #:
 msgid "Clear Conversations"
-msgstr "Borrar conversaciones"
+msgstr "Καθαρισμός Συνομιλιών"
 
 #:
 msgid "API Key"
-msgstr "Clave API"
+msgstr "Κλειδί API"
 
 #:
 msgid "Ok"
-msgstr "Ok"
+msgstr "Εντάξει"
 
 #:
 msgid "Dark Mode"
-msgstr "Modo oscuro"
+msgstr "Σκοτεινή Λειτουργία"
 
 #:
 msgid "Language"
-msgstr "Idioma"
+msgstr "Γλώσσα"
 
 #:
 msgid "Stop Generating"
-msgstr "Detener generación"
+msgstr "Διακοπή Δημιουργίας"
 
 #:
 msgid "Ask a question"
-msgstr "Haz una pregunta"
+msgstr "Κάντε μια ερώτηση"
 
 #:
 msgid "IMAGE"
-msgstr "IMAGEN"
+msgstr "ΕΙΚΟΝΑ"
 
 #:
 msgid "Default"
-msgstr "Por defecto"
+msgstr "Προεπιλογή"
 
 #:
 msgid "DAN"
@@ -63,12 +63,12 @@ msgstr "DAN"
 
 #:
 msgid "Evil"
-msgstr "Malvado"
+msgstr "Κακό"
 
 #:
 msgid "Web Access"
-msgstr "Acceso web"
+msgstr "Πρόσβαση στον ιστό"
 
 #:
 msgid "Version"
-msgstr "Versión"
+msgstr "Έκδοση"

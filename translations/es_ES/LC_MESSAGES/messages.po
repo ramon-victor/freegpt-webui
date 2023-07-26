@@ -1,4 +1,4 @@
-# Spanish (Mexico) translations for FreeGPT WebUI.
+# Spanish (Spain) translations for FreeGPT WebUI.
 # Copyright (C) 2023 FreeGPT WebUI.
 # This file is distributed under the same license as the FreeGPT WebUI
 # project.
@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
 "MIME-Version: 1.0\n"
-"Language: es_MX\n"
-"Language-Team: es_MX <LL@li.org>\n"
+"Language: es_ES\n"
+"Language-Team: es_ES <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -43,7 +43,7 @@ msgstr "Idioma"
 
 #:
 msgid "Stop Generating"
-msgstr "Detener generación"
+msgstr "Dejar de generar"
 
 #:
 msgid "Ask a question"
@@ -55,7 +55,7 @@ msgstr "IMAGEN"
 
 #:
 msgid "Default"
-msgstr "Por defecto"
+msgstr "Predeterminado"
 
 #:
 msgid "DAN"
@@ -63,7 +63,7 @@ msgstr "DAN"
 
 #:
 msgid "Evil"
-msgstr "Malvado"
+msgstr "Mal"
 
 #:
 msgid "Web Access"

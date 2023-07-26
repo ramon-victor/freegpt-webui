@@ -1,4 +1,4 @@
-# Spanish (Mexico) translations for FreeGPT WebUI.
+# Hebrew (Israel) translations for FreeGPT WebUI.
 # Copyright (C) 2023 FreeGPT WebUI.
 # This file is distributed under the same license as the FreeGPT WebUI
 # project.
@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
 "MIME-Version: 1.0\n"
-"Language: es_MX\n"
-"Language-Team: es_MX <LL@li.org>\n"
+"Language: he_IL\n"
+"Language-Team: he_IL <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,56 +19,56 @@ msgstr ""
 
 #:
 msgid "New Conversation"
-msgstr "Nueva conversación"
+msgstr "שיחה חדשה"
 
 #:
 msgid "Clear Conversations"
-msgstr "Borrar conversaciones"
+msgstr "נקה שיחות"
 
 #:
 msgid "API Key"
-msgstr "Clave API"
+msgstr "מפתח API"
 
 #:
 msgid "Ok"
-msgstr "Ok"
+msgstr "אוקיי"
 
 #:
 msgid "Dark Mode"
-msgstr "Modo oscuro"
+msgstr "מצב כהה"
 
 #:
 msgid "Language"
-msgstr "Idioma"
+msgstr "שפה"
 
 #:
 msgid "Stop Generating"
-msgstr "Detener generación"
+msgstr "הפסק ליצור"
 
 #:
 msgid "Ask a question"
-msgstr "Haz una pregunta"
+msgstr "שאל שאלה"
 
 #:
 msgid "IMAGE"
-msgstr "IMAGEN"
+msgstr "תמונה"
 
 #:
 msgid "Default"
-msgstr "Por defecto"
+msgstr "ברירת מחדל"
 
 #:
 msgid "DAN"
-msgstr "DAN"
+msgstr "DAN" 
 
 #:
 msgid "Evil"
-msgstr "Malvado"
+msgstr "רשע"
 
 #:
 msgid "Web Access"
-msgstr "Acceso web"
+msgstr "גישה לאינטרנט"
 
 #:
 msgid "Version"
-msgstr "Versión"
+msgstr "גרסה"

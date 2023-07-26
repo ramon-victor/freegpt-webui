@@ -1,4 +1,4 @@
-# Spanish (Mexico) translations for FreeGPT WebUI.
+# Indonesian (Indonesia) translations for FreeGPT WebUI.
 # Copyright (C) 2023 FreeGPT WebUI.
 # This file is distributed under the same license as the FreeGPT WebUI
 # project.
@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
 "MIME-Version: 1.0\n"
-"Language: es_MX\n"
-"Language-Team: es_MX <LL@li.org>\n"
+"Language: id_ID\n"
+"Language-Team: id_ID <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,43 +19,43 @@ msgstr ""
 
 #:
 msgid "New Conversation"
-msgstr "Nueva conversación"
+msgstr "Percakapan Baru"
 
 #:
 msgid "Clear Conversations"
-msgstr "Borrar conversaciones"
+msgstr "Hapus Percakapan"
 
 #:
 msgid "API Key"
-msgstr "Clave API"
+msgstr "Kunci API"
 
 #:
 msgid "Ok"
-msgstr "Ok"
+msgstr "Oke"
 
 #:
 msgid "Dark Mode"
-msgstr "Modo oscuro"
+msgstr "Mode Gelap"
 
 #:
 msgid "Language"
-msgstr "Idioma"
+msgstr "Bahasa"
 
 #:
 msgid "Stop Generating"
-msgstr "Detener generación"
+msgstr "Berhenti Menghasilkan"
 
 #:
 msgid "Ask a question"
-msgstr "Haz una pregunta"
+msgstr "Ajukan pertanyaan"
 
 #:
 msgid "IMAGE"
-msgstr "IMAGEN"
+msgstr "GAMBAR"
 
 #:
 msgid "Default"
-msgstr "Por defecto"
+msgstr "Default"
 
 #:
 msgid "DAN"
@@ -63,12 +63,12 @@ msgstr "DAN"
 
 #:
 msgid "Evil"
-msgstr "Malvado"
+msgstr "Jahat"
 
 #:
 msgid "Web Access"
-msgstr "Acceso web"
+msgstr "Akses Web"
 
 #:
 msgid "Version"
-msgstr "Versión"
+msgstr "Versi"

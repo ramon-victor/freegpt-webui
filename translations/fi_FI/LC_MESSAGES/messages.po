@@ -1,4 +1,4 @@
-# Spanish (Mexico) translations for FreeGPT WebUI.
+# Finnish (Finland) translations for FreeGPT WebUI.
 # Copyright (C) 2023 FreeGPT WebUI.
 # This file is distributed under the same license as the FreeGPT WebUI
 # project.
@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
 "MIME-Version: 1.0\n"
-"Language: es_MX\n"
-"Language-Team: es_MX <LL@li.org>\n"
+"Language: fi_FI\n"
+"Language-Team: fi_FI <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,15 +19,15 @@ msgstr ""
 
 #:
 msgid "New Conversation"
-msgstr "Nueva conversación"
+msgstr "Uusi keskustelu"
 
 #:
 msgid "Clear Conversations"
-msgstr "Borrar conversaciones"
+msgstr "Tyhjennä keskustelut"
 
 #:
 msgid "API Key"
-msgstr "Clave API"
+msgstr "API-avain"
 
 #:
 msgid "Ok"
@@ -35,27 +35,27 @@ msgstr "Ok"
 
 #:
 msgid "Dark Mode"
-msgstr "Modo oscuro"
+msgstr "Tumma tila"
 
 #:
 msgid "Language"
-msgstr "Idioma"
+msgstr "Kieli"
 
 #:
 msgid "Stop Generating"
-msgstr "Detener generación"
+msgstr "Lopeta tuottaminen"
 
 #:
 msgid "Ask a question"
-msgstr "Haz una pregunta"
+msgstr "Esitä kysymys"
 
 #:
 msgid "IMAGE"
-msgstr "IMAGEN"
+msgstr "KUVA"
 
 #:
 msgid "Default"
-msgstr "Por defecto"
+msgstr "Oletus"
 
 #:
 msgid "DAN"
@@ -63,12 +63,12 @@ msgstr "DAN"
 
 #:
 msgid "Evil"
-msgstr "Malvado"
+msgstr "Paha"
 
 #:
 msgid "Web Access"
-msgstr "Acceso web"
+msgstr "Verkkopääsy"
 
 #:
 msgid "Version"
-msgstr "Versión"
+msgstr "Versio"

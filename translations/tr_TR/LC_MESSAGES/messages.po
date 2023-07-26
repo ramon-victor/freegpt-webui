@@ -8,20 +8,16 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui"
-"/issuesMIME-Version: 1.0\n"
-"POT-Creation-Date: 2023-07-24 21:10-0300\n"
-"PO-Revision-Date: 2023-07-24 21:10-0300\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
 "Language: tr_TR\n"
 "Language-Team: tr_TR <LL@li.org>\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
+<<<<<<< HEAD
 #: client/html/index.html:42
 msgid "New Conversation"
 msgstr ""
@@ -34,43 +30,46 @@ msgstr ""
 msgid "API Key"
 msgstr ""
 
-#: client/html/index.html:57
 msgid "Ok"
-msgstr ""
+msgstr "Tamam"
 
-#: client/html/index.html:61
+#:
 msgid "Dark Mode"
-msgstr ""
+msgstr "Karanlık Mod"
 
-#: client/html/index.html:66
+#:
 msgid "Language"
-msgstr ""
+msgstr "Dil"
 
-#: client/html/index.html:89
+#:
 msgid "Stop Generating"
-msgstr ""
+msgstr "Üretmeyi Durdur"
 
-#: client/html/index.html:97
+#:
 msgid "Ask a question"
-msgstr ""
+msgstr "Bir soru sor"
 
-#: client/html/index.html:131
+#:
 msgid "IMAGE"
-msgstr ""
+msgstr "GÖRÜNTÜ"
 
-#: client/html/index.html:138
+#:
 msgid "Default"
-msgstr ""
+msgstr "Varsayılan"
 
-#: client/html/index.html:139
+#:
 msgid "DAN"
-msgstr ""
+msgstr "DAN"
 
-#: client/html/index.html:140
+#:
 msgid "Evil"
-msgstr ""
+msgstr "Kötü"
 
-#: client/html/index.html:147
+#:
 msgid "Web Access"
-msgstr ""
+msgstr "Web Erişimi"
 
+#:
+msgid "Version"
+msgstr "Versiyon"
+>>>>>>> pre-release

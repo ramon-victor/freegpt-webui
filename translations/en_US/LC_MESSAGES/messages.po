@@ -3,74 +3,72 @@
 # This file is distributed under the same license as the FreeGPT WebUI
 # project.
 # Contributors:
-# example name - github.com/example/
-# example name2 - github.com/example2/
-#
+# Ramon - github.com/ramonvc/
+# ...
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui"
-"/issuesMIME-Version: 1.0\n"
-"POT-Creation-Date: 2023-07-24 21:10-0300\n"
-"PO-Revision-Date: 2023-07-24 21:10-0300\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
 "Language: en_US\n"
 "Language-Team: en_US <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: client/html/index.html:42
+#:
 msgid "New Conversation"
-msgstr ""
+msgstr "New Conversation"
 
-#: client/html/index.html:49
+#:
 msgid "Clear Conversations"
-msgstr ""
+msgstr "Clear Conversations"
 
-#: client/html/index.html:54
+#:
 msgid "API Key"
-msgstr ""
+msgstr "API Key"
 
-#: client/html/index.html:57
+#:
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
-#: client/html/index.html:61
+#:
 msgid "Dark Mode"
-msgstr ""
+msgstr "Dark Mod"
 
-#: client/html/index.html:66
+#:
 msgid "Language"
-msgstr ""
+msgstr "Language"
 
-#: client/html/index.html:89
+#:
 msgid "Stop Generating"
-msgstr ""
+msgstr "Stop Generating"
 
-#: client/html/index.html:97
+#:
 msgid "Ask a question"
-msgstr ""
+msgstr "Ask a question"
 
-#: client/html/index.html:131
+#:
 msgid "IMAGE"
-msgstr ""
+msgstr "IMAGE"
 
-#: client/html/index.html:138
+#:
 msgid "Default"
-msgstr ""
+msgstr "Default"
 
-#: client/html/index.html:139
+#:
 msgid "DAN"
-msgstr ""
+msgstr "DAN"
 
-#: client/html/index.html:140
+#:
 msgid "Evil"
-msgstr ""
+msgstr "Evil"
 
-#: client/html/index.html:147
+#:
 msgid "Web Access"
-msgstr ""
+msgstr "Web Access"
+
+#:
+msgid "Version"
+msgstr "Version"
 

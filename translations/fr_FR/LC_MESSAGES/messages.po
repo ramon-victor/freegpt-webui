@@ -8,69 +8,67 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: PROJECT VERSION\n"
-"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui"
-"/issuesMIME-Version: 1.0\n"
-"POT-Creation-Date: 2023-07-24 21:10-0300\n"
-"PO-Revision-Date: 2023-07-24 21:10-0300\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
 "Language: fr_FR\n"
 "Language-Team: fr_FR <LL@li.org>\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.12.1\n"
 
-#: client/html/index.html:42
+#:
 msgid "New Conversation"
-msgstr ""
+msgstr "Nouvelle conversation"
 
-#: client/html/index.html:49
+#:
 msgid "Clear Conversations"
-msgstr ""
+msgstr "Effacer les conversations"
 
-#: client/html/index.html:54
+#:
 msgid "API Key"
-msgstr ""
+msgstr "Clé API"
 
-#: client/html/index.html:57
+#:
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
-#: client/html/index.html:61
+#:
 msgid "Dark Mode"
-msgstr ""
+msgstr "Mode sombre"
 
-#: client/html/index.html:66
+#:
 msgid "Language"
-msgstr ""
+msgstr "Langue"
 
-#: client/html/index.html:89
+#:
 msgid "Stop Generating"
-msgstr ""
+msgstr "Arrêter la génération"
 
-#: client/html/index.html:97
+#:
 msgid "Ask a question"
-msgstr ""
+msgstr "Poser une question"
 
-#: client/html/index.html:131
+#:
 msgid "IMAGE"
-msgstr ""
+msgstr "IMAGE"
 
-#: client/html/index.html:138
+#:
 msgid "Default"
-msgstr ""
+msgstr "Par défaut"
 
-#: client/html/index.html:139
+#:
 msgid "DAN"
-msgstr ""
+msgstr "DAN"
 
-#: client/html/index.html:140
+#:
 msgid "Evil"
-msgstr ""
+msgstr "Méchant"
 
-#: client/html/index.html:147
+#:
 msgid "Web Access"
-msgstr ""
+msgstr "Accès Web"
 
+#:
+msgid "Version"
+msgstr "Version"
