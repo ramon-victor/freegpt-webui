@@ -1,0 +1,75 @@
+# Romanian (Romania) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: ro_RO\n"
+"Language-Team: ro_RO <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100"
+" < 20)) ? 1 : 2);\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "Conversație nouă"
+
+#:
+msgid "Clear Conversations"
+msgstr "Șterge conversațiile"
+
+#:
+msgid "API Key"
+msgstr "Cheie API"
+
+#:
+msgid "Ok"
+msgstr "Ok"
+
+#:
+msgid "Dark Mode"
+msgstr "Mod întunecat"
+
+#:
+msgid "Language"
+msgstr "Limbă"
+
+#:
+msgid "Stop Generating"
+msgstr "Opriți generarea"
+
+#:
+msgid "Ask a question"
+msgstr "Pune o întrebare"
+
+#:
+msgid "IMAGE"
+msgstr "IMAGINE"
+
+#:
+msgid "Default"
+msgstr "Implicit"
+
+#:
+msgid "DAN"
+msgstr "DAN"
+
+#:
+msgid "Evil"
+msgstr "Rău"
+
+#:
+msgid "Web Access"
+msgstr "Acces la web"
+
+#:
+msgid "Version"
+msgstr "Versiune"

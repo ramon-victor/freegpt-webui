@@ -1,0 +1,74 @@
+# Korean (South Korea) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: ko_KR\n"
+"Language-Team: ko_KR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "새 대화"
+
+#:
+msgid "Clear Conversations"
+msgstr "대화 지우기"
+
+#:
+msgid "API Key"
+msgstr "API 키"
+
+#:
+msgid "Ok"
+msgstr "확인"
+
+#:
+msgid "Dark Mode"
+msgstr "다크 모드"
+
+#:
+msgid "Language"
+msgstr "언어"
+
+#:
+msgid "Stop Generating"
+msgstr "생성 중지"
+
+#:
+msgid "Ask a question"
+msgstr "질문하기"
+
+#:
+msgid "IMAGE"
+msgstr "이미지"
+
+#:
+msgid "Default"
+msgstr "기본값"
+
+#:
+msgid "DAN"
+msgstr "DAN"
+
+#:
+msgid "Evil"
+msgstr "악"
+
+#:
+msgid "Web Access"
+msgstr "웹 접근"
+
+#:
+msgid "Version"
+msgstr "버전"

@@ -1,0 +1,74 @@
+# Japanese (Japan) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: ja_JP\n"
+"Language-Team: ja_JP <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "新しい会話"
+
+#:
+msgid "Clear Conversations"
+msgstr "会話をクリア"
+
+#:
+msgid "API Key"
+msgstr "APIキー"
+
+#:
+msgid "Ok"
+msgstr "OK"
+
+#:
+msgid "Dark Mode"
+msgstr "ダークモード"
+
+#:
+msgid "Language"
+msgstr "言語"
+
+#:
+msgid "Stop Generating"
+msgstr "生成を停止"
+
+#:
+msgid "Ask a question"
+msgstr "質問をする"
+
+#:
+msgid "IMAGE"
+msgstr "画像"
+
+#:
+msgid "Default"
+msgstr "デフォルト"
+
+#:
+msgid "DAN"
+msgstr "DAN"
+
+#:
+msgid "Evil"
+msgstr "悪"
+
+#:
+msgid "Web Access"
+msgstr "Webアクセス"
+
+#:
+msgid "Version"
+msgstr "バージョン"

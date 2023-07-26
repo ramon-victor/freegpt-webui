@@ -1,0 +1,75 @@
+# Russian (Russia) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: ru_RU\n"
+"Language-Team: ru_RU <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "Новый разговор"
+
+#:
+msgid "Clear Conversations"
+msgstr "Очистить разговоры"
+
+#:
+msgid "API Key"
+msgstr "API ключ"
+
+#:
+msgid "Ok"
+msgstr "Ок"
+
+#:
+msgid "Dark Mode"
+msgstr "Темный режим"
+
+#:
+msgid "Language"
+msgstr "Язык"
+
+#:
+msgid "Stop Generating"
+msgstr "Остановить генерацию"
+
+#:
+msgid "Ask a question"
+msgstr "Задать вопрос"
+
+#:
+msgid "IMAGE"
+msgstr "ИЗОБРАЖЕНИЕ"
+
+#:
+msgid "Default"
+msgstr "По умолчанию"
+
+#:
+msgid "DAN"
+msgstr "DAN"
+
+#:
+msgid "Evil"
+msgstr "Зло"
+
+#:
+msgid "Web Access"
+msgstr "Веб-доступ"
+
+#:
+msgid "Version"
+msgstr "Версия"

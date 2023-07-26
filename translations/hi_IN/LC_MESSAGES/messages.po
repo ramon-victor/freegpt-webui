@@ -1,0 +1,74 @@
+# Hindi (India) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: hi_IN\n"
+"Language-Team: hi_IN <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "नई बातचीत"
+
+#:
+msgid "Clear Conversations"
+msgstr "बातचीत साफ करें"
+
+#:
+msgid "API Key"
+msgstr "API कुंजी"
+
+#:
+msgid "Ok"
+msgstr "ठीक है"
+
+#:
+msgid "Dark Mode"
+msgstr "डार्क मोड"
+
+#:
+msgid "Language"
+msgstr "भाषा"
+
+#:
+msgid "Stop Generating"
+msgstr "उत्पादन रोकें"
+
+#:
+msgid "Ask a question"
+msgstr "एक प्रश्न पूछें"
+
+#:
+msgid "IMAGE"
+msgstr "छवि"
+
+#:
+msgid "Default"
+msgstr "डिफ़ॉल्ट"
+
+#:
+msgid "DAN"
+msgstr "DAN"
+
+#:
+msgid "Evil"
+msgstr "बुराई"
+
+#:
+msgid "Web Access"
+msgstr "वेब पहुंच"
+
+#:
+msgid "Version"
+msgstr "संस्करण"

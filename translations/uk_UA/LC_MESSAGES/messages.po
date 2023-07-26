@@ -1,0 +1,75 @@
+# Ukrainian (Ukraine) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: uk_UA\n"
+"Language-Team: uk_UA <LL@li.org>\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "Нова розмова"
+
+#:
+msgid "Clear Conversations"
+msgstr "Очистити розмови"
+
+#:
+msgid "API Key"
+msgstr "API-ключ"
+
+#:
+msgid "Ok"
+msgstr "Добре"
+
+#:
+msgid "Dark Mode"
+msgstr "Темний режим"
+
+#:
+msgid "Language"
+msgstr "Мова"
+
+#:
+msgid "Stop Generating"
+msgstr "Зупинити генерацію"
+
+#:
+msgid "Ask a question"
+msgstr "Задати питання"
+
+#:
+msgid "IMAGE"
+msgstr "ЗОБРАЖЕННЯ"
+
+#:
+msgid "Default"
+msgstr "За замовчуванням"
+
+#:
+msgid "DAN"
+msgstr "DAN"
+
+#:
+msgid "Evil"
+msgstr "Зло"
+
+#:
+msgid "Web Access"
+msgstr "Веб-доступ"
+
+#:
+msgid "Version"
+msgstr "Версія"

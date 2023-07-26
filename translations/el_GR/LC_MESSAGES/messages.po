@@ -1,0 +1,74 @@
+# Greek (Greece) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: el_GR\n"
+"Language-Team: el_GR <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "Νέα Συνομιλία"
+
+#:
+msgid "Clear Conversations"
+msgstr "Καθαρισμός Συνομιλιών"
+
+#:
+msgid "API Key"
+msgstr "Κλειδί API"
+
+#:
+msgid "Ok"
+msgstr "Εντάξει"
+
+#:
+msgid "Dark Mode"
+msgstr "Σκοτεινή Λειτουργία"
+
+#:
+msgid "Language"
+msgstr "Γλώσσα"
+
+#:
+msgid "Stop Generating"
+msgstr "Διακοπή Δημιουργίας"
+
+#:
+msgid "Ask a question"
+msgstr "Κάντε μια ερώτηση"
+
+#:
+msgid "IMAGE"
+msgstr "ΕΙΚΟΝΑ"
+
+#:
+msgid "Default"
+msgstr "Προεπιλογή"
+
+#:
+msgid "DAN"
+msgstr "DAN"
+
+#:
+msgid "Evil"
+msgstr "Κακό"
+
+#:
+msgid "Web Access"
+msgstr "Πρόσβαση στον ιστό"
+
+#:
+msgid "Version"
+msgstr "Έκδοση"

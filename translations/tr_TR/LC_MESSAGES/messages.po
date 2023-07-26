@@ -1,0 +1,74 @@
+# Turkish (Turkey) translations for FreeGPT WebUI.
+# Copyright (C) 2023 FreeGPT WebUI.
+# This file is distributed under the same license as the FreeGPT WebUI
+# project.
+# Contributors:
+# example name - github.com/example/
+# example name2 - github.com/example2/
+#
+msgid ""
+msgstr ""
+"Report-Msgid-Bugs-To: https://github.com/ramonvc/freegpt-webui/issues"
+"MIME-Version: 1.0\n"
+"Language: tr_TR\n"
+"Language-Team: tr_TR <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.12.1\n"
+
+#:
+msgid "New Conversation"
+msgstr "Yeni Konuşma"
+
+#:
+msgid "Clear Conversations"
+msgstr "Konuşmaları Temizle"
+
+#:
+msgid "API Key"
+msgstr "API Anahtarı"
+
+#:
+msgid "Ok"
+msgstr "Tamam"
+
+#:
+msgid "Dark Mode"
+msgstr "Karanlık Mod"
+
+#:
+msgid "Language"
+msgstr "Dil"
+
+#:
+msgid "Stop Generating"
+msgstr "Üretmeyi Durdur"
+
+#:
+msgid "Ask a question"
+msgstr "Bir soru sor"
+
+#:
+msgid "IMAGE"
+msgstr "GÖRÜNTÜ"
+
+#:
+msgid "Default"
+msgstr "Varsayılan"
+
+#:
+msgid "DAN"
+msgstr "DAN"
+
+#:
+msgid "Evil"
+msgstr "Kötü"
+
+#:
+msgid "Web Access"
+msgstr "Web Erişimi"
+
+#:
+msgid "Version"
+msgstr "Versiyon"
