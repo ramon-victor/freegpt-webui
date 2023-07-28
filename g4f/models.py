@@ -1,5 +1,4 @@
 from g4f import Provider
-import random
 
 
 class Model:
@@ -31,7 +30,7 @@ class Model:
     class gpt_35_turbo_16k:
         name: str = 'gpt-3.5-turbo-16k'
         base_provider: str = 'openai'
-        best_provider: Provider.Provider = Provider.Liaobots
+        best_provider: Provider.Provider = Provider.Ezcht
 
     class gpt_4_dev:
         name: str = 'gpt-4-for-dev'
