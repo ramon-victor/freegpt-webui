@@ -13,7 +13,7 @@ Experience the power of ChatGPT with a user-friendly interface, enhanced jailbre
 I have created a new version of FreeGPT WebUI using the [ChimeraGPT API](https://chimeragpt.adventblocks.cc/). 
 <br>
 <br>
-This free API allows you to use various AI chat models, including <strong>GPT-4, GPT-4-32k, Claude-2, Claude-2-100k, and more.</strong> <br>
+This free API allows you to use various AI chat models, including <strong>GPT-4, GPT-4-32k, llama-2 and more.</strong> <br>
 Check out the project here: [FreeGPT WebUI - Chimera Version](https://github.com/ramonvc/freegpt-webui/tree/chimeragpt-version).
 
 ## Project Hosting and Demonstration 🌐🚀
