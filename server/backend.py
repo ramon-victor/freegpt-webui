@@ -37,7 +37,6 @@ class Backend_Api:
             # Generate response
             response = ChatCompletion.create(
                 model=model,
-                stream=True,
                 chatId=conversation_id,
                 messages=messages
             )

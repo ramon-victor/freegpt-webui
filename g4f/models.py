@@ -10,7 +10,7 @@ class Model:
     class gpt_35_turbo:
         name: str = 'gpt-3.5-turbo'
         base_provider: str = 'openai'
-        best_provider: Provider.Provider = Provider.DeepAi
+        best_provider: Provider.Provider = Provider.AiService
 
     class gpt_35_turbo_0613:
         name: str = 'gpt-3.5-turbo-0613'
@@ -30,7 +30,7 @@ class Model:
     class gpt_35_turbo_16k:
         name: str = 'gpt-3.5-turbo-16k'
         base_provider: str = 'openai'
-        best_provider: Provider.Provider = Provider.Ezcht
+        best_provider: Provider.Provider = Provider.ChatFree
 
     class gpt_4_dev:
         name: str = 'gpt-4-for-dev'
@@ -162,10 +162,6 @@ class Model:
         name: str = 'palm2'
         base_provider: str = 'google'
         best_provider: Provider.Provider = Provider.Bard
-
-    """    'falcon-40b': Model.falcon_40b,
-    'falcon-7b': Model.falcon_7b,
-    'llama-13b': Model.llama_13b,"""
 
     class falcon_40b:
         name: str = 'falcon-40b'
