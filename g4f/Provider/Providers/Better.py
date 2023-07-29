@@ -4,13 +4,13 @@ import requests
 from typing import Dict, get_type_hints
 
 url = 'https://openai-proxy-api.vercel.app/v1/'
-model = {
+model = [
     'gpt-3.5-turbo',
-    'gpt-3.5-turbo-0613'
+    'gpt-3.5-turbo-0613',
     'gpt-3.5-turbo-16k',
     'gpt-3.5-turbo-16k-0613',
     'gpt-4',
-}
+]
 
 supports_stream = True
 needs_auth = False

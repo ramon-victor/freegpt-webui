@@ -6,7 +6,7 @@ from typing import Dict, get_type_hints
 url = 'https://ai.fakeopen.com/v1/'  
 model = [  
     'gpt-3.5-turbo', 
-    'gpt-3.5-turbo-0613'
+    'gpt-3.5-turbo-0613',
     'gpt-3.5-turbo-16k', 
     'gpt-3.5-turbo-16k-0613', 
 ]  
