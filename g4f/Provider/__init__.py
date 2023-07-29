@@ -28,7 +28,8 @@ from .Providers import (
     Xiaor,
     Yqcloud,
     You,
-    Zeabur
+    Zeabur,
+    Wewordle
 )
 
 Palm = Bard
