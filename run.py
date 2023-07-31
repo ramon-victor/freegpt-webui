@@ -1,5 +1,4 @@
 import secrets
-
 from server.bp import bp
 from server.website import Website
 from server.backend import Backend_Api
