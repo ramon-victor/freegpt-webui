@@ -7,9 +7,7 @@
 - gpt-4
 - gpt-4-0314
 - gpt-4-32k
-- llama-2-7b-chat 🆕
-- llama-2-13b-chat 🆕
-- llama-2-70b-chat 🆕
+- llama-2-70b-chat 
 
 <br>
 
