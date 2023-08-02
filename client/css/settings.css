@@ -1,20 +1,21 @@
 .settings-container {
-    margin: 24px 0px 8px 0px;
-    justify-content: center;
+	color: var(--colour-2);
+	margin: 24px 0px 8px 0px;
+	justify-content: center;
 }
 
 .settings-container span {
-    font-size: 0.875rem;
-    margin: 0;
+	font-size: 0.875rem;
+	margin: 0;
 }
 
 .settings-container label {
-    width: 24px;
-    height: 16px;
+	width: 24px;
+	height: 16px;
 }
 
 .settings-container .field {
-    justify-content: space-between;
+	justify-content: space-between;
 }
 
 .settings-container .checkbox input + label,
@@ -28,17 +29,16 @@
 }
 
 .settings-container .checkbox label:after {
-    left: 2px;
-    width: 10px;
-    height: 10px;
+	left: 2px;
+	width: 10px;
+	height: 10px;
 }
 
 .settings-container .checkbox input:checked + label:after {
-    left: calc(100% - 2px - 10px);
+	left: calc(100% - 2px - 10px);
 }
 
 .settings-container .dropdown {
-    padding: 4px 8px;
-    font-size: 0.75rem;
+	padding: 4px 8px;
+	font-size: 0.75rem;
 }
-
