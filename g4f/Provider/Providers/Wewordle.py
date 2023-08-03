@@ -62,7 +62,9 @@ def _create_completion(model: str, messages: list, stream: bool, **kwargs):
     if response.status_code == 200:
         _json = response.json()
         if 'message' in _json:
-            yield _json['message']['content']
+            message_content = _json['message']['content']
+            message_content = message_content.replace('**assistant:** ', '')
+            yield message_content
     else:
         print(f"Error Occurred::{response.status_code}")
         return None
