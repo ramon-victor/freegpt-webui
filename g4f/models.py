@@ -72,11 +72,6 @@ class Model:
         base_provider: str = 'anthropic'
         best_provider: Provider.Provider = Provider.Chimera
 
-    class sage:
-        name: str = 'sage'
-        base_provider: str = 'poe'
-        best_provider: Provider.Provider = Provider.Chimera
-
     class llama_2_7b_chat:
         name: str = 'llama-2-7b-chat'
         base_provider: str = 'llama'
@@ -114,6 +109,5 @@ class ModelUtils:
         'llama-2-7b-chat': Model.llama_2_7b_chat,
         'llama-2-13b-chat': Model.llama_2_13b_chat,
         'llama-2-70b-chat': Model.llama_2_70b_chat,
-
-        'sage': Model.sage,
+        'oasst-sft-6-llama-30b': Model.oasst_sft_6_llama_30b,
     }
