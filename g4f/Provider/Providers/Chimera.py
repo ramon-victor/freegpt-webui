@@ -18,6 +18,7 @@ model = [
     'gpt-4-0314',
     'gpt-4-32k',
     'llama-2-70b-chat',
+    'oasst-sft-6-llama-30b'
 ]
 supports_stream = True
 needs_auth = False

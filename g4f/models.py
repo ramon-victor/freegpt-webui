@@ -86,6 +86,11 @@ class Model:
         name: str = 'llama-2-70b-chat'
         base_provider: str = 'llama'
         best_provider: Provider.Provider = Provider.Chimera
+    
+    class oasst_sft_6_llama_30b:
+        name: str = 'oasst-sft-6-llama-30b'
+        base_provider: str = 'huggingface-chat'
+        best_provider: Provider.Provider = Provider.Chimera
 
 
 
