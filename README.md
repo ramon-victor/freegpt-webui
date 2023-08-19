@@ -12,7 +12,6 @@
 -   llama-2-70b-chat
 -   claude-instant
 -   claude-2
--   claude-2-100k
 
 <br>
 
