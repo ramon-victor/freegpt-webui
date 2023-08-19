@@ -10,6 +10,9 @@
 -   gpt-4-32k
 -   oasst-sft-6-llama-30b
 -   llama-2-70b-chat
+-   claude-instant
+-   claude-2
+-   claude-2-100k
 
 <br>
 

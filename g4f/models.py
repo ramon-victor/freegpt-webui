@@ -67,6 +67,11 @@ class Model:
         base_provider: str = 'anthropic'
         best_provider: Provider.Provider = Provider.Chimera
 
+    class claude_2:
+        name: str = 'claude-2'
+        base_provider: str = 'anthropic'
+        best_provider: Provider.Provider = Provider.Chimera
+
     class claude_2_100k:
         name: str = 'claude-2-100k'
         base_provider: str = 'anthropic'
@@ -109,6 +114,7 @@ class ModelUtils:
 
         'claude-instant-100k': Model.claude_instant_100k,
         'claude-instant': Model.claude_instant,
+        'claude-2': Model.claude_2_100k,
         'claude-2-100k': Model.claude_2_100k,
 
         'llama-2-7b-chat': Model.llama_2_7b_chat,
