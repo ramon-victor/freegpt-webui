@@ -18,7 +18,7 @@ Check out the project here: [FreeGPT WebUI - Chimera Version](https://github.com
 
 ## Project Hosting and Demonstration 🌐🚀
 The project is hosted on multiple platforms to be tested and modified.
-|Plataform|Status|API Key|Free|Repo|Demo|
+|Platform|Status|API Key|Free|Repo|Demo|
 |--|--|--|--|--|--|
 |[replit](https://replit.com/)|![Active](https://img.shields.io/badge/Active-brightgreen)|◼️|☑️|[FreeGPT WebUI](https://replit.com/@ramonvc/freegpt-webui)|[Chat](https://freegpt-webui.ramonvc.repl.co/chat/)
 |[hugging face](https://huggingface.co)|![Active](https://img.shields.io/badge/Active-brightgreen)|◼️|☑️|[FreeGPT WebUI](https://huggingface.co/spaces/monra/freegpt-webui/tree/main)|[Chat](https://huggingface.co/spaces/monra/freegpt-webui)
