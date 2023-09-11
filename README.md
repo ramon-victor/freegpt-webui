@@ -126,13 +126,13 @@ Get your API key from the [NagaAI Discord](https://discord.naga.ac).
 Pull the Docker image from Docker Hub:
 
 ```
-docker pull ramonvc/freegpt-webui-chimera
+docker pull ramonvc/freegpt-webui-naga
 ```
 
 Run the application using Docker:
 
 ```
-docker run -p 1338:1338 -e NAGA_API_KEY=<API-Key> ramonvc/freegpt-webui-chimera
+docker run -p 1338:1338 -e NAGA_API_KEY=<API-Key> ramonvc/freegpt-webui-naga
 ```
 
 Access the application in your browser using the URL:

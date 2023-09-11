@@ -2,7 +2,7 @@ name: Docker Build and Push
 on:
   push:
     branches:
-      - chimeragpt-version 
+      - naga-version 
 jobs:
   build-and-push:
     runs-on: ubuntu-latest 
@@ -30,4 +30,4 @@ jobs:
           file: Dockerfile
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/freegpt-webui-chimera:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/freegpt-webui-naga:latest

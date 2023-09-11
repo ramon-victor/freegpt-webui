@@ -3,7 +3,7 @@ name: Sync with Hugging Face Hub
 on:
   push:
     branches:
-      - chimeragpt-version
+      - naga-version
 
 jobs:
   build:
@@ -17,4 +17,4 @@ jobs:
         repo_type: space
         space_sdk: docker
         hf_token: ${{ secrets.HF_TOKEN }}
-        branch: chimeragpt-version
+        branch: naga-version
