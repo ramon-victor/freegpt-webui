@@ -88,7 +88,7 @@ In the project directory, create a file called .env.
 Open the .env file and add the following line:
 
 ```
-CHIMERA_API_KEY=<API-Key>
+NAGA_API_KEY=<API-Key>
 ```
 
 ## Running the Application :rocket:
@@ -132,7 +132,7 @@ docker pull ramonvc/freegpt-webui-chimera
 Run the application using Docker:
 
 ```
-docker run -p 1338:1338 -e CHIMERA_API_KEY=<API-Key> ramonvc/freegpt-webui-chimera
+docker run -p 1338:1338 -e NAGA_API_KEY=<API-Key> ramonvc/freegpt-webui-chimera
 ```
 
 Access the application in your browser using the URL:
