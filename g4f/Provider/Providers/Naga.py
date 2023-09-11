@@ -6,10 +6,10 @@ from dotenv import load_dotenv
 from ...typing import sha256, Dict, get_type_hints
 
 load_dotenv()
-api_key_env = os.environ.get("CHIMERA_API_KEY")
-openai.api_base = "https://chimeragpt.adventblocks.cc/api/v1"
+api_key_env = os.environ.get("CHIMERA_API_KEY") or os.environ.get("NAGA_API_KEY")
+openai.api_base = "https://api.naga.ac/v1"
 
-url = 'https://chimeragpt.adventblocks.cc/'
+url = 'https://api.naga.ac'
 model = [
     'gpt-3.5-turbo',
     'gpt-3.5-turbo-0301',

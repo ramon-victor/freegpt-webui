@@ -10,92 +10,92 @@ class Model:
     class gpt_35_turbo:
         name: str = 'gpt-3.5-turbo'
         base_provider: str = 'openai'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class gpt_35_turbo_0301:
         name: str = 'gpt-3.5-turbo-0301'
         base_provider: str = 'openai'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class gpt_35_turbo_poe:
         name: str = 'gpt-3.5-turbo-poe'
         base_provider: str = 'poe'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class gpt_35_turbo_16k:
         name: str = 'gpt-3.5-turbo-16k'
         base_provider: str = 'reversed'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class gpt_35_turbo_16k_poe:
         name: str = 'gpt-3.5-turbo-16k-poe'
         base_provider: str = 'poe'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class gpt_4:
         name: str = 'gpt-4'
         base_provider: str = 'reversed'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class gpt_4_0314:
         name: str = 'gpt-4-0314'
         base_provider: str = 'reversed'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class gpt_4_poe:
         name: str = 'gpt-4-poe'
         base_provider: str = 'poe'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class gpt_4_32k:
         name: str = 'gpt-4-32k'
         base_provider: str = 'reversed'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class gpt_4_32k_poe:
         name: str = 'gpt-4-32k-poe'
         base_provider: str = 'poe'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class claude_instant_100k:
         name: str = 'claude-instant-100k'
         base_provider: str = 'anthropic'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class claude_instant:
         name: str = 'claude-instant'
         base_provider: str = 'anthropic'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class claude_2:
         name: str = 'claude-2'
         base_provider: str = 'anthropic'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class claude_2_100k:
         name: str = 'claude-2-100k'
         base_provider: str = 'anthropic'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class llama_2_7b_chat:
         name: str = 'llama-2-7b-chat'
         base_provider: str = 'llama'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class llama_2_13b_chat:
         name: str = 'llama-2-13b-chat'
         base_provider: str = 'llama'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
     class llama_2_70b_chat:
         name: str = 'llama-2-70b-chat'
         base_provider: str = 'llama'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
     
     class oasst_sft_6_llama_30b:
         name: str = 'oasst-sft-6-llama-30b'
         base_provider: str = 'huggingface-chat'
-        best_provider: Provider.Provider = Provider.Chimera
+        best_provider: Provider.Provider = Provider.Naga
 
 
 
