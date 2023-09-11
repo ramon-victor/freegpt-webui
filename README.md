@@ -60,10 +60,10 @@ git clone https://github.com/ramonvc/freegpt-webui.git
 
 ### Switching to the NagaAI-version Branch :arrows_counterclockwise:
 
-Run the following command to switch to the NagaAI-version branch:
+Run the following command to switch to the NagaAI branch:
 
 ```
-git checkout NagaAI-version
+git checkout naga-version
 ```
 
 ## Install Dependencies :wrench:
