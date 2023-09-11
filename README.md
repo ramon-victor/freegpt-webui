@@ -1,4 +1,4 @@
-# FreeGPT WebUI - Chimera Version
+# FreeGPT WebUI - NagaAI Version
 
 ## Models
 
@@ -17,7 +17,7 @@
 
 ## 🔑 <strong>REQUIRE API KEY BUT IT'S FREE</strong>
 
-Get your API key from the [ChimeraGPT Discord](https://discord.gg/hfmwJzctC6).
+Get your API key from the [NagaAI Discord](https://discord.naga.ac).
 
 ## Project Hosting and Demonstration 🌐🚀
 
@@ -26,8 +26,8 @@ The project is hosted on multiple platforms to be tested and modified.
 |--|--|--|--|--|--|
 |[replit](https://replit.com/)|![Active](https://img.shields.io/badge/Active-brightgreen)|◼️|☑️|[FreeGPT WebUI](https://replit.com/@ramonvc/freegpt-webui)|[Chat](https://freegpt-webui.ramonvc.repl.co/chat/)
 |[hugging face](https://huggingface.co)|![Active](https://img.shields.io/badge/Active-brightgreen)|◼️|☑️|[FreeGPT WebUI](https://huggingface.co/spaces/monra/freegpt-webui/tree/main)|[Chat](https://huggingface.co/spaces/monra/freegpt-webui)
-|[replit](https://replit.com/)|![Active](https://img.shields.io/badge/Active-brightgreen)|☑️|☑️|[FreeGPT WebUI - Chimera Version](https://replit.com/@ramonvc/freegpt-webui-chimera)|[Chat](https://freegpt-webui-chimera.ramonvc.repl.co/chat/)
-|[hugging face](https://huggingface.co)|![Active](https://img.shields.io/badge/Active-brightgreen)|☑️|☑️|[FreeGPT WebUI - Chimera Version](https://huggingface.co/spaces/monra/freegpt-webui-chimera/tree/main)|[Chat](https://huggingface.co/spaces/monra/freegpt-webui-chimera)
+|[replit](https://replit.com/)|![Active](https://img.shields.io/badge/Active-brightgreen)|☑️|☑️|[FreeGPT WebUI - Naga Version](https://replit.com/@ramonvc/freegpt-webui-chimera)|[Chat](https://freegpt-webui-chimera.ramonvc.repl.co/chat/)
+|[hugging face](https://huggingface.co)|![Active](https://img.shields.io/badge/Active-brightgreen)|☑️|☑️|[FreeGPT WebUI - Naga Version](https://huggingface.co/spaces/monra/freegpt-webui-chimera/tree/main)|[Chat](https://huggingface.co/spaces/monra/freegpt-webui-chimera)
 
 ## Table of Contents
 
@@ -58,12 +58,12 @@ Run the following command to clone the repository:
 git clone https://github.com/ramonvc/freegpt-webui.git
 ```
 
-### Switching to the chimeragpt-version Branch :arrows_counterclockwise:
+### Switching to the NagaAI-version Branch :arrows_counterclockwise:
 
-Run the following command to switch to the chimeragpt-version branch:
+Run the following command to switch to the NagaAI-version branch:
 
 ```
-git checkout chimeragpt-version
+git checkout NagaAI-version
 ```
 
 ## Install Dependencies :wrench:
@@ -76,11 +76,11 @@ pip install -r requirements.txt
 
 ## Setting up the API Key and .env :key:
 
-Before starting the application, you need to obtain an API key from ChimeraGPT and set up the .env file.
+Before starting the application, you need to obtain an API key from NagaAI and set up the .env file.
 
 ### Get your API key
 
-Get your API key from the [ChimeraGPT Discord](https://discord.gg/hfmwJzctC6).
+Get your API key from the [NagaAI Discord](https://discord.naga.ac).
 
 ### Create .env
 
@@ -119,7 +119,7 @@ Before you start, make sure you have installed [Docker](https://www.docker.com/g
 
 ### Get your API key
 
-Get your API key from the [ChimeraGPT Discord](https://discord.gg/hfmwJzctC6).
+Get your API key from the [NagaAI Discord](https://discord.naga.ac).
 
 ### Running the Docker
 
@@ -157,9 +157,9 @@ docker stop <container-id>
 
 I highly recommend visiting and supporting both projects.
 
-### ChimeraGPT
+### NagaAI
 
-The free API was incorporated from the [ChimeraGPT](https://chimeragpt.adventblocks.cc/).
+The free API was incorporated from the [NagaAI](https://naga.ac/).
 
 ### WebUI
 
