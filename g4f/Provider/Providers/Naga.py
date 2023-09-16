@@ -17,8 +17,9 @@ model = [
     'gpt-4',
     'gpt-4-0314',
     'gpt-4-32k',
-    'llama-2-70b-chat',
     'oasst-sft-6-llama-30b',
+    'llama-2-70b-chat',
+    'falcon-180b-chat',
     'claude-instant',
     'claude-2',
     'claude-2-100k'
