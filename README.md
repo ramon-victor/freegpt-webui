@@ -1,5 +1,12 @@
 # FreeGPT WebUI - NagaAI Version
 
+##
+> [!WARNING]
+> It's with a heavy heart that I announce the archiving of this repository. Due to various commitments, I no longer have the time to maintain and keep it updated.
+> I want to express my sincere thanks to everyone who contributed to and used this project; your  involvement was invaluable.
+> Even though this repository is being archived, it will remain available as a guide and reference for those who wish to integrate G4F with web interfaces.
+> I appreciate everyone's understanding and wish you all success in your future projects!
+
 ## Models
 
 -   gpt-3.5-turbo
@@ -12,6 +19,7 @@
 -   llama-2-70b-chat
 -   claude-instant
 -   claude-2
+-   falcon-180b-chat
 
 <br>
 
